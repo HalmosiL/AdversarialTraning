@@ -1,0 +1,33 @@
+{
+    "EXECUTOR_CONFIGS_PATH": "../AdversarialExecutor/ExecutorConfigs/",
+    "NUMBER_OF_WORKERS_DATALOADER": 0,
+    "PIN_MEMORY_ALLOWED_DATALOADER": false,
+    "DEVICE_TRAIN": "cuda:0",
+    "LEARNING_RATE": 0.001,
+    "BATCH_SIZE_LOADER": 4,
+    "BATCH_SIZE": 4,
+    "EPOCHS": 5,
+    "WB_LOG": "CitySpacesSemanticAdversarial",
+    "PRINT_LOG": true,
+    "MODEL_CACHE_PERIOD": 10,
+    "MODEL_CACHE": "../ModelCache/",
+    "MODEL_SAVE": "../Models/",
+    "MODEL_NAME": "test",
+    "GPU_MAX_MEMORY_IN_USED": [
+        1400,
+        10000
+    ],
+    "DEVICE": [
+        "cuda:0",
+        "cuda:0"
+    ],
+    "QUEUE_SIZE_TRAIN": 25,
+    "QUEUE_SIZE_VAL": 25,
+    "DATA_QUEUE_PATH_LOADER": "../AdversarialExecutor/data_queue/",
+    "DATA_QUEUE": "./data_queue/",
+    "DATA_PATH": "../../../../../Data/City_scapes_data/",
+    "NUMBER_OF_STEPS": 3,
+    "NUMBER_OF_EXECUTORS": 1,
+    "MODE": "train",
+    "LOG_PATH": "./Logs/"
+}
