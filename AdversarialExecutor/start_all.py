@@ -6,7 +6,7 @@ import sys
 
 def start_all(CONFIG_PATH, script):
     config_generator(CONFIG_PATH)
-    configs = glob.glob("./ExecutorConfigs/*.json")
+    configs = glob.glob("../AdversarialExecutor/ExecutorConfigs/*.json")
 
     for config in configs:
         log_path = json.load(open(config))["LOG_PATH"]

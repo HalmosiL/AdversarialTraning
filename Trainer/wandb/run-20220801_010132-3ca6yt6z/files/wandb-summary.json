@@ -1,0 +1,1 @@
+{"batch_train_loss_adversarial": 1.360852837562561, "_runtime": 21, "_timestamp": 1659308513, "_step": 56, "batch_train_iou_adversarial": 0.13906693373110085, "batch_train_acc_adversarial": 0.5741612116495768, "_wandb": {"runtime": 23}}

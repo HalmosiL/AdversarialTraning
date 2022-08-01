@@ -1,0 +1,26 @@
+{
+    "os": "Linux-5.16.0-1-default-x86_64-with-glibc2.17",
+    "python": "3.6.13",
+    "heartbeatAt": "2022-07-31T21:53:16.595181",
+    "startedAt": "2022-07-31T21:53:15.539052",
+    "docker": null,
+    "gpu": "NVIDIA RTX A6000",
+    "gpu_count": 4,
+    "cpu_count": 48,
+    "cuda": null,
+    "args": [
+        "../Configs/config_main.json"
+    ],
+    "state": "running",
+    "program": "start_traning.py",
+    "codePath": "Trainer/start_traning.py",
+    "git": {
+        "remote": "https://github.com/HalmosiL/AdversarialTraning.git",
+        "commit": "4c0fa3008e36e2683884c5521d6633d889deaf0b"
+    },
+    "email": null,
+    "root": "/srv/data/halmosi/ADVERSARIAL_TRANING_SEGMENTATION/AdversarialTraning",
+    "host": "deep4",
+    "username": "halmosi",
+    "executable": "/srv/data/halmosi/anaconda3/envs/pytorch/bin/python3"
+}

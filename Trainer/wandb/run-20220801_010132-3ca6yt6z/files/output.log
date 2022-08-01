@@ -1,0 +1,86 @@
+Traning started.....
+Epoch[0] Finished[0.403%]Batch[1]loss_adversarial:3.232182264328003
+Epoch[0] Finished[0.403%]Batch[1]iou_adversarial:0.04880497810986992
+Epoch[0] Finished[0.403%]Batch[1]acc_adversarial:0.033681233723958336
+Epoch[0] Finished[0.806%]Batch[2]loss_adversarial:2.8564226627349854
+Epoch[0] Finished[0.806%]Batch[2]iou_adversarial:0.06281142436155003
+Epoch[0] Finished[0.806%]Batch[2]acc_adversarial:0.1943051020304362
+Epoch[0] Finished[1.209%]Batch[3]loss_adversarial:2.71921968460083
+Epoch[0] Finished[1.209%]Batch[3]iou_adversarial:0.0936563589484107
+Epoch[0] Finished[1.209%]Batch[3]acc_adversarial:0.23902130126953125
+Epoch[0] Finished[1.612%]Batch[4]loss_adversarial:2.5026257038116455
+Epoch[0] Finished[1.612%]Batch[4]iou_adversarial:0.11991793360117467
+Epoch[0] Finished[1.612%]Batch[4]acc_adversarial:0.31780751546223956
+Epoch[0] Finished[2.016%]Batch[5]loss_adversarial:2.510896921157837
+Epoch[0] Finished[2.016%]Batch[5]iou_adversarial:0.07433271905740135
+Epoch[0] Finished[2.016%]Batch[5]acc_adversarial:0.2619819641113281
+Epoch[0] Finished[2.419%]Batch[6]loss_adversarial:2.5092241764068604
+Epoch[0] Finished[2.419%]Batch[6]iou_adversarial:0.12609570310476875
+Epoch[0] Finished[2.419%]Batch[6]acc_adversarial:0.3437776565551758
+Epoch[0] Finished[2.822%]Batch[7]loss_adversarial:2.4399354457855225
+Epoch[0] Finished[2.822%]Batch[7]iou_adversarial:0.10746189191055029
+Epoch[0] Finished[2.822%]Batch[7]acc_adversarial:0.37128353118896484
+Epoch[0] Finished[3.225%]Batch[8]loss_adversarial:2.3204472064971924
+Epoch[0] Finished[3.225%]Batch[8]iou_adversarial:0.13430607935762984
+Epoch[0] Finished[3.225%]Batch[8]acc_adversarial:0.452206293741862
+Epoch[0] Finished[3.629%]Batch[9]loss_adversarial:2.0079843997955322
+Epoch[0] Finished[3.629%]Batch[9]iou_adversarial:0.1451451900084017
+Epoch[0] Finished[3.629%]Batch[9]acc_adversarial:0.5039698282877604
+Epoch[0] Finished[4.032%]Batch[10]loss_adversarial:2.1083626747131348
+Epoch[0] Finished[4.032%]Batch[10]iou_adversarial:0.13600223115166088
+Epoch[0] Finished[4.032%]Batch[10]acc_adversarial:0.4480120340983073
+Epoch[0] Finished[4.435%]Batch[11]loss_adversarial:1.7899863719940186
+Epoch[0] Finished[4.435%]Batch[11]iou_adversarial:0.18161728441931613
+Epoch[0] Finished[4.435%]Batch[11]acc_adversarial:0.5618769327799479
+Epoch[0] Finished[4.838%]Batch[12]loss_adversarial:1.981580376625061
+Epoch[0] Finished[4.838%]Batch[12]iou_adversarial:0.1406941206095153
+Epoch[0] Finished[4.838%]Batch[12]acc_adversarial:0.455166498819987
+Epoch[0] Finished[5.241%]Batch[13]loss_adversarial:1.899020791053772
+Epoch[0] Finished[5.241%]Batch[13]iou_adversarial:0.13426934978450308
+Epoch[0] Finished[5.241%]Batch[13]acc_adversarial:0.4181232452392578
+Epoch[0] Finished[5.645%]Batch[14]loss_adversarial:1.8226677179336548
+Epoch[0] Finished[5.645%]Batch[14]iou_adversarial:0.17117295238449556
+Epoch[0] Finished[5.645%]Batch[14]acc_adversarial:0.5060634613037109
+Epoch[0] Finished[6.048%]Batch[15]loss_adversarial:1.632635474205017
+Epoch[0] Finished[6.048%]Batch[15]iou_adversarial:0.1733357650263505
+Epoch[0] Finished[6.048%]Batch[15]acc_adversarial:0.5800619125366211
+Epoch[0] Finished[6.451%]Batch[16]loss_adversarial:1.680909514427185
+Epoch[0] Finished[6.451%]Batch[16]iou_adversarial:0.15283342418556403
+Epoch[0] Finished[6.451%]Batch[16]acc_adversarial:0.5203860600789388
+Epoch[0] Finished[6.854%]Batch[17]loss_adversarial:1.4677937030792236
+Epoch[0] Finished[6.854%]Batch[17]iou_adversarial:0.146981728046756
+Epoch[0] Finished[6.854%]Batch[17]acc_adversarial:0.5708548227945963
+Epoch[0] Finished[7.258%]Batch[18]loss_adversarial:1.5005967617034912
+Epoch[0] Finished[7.258%]Batch[18]iou_adversarial:0.1523877997893568
+Epoch[0] Finished[7.258%]Batch[18]acc_adversarial:0.5923261642456055
+Epoch[0] Finished[7.661%]Batch[19]loss_adversarial:1.360852837562561
+Epoch[0] Finished[7.661%]Batch[19]iou_adversarial:0.13906693373110085
+Epoch[0] Finished[7.661%]Batch[19]acc_adversarial:0.5741612116495768
+Traceback (most recent call last):
+  File "start_traning.py", line 41, in <module>
+    train(CONFIG_PATH, CONFIG, "cuda:3", train_loader_adversarial, val_loader_adversarial, val_loader)
+  File "/srv/data/halmosi/ADVERSARIAL_TRANING_SEGMENTATION/AdversarialTraning/Trainer/Train.py", line 39, in train
+    for data in train_loader_adversarial:
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 1203, in _next_data
+    return self._process_data(data)
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 1229, in _process_data
+    data.reraise()
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/_utils.py", line 434, in reraise
+    raise exception
+RuntimeError: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "../AdversarialLoader/Dataset.py", line 41, in __getitem__
+    labels.append(torch.load(label_path))
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/serialization.py", line 600, in load
+    with _open_zipfile_reader(opened_file) as opened_zipfile:
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/serialization.py", line 242, in __init__
+    super(_open_zipfile_reader, self).__init__(torch._C.PyTorchFileReader(name_or_buffer))
+RuntimeError: PytorchStreamReader failed reading zip archive: failed finding central directory

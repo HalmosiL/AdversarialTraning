@@ -15,5 +15,5 @@ def run(id_, batch, device, model, attack, number_of_steps, data_queue):
         device=device
     )
 
-    torch.save(image, data_queue + 'image_' + str(id_) + '.pt')
-    torch.save(label, data_queue + 'label_' + str(id_) + '.pt')
+    torch.save(image.cpu().detach(), data_queue + 'image_' + str(id_) + '.pt')
+    torch.save(label.cpu().detach(), data_queue + 'label_' + str(id_) + '.pt')

@@ -1,0 +1,37 @@
+Traceback (most recent call last):
+  File "start_traning.py", line 41, in <module>
+    train(CONFIG_PATH, CONFIG, "cuda:3", train_loader_adversarial, val_loader_adversarial, val_loader)
+  File "/srv/data/halmosi/ADVERSARIAL_TRANING_SEGMENTATION/AdversarialTraning/Trainer/Train.py", line 39, in train
+    for data in train_loader_adversarial:
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 1203, in _next_data
+    return self._process_data(data)
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 1229, in _process_data
+    data.reraise()
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/_utils.py", line 434, in reraise
+    raise exception
+FileNotFoundError: Caught FileNotFoundError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "../AdversarialLoader/Dataset.py", line 44, in __getitem__
+    os.remove(image_path)
+FileNotFoundError: [Errno 2] No such file or directory: '../AdversarialExecutor/data_queue/image_1.pt'
+Traning started.....
+../AdversarialExecutor/data_queue/
+../AdversarialExecutor/data_queue/
+../AdversarialExecutor/data_queue/
+../AdversarialExecutor/data_queue/
+../AdversarialExecutor/data_queue/
+../AdversarialExecutor/data_queue/
+../AdversarialExecutor/data_queue/
+GET DATA...
+../AdversarialExecutor/data_queue/
+../AdversarialExecutor/data_queue/
+GET DATA...
+GET DATA...

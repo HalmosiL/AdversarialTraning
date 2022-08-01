@@ -46,7 +46,6 @@ class DatasetAdversarial:
                 self.data_in_queue = glob.glob(self.data_queue_path + "image_*")
                 self.data_in_queue.sort(key=self.__sort__)
             else:
-                print("Wating for data....")
                 time.sleep(0.5)
                 self.data_in_queue = glob.glob(self.data_queue_path + "image_*")
                 self.data_in_queue.sort(key=self.__sort__)

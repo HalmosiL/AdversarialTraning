@@ -7,14 +7,14 @@ import glob
 def config_generator(CONFIG_PATH):
     try: 
         print("Create config folder...")
-        os.mkdir("./ExecutorConfigs")
+        os.mkdir("../AdversarialExecutor/ExecutorConfigs")
         print("Folder created successfuly...")
     except OSError as error: 
         print("Folder alredy exist...")
 
     print("Clear config...")
 
-    for filename in glob.glob('./ExecutorConfigs/*.json'):
+    for filename in glob.glob('../AdversarialExecutor/ExecutorConfigs/*.json'):
         os.unlink(filename)
 
     print("Clear data queue...")
@@ -37,11 +37,11 @@ def config_generator(CONFIG_PATH):
 
     print("Create Logs folder...")
 
-    if(os.path.exists("./Logs")):
-        for filename in glob.glob("./Logs/" + "*.log"):
+    if(os.path.exists("../AdversarialExecutor/Logs")):
+        for filename in glob.glob("../AdversarialExecutor/Logs/" + "*.log"):
             os.unlink(filename)
     else:
-        os.mkdir("./Logs")
+        os.mkdir("../AdversarialExecutor/Logs")
 
     print("Use config:" + str(sys.argv[1]) + "...")
 
@@ -52,7 +52,7 @@ def config_generator(CONFIG_PATH):
     val_split_step = int(val_data_set_len / CONFIG['NUMBER_OF_EXECUTORS'])
 
     for i in range(CONFIG['NUMBER_OF_EXECUTORS']):
-        name = "./ExecutorConfigs/config_" + str(i + 1) + ".json"
+        name = "../AdversarialExecutor/ExecutorConfigs/config_" + str(i + 1) + ".json"
 
         DATA_SET_START_INDEX_TRAIN = i * train_split_step
         DATA_SET_START_INDEX_VAL = i * val_split_step

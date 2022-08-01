@@ -1,0 +1,92 @@
+Traning started.....
+Epoch[0] Finished[0.537%]Batch[1]loss_adversarial:3.1924266815185547
+Epoch[0] Finished[0.537%]Batch[1]iou_adversarial:0.028397998999732707
+Epoch[0] Finished[0.537%]Batch[1]acc_adversarial:0.03439593315124512
+Epoch[0] Finished[1.075%]Batch[2]loss_adversarial:2.7675375938415527
+Epoch[0] Finished[1.075%]Batch[2]iou_adversarial:0.08341103300057982
+Epoch[0] Finished[1.075%]Batch[2]acc_adversarial:0.18700695037841797
+Epoch[0] Finished[1.612%]Batch[3]loss_adversarial:2.6506052017211914
+Epoch[0] Finished[1.612%]Batch[3]iou_adversarial:0.11932369039133967
+Epoch[0] Finished[1.612%]Batch[3]acc_adversarial:0.21111679077148438
+Epoch[0] Finished[2.150%]Batch[4]loss_adversarial:2.5123510360717773
+Epoch[0] Finished[2.150%]Batch[4]iou_adversarial:0.0917416995606979
+Epoch[0] Finished[2.150%]Batch[4]acc_adversarial:0.24477505683898926
+Epoch[0] Finished[2.688%]Batch[5]loss_adversarial:2.5283994674682617
+Epoch[0] Finished[2.688%]Batch[5]iou_adversarial:0.11630447596139097
+Epoch[0] Finished[2.688%]Batch[5]acc_adversarial:0.31707024574279785
+Epoch[0] Finished[3.225%]Batch[6]loss_adversarial:2.4974985122680664
+Epoch[0] Finished[3.225%]Batch[6]iou_adversarial:0.13039280073092663
+Epoch[0] Finished[3.225%]Batch[6]acc_adversarial:0.3256042003631592
+Epoch[0] Finished[3.763%]Batch[7]loss_adversarial:2.244002103805542
+Epoch[0] Finished[3.763%]Batch[7]iou_adversarial:0.12165335949511547
+Epoch[0] Finished[3.763%]Batch[7]acc_adversarial:0.41339921951293945
+Epoch[0] Finished[4.301%]Batch[8]loss_adversarial:2.208864212036133
+Epoch[0] Finished[4.301%]Batch[8]iou_adversarial:0.16288425427439585
+Epoch[0] Finished[4.301%]Batch[8]acc_adversarial:0.4610567092895508
+Epoch[0] Finished[4.838%]Batch[9]loss_adversarial:2.0514400005340576
+Epoch[0] Finished[4.838%]Batch[9]iou_adversarial:0.15705763909856077
+Epoch[0] Finished[4.838%]Batch[9]acc_adversarial:0.47328996658325195
+Epoch[0] Finished[5.376%]Batch[10]loss_adversarial:2.101410388946533
+Epoch[0] Finished[5.376%]Batch[10]iou_adversarial:0.14780857712936232
+Epoch[0] Finished[5.376%]Batch[10]acc_adversarial:0.43211889266967773
+Epoch[0] Finished[5.913%]Batch[11]loss_adversarial:2.06286883354187
+Epoch[0] Finished[5.913%]Batch[11]iou_adversarial:0.15418280912408472
+Epoch[0] Finished[5.913%]Batch[11]acc_adversarial:0.39965295791625977
+Epoch[0] Finished[6.451%]Batch[12]loss_adversarial:1.8335705995559692
+Epoch[0] Finished[6.451%]Batch[12]iou_adversarial:0.14886696678299427
+Epoch[0] Finished[6.451%]Batch[12]acc_adversarial:0.4661736488342285
+Epoch[0] Finished[6.989%]Batch[13]loss_adversarial:1.8276491165161133
+Epoch[0] Finished[6.989%]Batch[13]iou_adversarial:0.17952835548170865
+Epoch[0] Finished[6.989%]Batch[13]acc_adversarial:0.49170565605163574
+Epoch[0] Finished[7.526%]Batch[14]loss_adversarial:2.0294301509857178
+Epoch[0] Finished[7.526%]Batch[14]iou_adversarial:0.17593555976160902
+Epoch[0] Finished[7.526%]Batch[14]acc_adversarial:0.4243192672729492
+Epoch[0] Finished[8.064%]Batch[15]loss_adversarial:1.6968488693237305
+Epoch[0] Finished[8.064%]Batch[15]iou_adversarial:0.16002451177355925
+Epoch[0] Finished[8.064%]Batch[15]acc_adversarial:0.5137181282043457
+Epoch[0] Finished[8.602%]Batch[16]loss_adversarial:1.6734490394592285
+Epoch[0] Finished[8.602%]Batch[16]iou_adversarial:0.1898992671413253
+Epoch[0] Finished[8.602%]Batch[16]acc_adversarial:0.4866447448730469
+Epoch[0] Finished[9.139%]Batch[17]loss_adversarial:1.600396990776062
+Epoch[0] Finished[9.139%]Batch[17]iou_adversarial:0.15464206835496191
+Epoch[0] Finished[9.139%]Batch[17]acc_adversarial:0.5405013561248779
+Epoch[0] Finished[9.677%]Batch[18]loss_adversarial:1.5795854330062866
+Epoch[0] Finished[9.677%]Batch[18]iou_adversarial:0.16978898110597773
+Epoch[0] Finished[9.677%]Batch[18]acc_adversarial:0.5025875568389893
+Epoch[0] Finished[10.21%]Batch[19]loss_adversarial:1.5493215322494507
+Epoch[0] Finished[10.21%]Batch[19]iou_adversarial:0.18124164259842288
+Epoch[0] Finished[10.21%]Batch[19]acc_adversarial:0.5137407779693604
+Epoch[0] Finished[10.75%]Batch[20]loss_adversarial:1.5431771278381348
+Epoch[0] Finished[10.75%]Batch[20]iou_adversarial:0.15354027109865934
+Epoch[0] Finished[10.75%]Batch[20]acc_adversarial:0.5412847995758057
+Epoch[0] Finished[11.29%]Batch[21]loss_adversarial:1.6073181629180908
+Epoch[0] Finished[11.29%]Batch[21]iou_adversarial:0.15399596595113174
+Epoch[0] Finished[11.29%]Batch[21]acc_adversarial:0.43163585662841797
+Traceback (most recent call last):
+  File "start_traning.py", line 41, in <module>
+    train(CONFIG_PATH, CONFIG, "cuda:3", train_loader_adversarial, val_loader_adversarial, val_loader)
+  File "/srv/data/halmosi/ADVERSARIAL_TRANING_SEGMENTATION/AdversarialTraning/Trainer/Train.py", line 39, in train
+    for data in train_loader_adversarial:
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 1203, in _next_data
+    return self._process_data(data)
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 1229, in _process_data
+    data.reraise()
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/_utils.py", line 434, in reraise
+    raise exception
+EOFError: Caught EOFError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/_utils/worker.py", line 287, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "../AdversarialLoader/Dataset.py", line 41, in __getitem__
+    labels.append(torch.load(label_path))
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/serialization.py", line 608, in load
+    return _legacy_load(opened_file, map_location, pickle_module, **pickle_load_args)
+  File "/srv/data/halmosi/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/serialization.py", line 777, in _legacy_load
+    magic_number = pickle_module.load(f, **pickle_load_args)
+EOFError: Ran out of input
