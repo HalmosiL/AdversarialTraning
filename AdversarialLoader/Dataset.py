@@ -22,6 +22,9 @@ class DatasetAdversarial:
 
         images = []
         labels = []
+        
+        images_remove = []
+        labels_remove = []
 
         if(idx + 1 == self.len_dataset and self.plus_batch_num != None):
             concatenate_number_actual = self.plus_batch_num
@@ -30,6 +33,9 @@ class DatasetAdversarial:
 
         while(len(images) < concatenate_number_actual):
             if(len(self.data_in_queue)):
+                self.data_in_queue = glob.glob(self.data_queue_path + "image_*")
+                self.data_in_queue.sort(key=self.__sort__)
+                
                 image_path = self.data_queue_path + self.data_in_queue[0].split("/")[-1]
                 label_path = self.data_queue_path + "label" + self.data_in_queue[0].split("/")[-1][len("image"):]
 
@@ -37,14 +43,11 @@ class DatasetAdversarial:
                     os.path.exists(image_path) and
                     os.path.exists(label_path)
                 ):
-                    images.append(torch.load(image_path))
-                    labels.append(torch.load(label_path))
+                    images.append(torch.load(image_path).clone())
+                    labels.append(torch.load(label_path).clone())
 
-                    os.remove(image_path)
-                    os.remove(label_path)
-
-                self.data_in_queue = glob.glob(self.data_queue_path + "image_*")
-                self.data_in_queue.sort(key=self.__sort__)
+                    images_remove.append(image_path)
+                    labels_remove.append(label_path)
             else:
                 time.sleep(0.5)
                 self.data_in_queue = glob.glob(self.data_queue_path + "image_*")
@@ -52,6 +55,10 @@ class DatasetAdversarial:
 
         images = torch.cat(images, dim=0)
         labels = torch.cat(labels, dim=0)
+        
+        for i range(len(images_remove)):
+            os.remove(images_remove[i])
+            os.remove(labels_remove[i])
 
         return images, labels
 
