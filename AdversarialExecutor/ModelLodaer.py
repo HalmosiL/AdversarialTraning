@@ -35,7 +35,7 @@ def get_resnet18_hourglass(device, encoder_weights=None):
     return model
 
 def load_model(path, device):
-    model = get_resnet18_hourglass(device, encoder_weights=None)
+    model = get_DeepLabv3(device, encoder_weights=None)
     model.load_state_dict(torch.load(path))
     model = model.to(device)
 
