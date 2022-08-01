@@ -56,7 +56,7 @@ class DatasetAdversarial:
         images = torch.cat(images, dim=0)
         labels = torch.cat(labels, dim=0)
         
-        for i range(len(images_remove)):
+        for i in range(len(images_remove)):
             os.remove(images_remove[i])
             os.remove(labels_remove[i])
 
