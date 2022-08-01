@@ -2,7 +2,7 @@
     "EXECUTOR_CONFIGS_PATH": "../AdversarialExecutor/ExecutorConfigs/",
     "NUMBER_OF_WORKERS_DATALOADER": 1,
     "PIN_MEMORY_ALLOWED_DATALOADER": true,
-    "DEVICE_TRAIN": "cuda:0",
+    "DEVICE_TRAIN": "cuda:3",
     "LEARNING_RATE": 0.001,
     "BATCH_SIZE_LOADER": 12,
     "BATCH_SIZE": 12,
