@@ -38,5 +38,5 @@ if __name__ == '__main__':
         pin_memory=CONFIG["PIN_MEMORY_ALLOWED_DATALOADER"]
     )
 
-    train(CONFIG_PATH, CONFIG, "cuda:3", train_loader_adversarial, val_loader_adversarial, val_loader)
+    train(CONFIG_PATH, CONFIG, CONFIG["DEVICE_TRAIN"], train_loader_adversarial, val_loader_adversarial, val_loader)
     subprocess.Popen("./stop_all.sh", stdout=subprocess.PIPE)
