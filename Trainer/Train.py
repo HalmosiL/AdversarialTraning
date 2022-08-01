@@ -7,12 +7,12 @@ import json
 
 sys.path.insert(0, "./")
 
-from Model import get_resnet18_hourglass, get_resnet50_hourglass
+from Model import get_DeepLabv3
 from Metrics import iou_score_m, acuracy
 from WBLogger import LogerWB
 
 def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adversarial, val_loader):
-    model = get_resnet18_hourglass(DEVICE, encoder_weights=None)
+    model = get_DeepLabv3(DEVICE, encoder_weights=None)
 
     optimizer = torch.optim.Adam(model.parameters(), lr=CONFIG["LEARNING_RATE"])
     lossFun = torch.nn.CrossEntropyLoss(ignore_index=-1)
