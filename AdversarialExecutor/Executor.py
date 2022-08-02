@@ -205,6 +205,15 @@ class Executor:
                                     number_of_steps=self.number_of_steps,
                                     data_queue=self.data_queue[:-1] + "_val/"
                                 )
+                                
+                                with open('./val_queue.json', 'r+') as f:
+                                    data = json.load(f)
+                                    data['IDS'].append((val_id - 1) * config_main["NUMBER_OF_EXECUTORS"] + config["ID"])
+                                    data['IDS'].sort()
+                                    f.seek(0)
+                                    json.dump(data, f)
+                                    f.truncate()
+                                    
                             except StopIteration:
                                 val_iter = iter(self.val_data_set_loader)
                         else:
