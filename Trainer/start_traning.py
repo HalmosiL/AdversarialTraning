@@ -22,6 +22,20 @@ if __name__ == '__main__':
     models_in_cache = glob.glob(CONFIG["MODEL_CACHE"] + "*.pt")
     for m in models_in_cache:
         os.remove(m)
+    
+    if(os.path.exists("../AdversarialExecutor/train_queue.json")):
+        os.remove("../AdversarialExecutor/train_queue.json")
+    
+    train_queue_json = open("../AdversarialExecutor/train_queue.json", "w+")
+    json.dump({"IDS:":[]}, train_queue_json, indent = 6) 
+    train_queue_json.close() 
+        
+    if(os.path.exists("../AdversarialExecutor/val_queue.json")):
+        os.remove("../AdversarialExecutor/val_queue.json")
+    
+    val_queue_json = open("../AdversarialExecutor/val_queue.json", "w+")
+    json.dump({"IDS:":[]}, val_queue_json, indent = 6) 
+    val_queue_json.close() 
 
     start_all(CONFIG_PATH, "../AdversarialExecutor/start_one.sh")
 
