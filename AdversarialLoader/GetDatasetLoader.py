@@ -65,7 +65,8 @@ def getDatasetLoader(CONFIG_DATALOADER_PATH, type_="train", num_workers=0, pin_m
             CONFIG_DATALOADER["DATA_QUEUE_PATH_LOADER"],
             len_,
             int(concatenate_number),
-            plus_batch_num
+            plus_batch_num,
+            type_
         )
     else:
         len_ = CONFIG_EXECUTOR["DATA_SET_END_INDEX_VAL"] / CONFIG_DATALOADER["BATCH_SIZE"]
