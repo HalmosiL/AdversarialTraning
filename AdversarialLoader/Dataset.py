@@ -3,46 +3,33 @@ import os
 import torch
 import time
 
-class DatasetAdversarial:
-    number_of_instance = 0
-    
+class DatasetAdversarial:    
     def __init__(self, data_queue_path, len_dataset, concatenate_number, plus_batch_num):
         self.len_dataset = len_dataset
         self.concatenate_number = concatenate_number
         self.data_queue_path = data_queue_path
         self.plus_batch_num = plus_batch_num
-
-        self.data_in_queue = glob.glob(self.data_queue_path + "image_*")
-        self.data_in_queue.sort(key=self.__sort__)
-        
-        self.number_of_instance += 1
-
-    def __sort__(self, k):
-        return int(k.split("_")[-1].split(".")[0])
+        self.epoch = 0
 
     def __getitem__(self, idx):
-        print(self.number_of_instance)
-        self.data_in_queue = glob.glob(self.data_queue_path + "image_*")
-        self.data_in_queue.sort(key=self.__sort__)
-
         images = []
         labels = []
-        
-        images_remove = []
-        labels_remove = []
 
         if(idx + 1 == self.len_dataset and self.plus_batch_num != None):
             concatenate_number_actual = self.plus_batch_num
         else:
             concatenate_number_actual = self.concatenate_number
 
-        while(len(images) < concatenate_number_actual):
+        idx_ = idx * concatenate_number_actual + self.epoch * (self.len_dataset - 1)
+        i = 0
+        
+        images_remove = []
+        labels_remove = []
+        
+        while(i < concatenate_number_actual):
             if(len(self.data_in_queue)):
-                self.data_in_queue = glob.glob(self.data_queue_path + "image_*")
-                self.data_in_queue.sort(key=self.__sort__)
-                
-                image_path = self.data_queue_path + self.data_in_queue[0].split("/")[-1]
-                label_path = self.data_queue_path + "label" + self.data_in_queue[0].split("/")[-1][len("image"):]
+                image_path = self.data_queue_path + "image_" + str(idx_ + i + 1) + ".pt"
+                label_path = self.data_queue_path + "label_" + str(idx_ + i + 1) + ".pt"
 
                 if(
                     os.path.exists(image_path) and
@@ -50,9 +37,11 @@ class DatasetAdversarial:
                 ):
                     images.append(torch.load(image_path).clone())
                     labels.append(torch.load(label_path).clone())
-
+                    
                     images_remove.append(image_path)
                     labels_remove.append(label_path)
+                    
+                    i += 1
             else:
                 time.sleep(0.5)
                 self.data_in_queue = glob.glob(self.data_queue_path + "image_*")
@@ -64,6 +53,9 @@ class DatasetAdversarial:
         for i in range(len(images_remove)):
             os.remove(images_remove[i])
             os.remove(labels_remove[i])
+            
+        if(idx == self.len_dataset - 1):
+            self.epoch += 1
 
         return images, labels
 
