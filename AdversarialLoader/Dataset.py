@@ -26,6 +26,8 @@ class DatasetAdversarial:
         images_remove = []
         labels_remove = []
         
+        count_no_data = 0
+        
         while(i < concatenate_number_actual):
             image_path = self.data_queue_path + "image_" + str(idx_ + i + 1) + ".pt"
             label_path = self.data_queue_path + "label_" + str(idx_ + i + 1) + ".pt"
@@ -34,6 +36,7 @@ class DatasetAdversarial:
                 os.path.exists(image_path) and
                 os.path.exists(label_path)
             ):
+                count_no_data = 0
                 images.append(torch.load(image_path).clone())
                 labels.append(torch.load(label_path).clone())
 
@@ -42,8 +45,13 @@ class DatasetAdversarial:
 
                 i += 1
             else:
-                print("wating for data...")
-                time.sleep(0.01)
+                count_no_data += 1
+                if(count_no_data == 1):
+                    print("waiting for data...")
+                elif(count_no_data > 1):
+                    print("waiting for data sice:" + str(0.05 * count_no_data) + "(s)...", end="\r")
+                
+                time.sleep(0.05)
 
         images = torch.cat(images, dim=0)
         labels = torch.cat(labels, dim=0)
