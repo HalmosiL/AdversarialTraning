@@ -9,6 +9,7 @@ class DatasetAdversarial:
         self.data_queue_path = data_queue_path
         self.plus_batch_num = plus_batch_num
         self.epoch = 0
+        self.delete_q = []
 
     def __getitem__(self, idx):
         if(idx + 1 == self.len_dataset and self.plus_batch_num != None):
@@ -46,9 +47,14 @@ class DatasetAdversarial:
         images = torch.cat(images, dim=0)
         labels = torch.cat(labels, dim=0)
         
-        for i in range(len(images_remove)):
-            os.remove(images_remove[i])
-            os.remove(labels_remove[i])
+        self.delete_q.append([images_remove, abels_remove])
+        
+        if(len(self.delete_q) > 5):
+            for i in range(len(self.delete_q[0][0])):
+                os.remove(self.delete_q[0][0][i])
+                os.remove(self.delete_q[0][1][i])
+                
+            self.delete_q.pop(0)
             
         if(idx == self.len_dataset - 1):
             self.epoch += 1
