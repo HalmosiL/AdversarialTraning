@@ -162,8 +162,8 @@ class Executor:
                                     data_queue=self.data_queue
                                 )
                                 
-                                file_ = open("./train_queue.json","w")
-                                data = json.load(file_.read())
+                                file_ = open("./train_queue.json","w+")
+                                data = json.load(file_)
                                 data["IDS"].append((train_id - 1) * config_main["NUMBER_OF_EXECUTORS"] + config["ID"])
                                 data["IDS"].sort()
                                 json.dump(data, file_, indent = 6)
