@@ -162,12 +162,13 @@ class Executor:
                                     data_queue=self.data_queue
                                 )
                                 
-                                file_ = open("./train_queue.json","r+")
-                                data = json.load(file_)
-                                data["IDS"].append((train_id - 1) * config_main["NUMBER_OF_EXECUTORS"] + config["ID"])
-                                data["IDS"].sort()
-                                json.dump(data, file_, indent = 6)
-                                file_.close()
+                                with open('./train_queue.json', 'r+') as f:
+                                    data = json.load(f)
+                                    data['IDS'].append((train_id - 1) * config_main["NUMBER_OF_EXECUTORS"] + config["ID"])
+                                    data['IDS'].sort()
+                                    f.seek(0) 
+                                    json.dump(data, f, indent=4)
+                                    f.truncate()
                                 
                             except StopIteration:
                                 train_iter = iter(self.train_data_set_loader)
