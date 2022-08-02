@@ -15,11 +15,9 @@
     "MODEL_NAME": "test",
     "GPU_MAX_MEMORY_IN_USED": [
         14000,
-        60000,
-        120000
+        60000
     ],
     "DEVICE": [
-        "cuda:3",
         "cuda:3",
         "cuda:3"
     ],
