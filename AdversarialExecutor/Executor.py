@@ -161,6 +161,14 @@ class Executor:
                                     number_of_steps=self.number_of_steps,
                                     data_queue=self.data_queue
                                 )
+                                
+                                file_ = open("./train_queue.json","w")
+                                data = json.load(file_.read())
+                                data["IDS"].append((train_id - 1) * config_main["NUMBER_OF_EXECUTORS"] + config["ID"])
+                                data["IDS"].sort()
+                                json.dump(data, file_, indent = 6)
+                                file_.close()
+                                
                             except StopIteration:
                                 train_iter = iter(self.train_data_set_loader)
                         else:
