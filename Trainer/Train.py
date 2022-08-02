@@ -24,7 +24,7 @@ def cacheModel(cache_id, model, CONFIG):
 def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adversarial, val_loader):
     if(DEVICE == "cuda:2"):
         DEVICE = "cuda:3"
-    elif(DEVICE == "cuda:3")
+    elif(DEVICE == "cuda:3"):
         DEVICE = "cuda:2"
     
     model = get_DeepLabv3(DEVICE, encoder_weights=None)
