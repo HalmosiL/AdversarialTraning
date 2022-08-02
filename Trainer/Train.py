@@ -11,7 +11,7 @@ from Model import get_DeepLabv3
 from Metrics import iou_score_m, acuracy
 from WBLogger import LogerWB
 
-def cacheModel(cache_id, model):
+def cacheModel(cache_id, model, CONFIG):
     models = glob.glob(CONFIG["MODEL_CACHE"] + "*.pt")
     models.sort()
     torch.save(model.state_dict(), CONFIG["MODEL_CACHE"] + CONFIG["MODEL_NAME"] + str(cache_id) + ".pt")
@@ -32,7 +32,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
     print("Traning started.....")
 
     cache_id = 0
-    cache_id = cacheModel(cache_id, model)
+    cache_id = cacheModel(cache_id, model, CONFIG)
     
     for e in range(CONFIG["EPOCHS"]):
         model = model.train()
@@ -67,7 +67,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
             batch_id += 1
 
             if(e % CONFIG["MODEL_CACHE_PERIOD"] == 0):
-                cache_id = cacheModel(cache_id, model)
+                cache_id = cacheModel(cache_id, model, CONFIG)
 
         loss_train_epoch = loss_train_epoch / train_loader_adversarial.__len__()
         iou_train_epoch = iou_train_epoch / train_loader_adversarial.__len__()
@@ -80,7 +80,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
         torch.save(model.state_dict(), CONFIG["MODEL_SAVE"] + CONFIG["MODEL_NAME"] + str(e) + ".pt")
         torch.save(optimizer.state_dict(), CONFIG["MODEL_SAVE"] + CONFIG["MODEL_NAME"] + "_optimizer" + str(e) + ".pt")
 
-        cache_id = cacheModel(cache_id, model)
+        cache_id = cacheModel(cache_id, model, CONFIG)
 
         with open(CONFIG_PATH, 'r+') as f:
             data_json = json.load(f)
