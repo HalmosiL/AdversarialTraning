@@ -22,6 +22,11 @@ def cacheModel(cache_id, model, CONFIG):
     return cache_id + 1
 
 def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adversarial, val_loader):
+    if(DEVICE == "cuda:2"):
+        DEVICE = "cuda:3"
+    elif(DEVICE == "cuda:3")
+        DEVICE = "cuda:2"
+    
     model = get_DeepLabv3(DEVICE, encoder_weights=None)
 
     optimizer = torch.optim.Adam(model.parameters(), lr=CONFIG["LEARNING_RATE"])
