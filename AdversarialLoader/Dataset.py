@@ -42,7 +42,6 @@ class DatasetAdversarial:
                 i += 1
             else:
                 time.sleep(0.5)
-                self.data_in_queue.sort(key=self.__sort__)
 
         images = torch.cat(images, dim=0)
         labels = torch.cat(labels, dim=0)
