@@ -27,7 +27,7 @@
     "DATA_QUEUE": "../AdversarialExecutor/data_queue/",
     "DATA_PATH": "../../../city-scapes-dataset/",
     "NUMBER_OF_STEPS": 3,
-    "NUMBER_OF_EXECUTORS": 3,
+    "NUMBER_OF_EXECUTORS": 2,
     "MODE": "val",
     "LOG_PATH": "../AdversarialExecutor/Logs/"
 }
