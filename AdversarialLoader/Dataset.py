@@ -47,7 +47,7 @@ class DatasetAdversarial:
         images = torch.cat(images, dim=0)
         labels = torch.cat(labels, dim=0)
         
-        self.delete_q.append([images_remove, abels_remove])
+        self.delete_q.append([images_remove, labels_remove])
         
         if(len(self.delete_q) > 5):
             for i in range(len(self.delete_q[0][0])):
