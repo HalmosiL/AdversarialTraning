@@ -41,7 +41,7 @@ class DatasetAdversarial:
 
                 i += 1
             else:
-                time.sleep(1)
+                time.sleep(0.01)
 
         images = torch.cat(images, dim=0)
         labels = torch.cat(labels, dim=0)
