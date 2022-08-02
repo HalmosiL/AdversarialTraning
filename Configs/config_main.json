@@ -28,7 +28,7 @@
     "DATA_PATH": "../../../city-scapes-dataset/",
     "NUMBER_OF_STEPS": 3,
     "NUMBER_OF_EXECUTORS": 2,
-    "MODE": "val",
+    "MODE": "train",
     "LOG_PATH": "../AdversarialExecutor/Logs/"
 }
 
