@@ -4,6 +4,8 @@ import torch
 import time
 
 class DatasetAdversarial:
+    number_of_instance = 0
+    
     def __init__(self, data_queue_path, len_dataset, concatenate_number, plus_batch_num):
         self.len_dataset = len_dataset
         self.concatenate_number = concatenate_number
@@ -12,11 +14,14 @@ class DatasetAdversarial:
 
         self.data_in_queue = glob.glob(self.data_queue_path + "image_*")
         self.data_in_queue.sort(key=self.__sort__)
+        
+        self.number_of_instance += 1
 
     def __sort__(self, k):
         return int(k.split("_")[-1].split(".")[0])
 
     def __getitem__(self, idx):
+        print(self.number_of_instance)
         self.data_in_queue = glob.glob(self.data_queue_path + "image_*")
         self.data_in_queue.sort(key=self.__sort__)
 
