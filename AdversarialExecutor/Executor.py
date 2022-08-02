@@ -153,7 +153,7 @@ class Executor:
                                 batch = next(train_iter)
 
                                 run(
-                                    id_=train_id,
+                                    id_=train_id * config_main["NUMBER_OF_EXECUTORS"] + config["ID"] - 1,
                                     batch=batch,
                                     device=self.device,
                                     model=model,
@@ -188,7 +188,7 @@ class Executor:
                                 batch = next(val_iter)
 
                                 run(
-                                    id_=val_id,
+                                    id_=val_id * config_main["NUMBER_OF_EXECUTORS"] + config["ID"] - 1,
                                     batch=batch,
                                     device=self.device,
                                     model=model,
