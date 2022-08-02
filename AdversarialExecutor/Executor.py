@@ -163,10 +163,10 @@ class Executor:
                                 )
                                 
                                 with open('./train_queue.json', 'r+') as f:
+                                    f.seek(0) 
                                     data = json.load(f)
                                     data['IDS'].append((train_id - 1) * config_main["NUMBER_OF_EXECUTORS"] + config["ID"])
                                     data['IDS'].sort()
-                                    f.seek(0) 
                                     json.dump(data, f, indent=4)
                                     f.truncate()
                                 
