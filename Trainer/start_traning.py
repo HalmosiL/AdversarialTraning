@@ -2,6 +2,8 @@ from Train import train
 import subprocess
 import json
 import sys
+import glob
+import os
 
 sys.path.insert(0, "../AdversarialLoader/")
 from GetDatasetLoader import getDatasetLoader, getNormalDatasetLoader
@@ -15,6 +17,11 @@ if __name__ == '__main__':
 
     CONFIG_PATH = sys.argv[1]
     CONFIG = json.load(open(CONFIG_PATH, "r+"))
+    
+    print("Clear model cache...")
+    models_in_cache = glob.glob(CONFIG["MODEL_CACHE"] + "*.pt")
+    for m in models_in_cache:
+        os.remove(m)
 
     start_all(CONFIG_PATH, "../AdversarialExecutor/start_one.sh")
 
