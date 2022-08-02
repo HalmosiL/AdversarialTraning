@@ -47,7 +47,7 @@ class DatasetAdversarial:
             else:
                 count_no_data += 1
                 if(count_no_data == 1):
-                    print("waiting for data...")
+                    print("waiting for data...\n")
                 elif(count_no_data > 1):
                     print("waiting for data sice:" + str(0.05 * count_no_data)[:5] + "(s)...", end="\r")
                 
