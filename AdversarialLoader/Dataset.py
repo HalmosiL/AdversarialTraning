@@ -12,11 +12,7 @@ class DatasetAdversarial:
         self.data_queue_path = data_queue_path
         self.plus_batch_num = plus_batch_num
         self.dataLoaderManager = DataLoaderManager()
-        
-        if(type_ == "train"):
-            self.path_queue = "../AdversarialExecutor/train_queue.json"
-        else:
-            self.path_queue = "../AdversarialExecutor/val_queue.json"
+        self.type_ = type_
 
     def __getitem__(self, idx):
         if(idx + 1 == self.len_dataset and self.plus_batch_num != None):
@@ -32,7 +28,7 @@ class DatasetAdversarial:
         count_no_data = 0
         
         while(i < concatenate_number_actual):
-            data = self.dataLoaderManager.getID(self.path_queue, self.data_queue_path)
+            data = self.dataLoaderManager.getID(self.data_queue_path, self.type_)
             if(len(data)):
                 count_no_data = 0
                 print("Data")
