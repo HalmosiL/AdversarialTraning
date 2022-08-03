@@ -6,6 +6,8 @@ import sys
 import glob
 import os
 
+os.environ['MKL_THREADING_LAYER'] = 'GNU'
+
 sys.path.insert(0, "../AdversarialLoader/")
 from GetDatasetLoader import getDatasetLoader, getNormalDatasetLoader
 
