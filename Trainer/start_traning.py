@@ -1,3 +1,4 @@
+from brain_plasma import Brain
 from Train import train
 import subprocess
 import json
@@ -23,19 +24,9 @@ if __name__ == '__main__':
     for m in models_in_cache:
         os.remove(m)
     
-    if(os.path.exists("../AdversarialExecutor/train_queue.json")):
-        os.remove("../AdversarialExecutor/train_queue.json")
-    
-    train_queue_json = open("../AdversarialExecutor/train_queue.json", "w+")
-    json.dump({"IDS":[]}, train_queue_json) 
-    train_queue_json.close() 
-        
-    if(os.path.exists("../AdversarialExecutor/val_queue.json")):
-        os.remove("../AdversarialExecutor/val_queue.json")
-    
-    val_queue_json = open("../AdversarialExecutor/val_queue.json", "w+")
-    json.dump({"IDS":[]}, val_queue_json) 
-    val_queue_json.close() 
+    brain = Brain()
+    brain["train_queue"] = []
+    brain["val_queue"] = []
 
     start_all(CONFIG_PATH, "../AdversarialExecutor/start_one.sh")
 
