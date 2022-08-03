@@ -1,12 +1,9 @@
-from brain_plasma import Brain
 from Train import train
 import subprocess
 import json
 import sys
 import glob
 import os
-
-os.environ['MKL_THREADING_LAYER'] = 'GNU'
 
 sys.path.insert(0, "../AdversarialLoader/")
 from GetDatasetLoader import getDatasetLoader, getNormalDatasetLoader
@@ -25,10 +22,6 @@ if __name__ == '__main__':
     models_in_cache = glob.glob(CONFIG["MODEL_CACHE"] + "*.pt")
     for m in models_in_cache:
         os.remove(m)
-    
-    brain = Brain()
-    brain["train_queue"] = []
-    brain["val_queue"] = []
 
     start_all(CONFIG_PATH, "../AdversarialExecutor/start_one.sh")
 
