@@ -63,7 +63,7 @@ class DatasetAdversarial:
                 elif(count_no_data > 1):
                     print("waiting for data sice:" + str(0.05 * count_no_data)[:5] + "(s)...", end="\r")
                 
-                time.sleep(0.2)
+                time.sleep(2000)
 
         images = torch.cat(images, dim=0)
         labels = torch.cat(labels, dim=0)
