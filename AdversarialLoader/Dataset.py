@@ -33,12 +33,15 @@ class DatasetAdversarial:
             
             with open(self.path_queue, 'r+') as f:
                 data = json.load(f)
+                print(data)
+                
                 if(len(data['IDS']) != 0):
                     idx_ = data['IDS'][0]
                     data['IDS'].pop(0)
-                    f.seek(0)
-                    json.dump(data, f)
-                    f.truncate()
+                    
+                f.seek(0)
+                json.dump(data, f)
+                f.truncate()
             
             image_path = self.data_queue_path + "image_" + str(idx_) + ".pt"
             label_path = self.data_queue_path + "label_" + str(idx_) + ".pt"
