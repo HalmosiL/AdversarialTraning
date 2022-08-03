@@ -47,6 +47,7 @@ class DatasetAdversarial:
                     os.path.exists(label_path)
                 ):
                     count_no_data = 0
+                    print(data['IDS'])
                     data['IDS'].pop(0)
                     f.seek(0)
                     json.dump(data, f)
@@ -62,10 +63,8 @@ class DatasetAdversarial:
                     i += 1
                 else:
                     count_no_data += 1
-                    if(count_no_data == 1):
-                        print("waiting for data...")
-                    elif(count_no_data > 1 and count_no_data % 20 == 0):
-                        print("waiting for data sice:" + str(0.05 * count_no_data)[:5] + "(s)...", end="\r")
+                    if(count_no_data > 1 and count_no_data % 20 == 0):
+                        print("waiting for data sice:" + str(0.1 * count_no_data)[:5] + "(s)...", end="\r")
 
                     time.sleep(0.1)
 
