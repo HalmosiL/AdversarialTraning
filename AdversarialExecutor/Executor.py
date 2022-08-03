@@ -163,7 +163,7 @@ class Executor:
                                     data_queue=self.data_queue
                                 )
                                 
-                                with open('./train_queue.json', 'r+') as f:
+                                with open('../AdversarialExecutor/train_queue.json', 'r+') as f:
                                     data = json.load(f)
                                     data['IDS'].append((train_id - 1) * config_main["NUMBER_OF_EXECUTORS"] + config["ID"])
                                     data['IDS'].sort()
@@ -207,7 +207,7 @@ class Executor:
                                     data_queue=self.data_queue[:-1] + "_val/"
                                 )
                                 
-                                with open('./val_queue.json', 'r+') as f:
+                                with open('../AdversarialExecutor/val_queue.json', 'r+') as f:
                                     data = json.load(f)
                                     data['IDS'].append((val_id - 1) * config_main["NUMBER_OF_EXECUTORS"] + config["ID"])
                                     data['IDS'].sort()
