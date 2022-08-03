@@ -9,6 +9,7 @@ import json
 import sys
 import json
 
+from brain_plasma import Brain
 from Gen import run
 from Cityscapes import CitySegmentation
 from Adversarial import Cosine_PDG_Adam
@@ -50,6 +51,7 @@ class Executor:
         self.num_workers = 2
         self.number_of_steps = number_of_steps
         self.data_queue = data_queue
+        self.brain = Brain()
 
         self.data_set_start_index_train = data_set_start_index_train
         self.data_set_end_index_train = data_set_end_index_train
@@ -163,14 +165,7 @@ class Executor:
                                     data_queue=self.data_queue
                                 )
                                 
-                                with open('../AdversarialExecutor/train_queue.json', 'r+') as f:
-                                    data = json.load(f)
-                                    data['IDS'].append((train_id - 1) * config_main["NUMBER_OF_EXECUTORS"] + config["ID"])
-                                    data['IDS'].sort()
-                                    f.seek(0)
-                                    json.dump(data, f)
-                                    f.truncate()
-                                
+                                self.brain["train_queue"].append((train_id - 1) * config_main["NUMBER_OF_EXECUTORS"] + config["ID"])                                
                             except StopIteration:
                                 train_iter = iter(self.train_data_set_loader)
                         else:
@@ -207,14 +202,7 @@ class Executor:
                                     data_queue=self.data_queue[:-1] + "_val/"
                                 )
                                 
-                                with open('../AdversarialExecutor/val_queue.json', 'r+') as f:
-                                    data = json.load(f)
-                                    data['IDS'].append((val_id - 1) * config_main["NUMBER_OF_EXECUTORS"] + config["ID"])
-                                    data['IDS'].sort()
-                                    f.seek(0)
-                                    json.dump(data, f)
-                                    f.truncate()
-                                    
+                                self.brain["val_queue"].append((val_id - 1) * config_main["NUMBER_OF_EXECUTORS"] + config["ID"])             
                             except StopIteration:
                                 val_iter = iter(self.val_data_set_loader)
                         else:
