@@ -7,6 +7,7 @@ import copy
 import math
 import json
 import sys
+import json
 
 from Gen import run
 from Cityscapes import CitySegmentation
