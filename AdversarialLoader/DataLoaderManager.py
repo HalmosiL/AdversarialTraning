@@ -39,11 +39,11 @@ class DataLoaderManager(SingletonClass):
             ID_GETER_IS_FREE = True
             return [image_path, label_path]
             
-        f.seek(0)
-        json.dump(data, f)
-        f.truncate()
-        f.close()
+      f.seek(0)
+      json.dump(data, f)
+      f.truncate()
+      f.close()
 
-        ID_GETER_IS_FREE = True
-        return []
+      ID_GETER_IS_FREE = True
+      return []
   
