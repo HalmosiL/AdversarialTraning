@@ -43,7 +43,7 @@ class DatasetAdversarial:
 
                     i += 1
                 except:
-                    print("Colison")
+                    print("Collison...")
                     time.sleep(0.1)
             else:
                 count_no_data += 1
