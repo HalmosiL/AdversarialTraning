@@ -28,6 +28,8 @@ class DataLoaderManager(SingletonClass):
     else:
       QUEUE_USED = DataLoaderManager.VAL_QUEUE_USED
 
+    print(QUEUE_USED)
+      
     if(len(queue) != 0):
       for q in queue:
         q_int = int(q.split("_")[-1].split(".")[0])
