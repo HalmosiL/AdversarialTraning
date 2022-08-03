@@ -14,7 +14,6 @@ class DataLoaderManager(SingletonClass):
   
   def getID(self, data_queue_path, type_):
     if(not DataLoaderManager.ID_GETER_IS_FREE):
-      print("Back")
       return []
     
     DataLoaderManager.ID_GETER_IS_FREE = False
@@ -28,8 +27,6 @@ class DataLoaderManager(SingletonClass):
       QUEUE_USED = DataLoaderManager.TRAIN_QUEUE_USED
     else:
       QUEUE_USED = DataLoaderManager.VAL_QUEUE_USED
-
-    print(QUEUE_USED)
       
     if(len(queue) != 0):
       for q in queue:
@@ -38,8 +35,6 @@ class DataLoaderManager(SingletonClass):
           QUEUE_USED.append(q_int)
           image_path = data_queue_path + "image_" + str(q_int) + ".pt"
           label_path = data_queue_path + "label_" + str(q_int) + ".pt"
-          print(image_path)
-          print(label_path)
           break
 
     if(
