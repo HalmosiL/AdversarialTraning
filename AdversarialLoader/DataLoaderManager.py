@@ -14,7 +14,7 @@ class DataLoaderManager(SingletonClass):
     if(not ID_GETER_IS_FREE):
       return []
     
-    ID_GETER_IS_FREE = False
+    DataLoaderManager.ID_GETER_IS_FREE = False
     
     with open(path_queue, 'r+') as f:
       data = json.load(f)
@@ -36,7 +36,7 @@ class DataLoaderManager(SingletonClass):
             f.truncate()
             f.close()
             
-            ID_GETER_IS_FREE = True
+            DataLoaderManager.ID_GETER_IS_FREE = True
             return [image_path, label_path]
             
       f.seek(0)
@@ -44,6 +44,6 @@ class DataLoaderManager(SingletonClass):
       f.truncate()
       f.close()
 
-      ID_GETER_IS_FREE = True
+      DataLoaderManager.ID_GETER_IS_FREE = True
       return []
   
