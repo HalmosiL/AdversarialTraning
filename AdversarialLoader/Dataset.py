@@ -35,6 +35,7 @@ class DatasetAdversarial:
             data = self.dataLoaderManager.getID(self.path_queue)
             if(len(data)):
                 count_no_data = 0
+                print("Data")
                 image_path = data[0]
                 label_path = data[1]
 
