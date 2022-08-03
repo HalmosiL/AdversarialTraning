@@ -1,3 +1,5 @@
+from filelock import FileLock
+
 import json
 import os
 
@@ -16,33 +18,34 @@ class DataLoaderManager(SingletonClass):
     
     DataLoaderManager.ID_GETER_IS_FREE = False
     
-    with open(path_queue, 'r+') as f:
-      data = json.load(f)
-      
-      if(len(data['IDS']) != 0):
-          image_path = data_queue_path + "image_" + str(data['IDS'][0]) + ".pt"
-          label_path = data_queue_path + "label_" + str(data['IDS'][0]) + ".pt"
-          
-          if(
-              os.path.exists(image_path) and
-              os.path.exists(label_path)
-          ):
-            print(data['IDS'])
-            data['IDS'].pop(0)
-            
-            f.seek(0)
-            json.dump(data, f)
-            f.truncate()
-            f.close()
-            
-            DataLoaderManager.ID_GETER_IS_FREE = True
-            return [image_path, label_path]
-            
-      f.seek(0)
-      json.dump(data, f)
-      f.truncate()
-      f.close()
+    with FileLock(path_queue):
+      with open(path_queue, 'r+') as f:
+        data = json.load(f)
 
-      DataLoaderManager.ID_GETER_IS_FREE = True
-      return []
+        if(len(data['IDS']) != 0):
+            image_path = data_queue_path + "image_" + str(data['IDS'][0]) + ".pt"
+            label_path = data_queue_path + "label_" + str(data['IDS'][0]) + ".pt"
+
+            if(
+                os.path.exists(image_path) and
+                os.path.exists(label_path)
+            ):
+              print(data['IDS'])
+              data['IDS'].pop(0)
+
+              f.seek(0)
+              json.dump(data, f)
+              f.truncate()
+              f.close()
+
+              DataLoaderManager.ID_GETER_IS_FREE = True
+              return [image_path, label_path]
+
+        f.seek(0)
+        json.dump(data, f)
+        f.truncate()
+        f.close()
+
+        DataLoaderManager.ID_GETER_IS_FREE = True
+        return []
   
