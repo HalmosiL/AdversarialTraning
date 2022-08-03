@@ -44,7 +44,7 @@ class DatasetAdversarial:
             label_path = self.data_queue_path + "label_" + str(idx_) + ".pt"
 
             if(
-                idy_ is not None and
+                idx_ is not None and
                 os.path.exists(image_path) and
                 os.path.exists(label_path)
             ):
