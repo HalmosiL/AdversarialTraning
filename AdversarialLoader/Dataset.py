@@ -9,7 +9,7 @@ class DatasetAdversarial:
         self.data_queue_path = data_queue_path
         self.plus_batch_num = plus_batch_num
         
-        if(type_ == "train")
+        if(type_ == "train"):
             self.path_queue = "../AdversarialExecutor/train_queue.json"
         else:
             self.path_queue = "../AdversarialExecutor/val_queue.json"
