@@ -35,6 +35,7 @@ class DataLoaderManager(SingletonClass):
           QUEUE_USED.append(q_int)
           image_path = data_queue_path + "image_" + str(q_int) + ".pt"
           label_path = data_queue_path + "label_" + str(q_int) + ".pt"
+          break
 
     if(
         image_path is not None and
