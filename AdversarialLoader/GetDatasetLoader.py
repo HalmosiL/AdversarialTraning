@@ -80,7 +80,8 @@ def getDatasetLoader(CONFIG_DATALOADER_PATH, type_="train", num_workers=0, pin_m
             CONFIG_DATALOADER["DATA_QUEUE_PATH_LOADER"][:-1] + "_val/",
             len_,
             int(concatenate_number),
-            plus_batch_num
+            plus_batch_num,
+            type_
         )
 
     return torch.utils.data.DataLoader(dataset, batch_size=1, num_workers=num_workers, pin_memory=pin_memory)
