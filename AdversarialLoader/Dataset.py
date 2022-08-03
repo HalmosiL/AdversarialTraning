@@ -31,17 +31,20 @@ class DatasetAdversarial:
             data = self.dataLoaderManager.getID(self.data_queue_path, self.type_)
             if(len(data)):
                 count_no_data = 0
-                print("Data")
                 image_path = data[0]
                 label_path = data[1]
 
                 images.append(torch.load(image_path).clone())
                 labels.append(torch.load(label_path).clone())
 
-                os.remove(image_path)
-                os.remove(label_path)
+                try:
+                    os.remove(image_path)
+                    os.remove(label_path)
 
-                i += 1
+                    i += 1
+                except
+                    print("Colison")
+                    time.sleep(0.1)
             else:
                 count_no_data += 1
                 if(count_no_data > 1 and count_no_data % 20 == 0):
