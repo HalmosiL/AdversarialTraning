@@ -31,7 +31,7 @@ class DataLoaderManager(SingletonClass):
     if(len(queue) != 0):
       for q in queue:
         q_int = int(q.split("_")[-1].split(".")[0])
-        if(q_int is not in QUEUE_USED):
+        if(q_int not in QUEUE_USED):
           QUEUE_USED.append(q_int)
           image_path = data_queue_path + "image_" + str(q_int) + ".pt"
           label_path = data_queue_path + "label_" + str(q_int) + ".pt"
