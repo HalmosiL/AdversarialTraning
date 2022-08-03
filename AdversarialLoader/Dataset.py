@@ -42,7 +42,7 @@ class DatasetAdversarial:
                     os.remove(label_path)
 
                     i += 1
-                except
+                except:
                     print("Colison")
                     time.sleep(0.1)
             else:
