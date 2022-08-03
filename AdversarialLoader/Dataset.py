@@ -34,10 +34,10 @@ class DatasetAdversarial:
                 image_path = data[0]
                 label_path = data[1]
 
-                images.append(torch.load(image_path).clone())
-                labels.append(torch.load(label_path).clone())
-
                 try:
+                    images.append(torch.load(image_path).clone())
+                    labels.append(torch.load(label_path).clone())
+
                     os.remove(image_path)
                     os.remove(label_path)
 
@@ -55,6 +55,7 @@ class DatasetAdversarial:
         images = torch.cat(images, dim=0)
         labels = torch.cat(labels, dim=0)
 
+        print("Data")
         return images, labels
 
     def __len__(self):
