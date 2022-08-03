@@ -42,6 +42,7 @@ class DatasetAdversarial:
                 f.seek(0)
                 json.dump(data, f)
                 f.truncate()
+                f.close()
             
             image_path = self.data_queue_path + "image_" + str(idx_) + ".pt"
             label_path = self.data_queue_path + "label_" + str(idx_) + ".pt"
