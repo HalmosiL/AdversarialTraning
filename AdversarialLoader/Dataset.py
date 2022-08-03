@@ -32,7 +32,7 @@ class DatasetAdversarial:
         count_no_data = 0
         
         while(i < concatenate_number_actual):
-            data = self.dataLoaderManager.getID(self.path_queue)
+            data = self.dataLoaderManager.getID(self.path_queue, self.data_queue_path)
             if(len(data)):
                 count_no_data = 0
                 print("Data")
