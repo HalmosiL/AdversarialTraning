@@ -9,7 +9,9 @@ class SingletonClass(object):
 
 class DataLoaderManager(SingletonClass):
   ID_GETER_IS_FREE = True
-  BRAIN = Brain()
+
+  def __init__(self):
+    self.BRAIN = Brain()
   
   def getID(self, data_queue_path, type_):
     if(not DataLoaderManager.ID_GETER_IS_FREE):
@@ -18,9 +20,9 @@ class DataLoaderManager(SingletonClass):
     DataLoaderManager.ID_GETER_IS_FREE = False
 
     if(type_ == "train"):
-      data = DataLoaderManager.BRAIN["train_queue"]
+      data = self.BRAIN["train_queue"]
     else:
-      data = DataLoaderManager.BRAIN["val_queue"]
+      data = self.BRAIN["val_queue"]
     
     if(len(data) != 0):
         image_path = data_queue_path + "image_" + str(data[0]) + ".pt"
