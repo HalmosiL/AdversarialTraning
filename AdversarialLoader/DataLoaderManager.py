@@ -11,7 +11,7 @@ class DataLoaderManager(SingletonClass):
   ID_GETER_IS_FREE = True
   
   def getID(self, path_queue):
-    if(not ID_GETER_IS_FREE):
+    if(not DataLoaderManager.ID_GETER_IS_FREE):
       return []
     
     DataLoaderManager.ID_GETER_IS_FREE = False
