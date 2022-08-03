@@ -1,3 +1,5 @@
+from DataLoaderManager import DataLoaderManager
+
 import os
 import torch
 import time
@@ -9,6 +11,7 @@ class DatasetAdversarial:
         self.concatenate_number = concatenate_number
         self.data_queue_path = data_queue_path
         self.plus_batch_num = plus_batch_num
+        self.dataLoaderManager = DataLoaderManager()
         
         if(type_ == "train"):
             self.path_queue = "../AdversarialExecutor/train_queue.json"
@@ -29,44 +32,25 @@ class DatasetAdversarial:
         count_no_data = 0
         
         while(i < concatenate_number_actual):
-            idx_ = None
-            image_path = None
-            label_path = None
-            
-            with open(self.path_queue, 'r+') as f:
-                data = json.load(f)
+            data = self.dataLoaderManager.getID(self.path_queue)
+            if(len(data)):
+                count_no_data = 0
+                image_path = data[0]
+                label_path = data[1]
 
-                if(len(data['IDS']) != 0):
-                    idx_ = data['IDS'][0]
-                    image_path = self.data_queue_path + "image_" + str(idx_) + ".pt"
-                    label_path = self.data_queue_path + "label_" + str(idx_) + ".pt"
-                
-                if(
-                    idx_ is not None and
-                    os.path.exists(image_path) and
-                    os.path.exists(label_path)
-                ):
-                    count_no_data = 0
-                    print(data['IDS'])
-                    data['IDS'].pop(0)
-                    f.seek(0)
-                    json.dump(data, f)
-                    f.truncate()
-                    f.close()
-                    
-                    images.append(torch.load(image_path).clone())
-                    labels.append(torch.load(label_path).clone())
+                images.append(torch.load(image_path).clone())
+                labels.append(torch.load(label_path).clone())
 
-                    os.remove(image_path)
-                    os.remove(label_path)
+                os.remove(image_path)
+                os.remove(label_path)
 
-                    i += 1
-                else:
-                    count_no_data += 1
-                    if(count_no_data > 1 and count_no_data % 20 == 0):
-                        print("waiting for data sice:" + str(0.1 * count_no_data)[:5] + "(s)...", end="\r")
+                i += 1
+            else:
+                count_no_data += 1
+                if(count_no_data > 1 and count_no_data % 20 == 0):
+                    print("waiting for data sice:" + str(0.1 * count_no_data)[:5] + "(s)...", end="\r")
 
-                    time.sleep(0.1)
+                time.sleep(0.1)
 
         images = torch.cat(images, dim=0)
         labels = torch.cat(labels, dim=0)
