@@ -33,7 +33,6 @@ class DatasetAdversarial:
             
             with open(self.path_queue, 'r+') as f:
                 data = json.load(f)
-                print(data)
                 
                 if(len(data['IDS']) != 0):
                     idx_ = data['IDS'][0]
@@ -64,10 +63,10 @@ class DatasetAdversarial:
                 count_no_data += 1
                 if(count_no_data == 1):
                     print("waiting for data...")
-                elif(count_no_data > 1):
+                elif(count_no_data > 1 and count_no_data % 20 == 0):
                     print("waiting for data sice:" + str(0.05 * count_no_data)[:5] + "(s)...", end="\r")
                 
-                time.sleep(0.01)
+                time.sleep(0.1)
 
         images = torch.cat(images, dim=0)
         labels = torch.cat(labels, dim=0)
