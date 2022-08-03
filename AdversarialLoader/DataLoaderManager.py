@@ -10,7 +10,7 @@ class SingletonClass(object):
 class DataLoaderManager(SingletonClass):
   ID_GETER_IS_FREE = True
   
-  def getID(self, path_queue):
+  def getID(self, path_queue, data_queue_path):
     if(not DataLoaderManager.ID_GETER_IS_FREE):
       return []
     
@@ -20,9 +20,8 @@ class DataLoaderManager(SingletonClass):
       data = json.load(f)
       
       if(len(data['IDS']) != 0):
-          idx_ = data['IDS'][0]
-          image_path = self.data_queue_path + "image_" + str(idx_) + ".pt"
-          label_path = self.data_queue_path + "label_" + str(idx_) + ".pt"
+          image_path = data_queue_path + "image_" + str(data['IDS'][0]) + ".pt"
+          label_path = data_queue_path + "label_" + str(data['IDS'][0]) + ".pt"
           
           if(
               os.path.exists(image_path) and
