@@ -49,7 +49,6 @@ class DatasetAdversarial:
         images = torch.cat(images, dim=0)
         labels = torch.cat(labels, dim=0)
 
-        print("Data")
         return images, labels
 
     def __len__(self):
