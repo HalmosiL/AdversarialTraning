@@ -32,13 +32,16 @@ class DatasetAdversarial:
                 os.path.exists(image_path) and
                 os.path.exists(label_path)
             ):
-                images.append(torch.load(image_path).clone())
-                labels.append(torch.load(label_path).clone())
+                try:
+                    images.append(torch.load(image_path).clone())
+                    labels.append(torch.load(label_path).clone())
 
-                os.remove(image_path)
-                os.remove(label_path)
+                    os.remove(image_path)
+                    os.remove(label_path)
 
-                i += 1
+                    i += 1
+                except:
+                    print("Conflict...")
             else:
                 count_no_data += 1
                 if(count_no_data > 1 and count_no_data % 200 == 0):
