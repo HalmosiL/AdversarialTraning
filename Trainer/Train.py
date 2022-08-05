@@ -100,6 +100,8 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
         iou_val_epoch = 0
         acc_val_epoch = 0
 
+        val_status = 0
+        
         for data in val_loader_adversarial:
             with torch.no_grad():
                 image_val = data[0][0].to(DEVICE)
@@ -113,6 +115,8 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 iou_val_epoch += iou
                 loss_val_epoch += loss
                 acc_val_epoch += acc
+                
+            print("Val finished:" + str(val_status / val_loader_adversarial.__len__())[:5] + "%", end="\r")
 
         loss_val_epoch = loss_val_epoch / val_loader_adversarial.__len__()
         iou_val_epoch = iou_val_epoch / val_loader_adversarial.__len__()
