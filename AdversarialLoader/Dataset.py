@@ -41,10 +41,10 @@ class DatasetAdversarial:
                 i += 1
             else:
                 count_no_data += 1
-                if(count_no_data > 1 and count_no_data % 20 == 0):
-                    print("waiting for data sice:" + str(0.1 * count_no_data)[:5] + "(s)...", end="\r")
+                if(count_no_data > 1 and count_no_data % 200 == 0):
+                    print("waiting for data sice:" + str(0.01 * count_no_data)[:5] + "(s)...", end="\r")
 
-                time.sleep(0.1)
+                time.sleep(0.01)
 
         images = torch.cat(images, dim=0)
         labels = torch.cat(labels, dim=0)
