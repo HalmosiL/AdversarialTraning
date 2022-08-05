@@ -1,18 +1,14 @@
-from DataLoaderManager import DataLoaderManager
-
 import os
 import torch
 import time
 import json
 
 class DatasetAdversarial:    
-    def __init__(self, data_queue_path, len_dataset, concatenate_number, plus_batch_num, type_):
+    def __init__(self, data_queue_path, len_dataset, concatenate_number, plus_batch_num):
         self.len_dataset = len_dataset
         self.concatenate_number = concatenate_number
         self.data_queue_path = data_queue_path
         self.plus_batch_num = plus_batch_num
-        self.dataLoaderManager = DataLoaderManager()
-        self.type_ = type_
 
     def __getitem__(self, idx):
         if(idx + 1 == self.len_dataset and self.plus_batch_num != None):
@@ -28,13 +24,15 @@ class DatasetAdversarial:
         count_no_data = 0
         
         while(i < concatenate_number_actual):
-            data = self.dataLoaderManager.getID(self.data_queue_path, self.type_)
             if(len(data)):
                 count_no_data = 0
-                image_path = data[0]
-                label_path = data[1]
+                image_path = self.data_queue_path + "image_" + str(idx + 1) + ".pt"
+                label_path = self.data_queue_path + "label_" + str(idx + 1) + ".pt"
 
-                try:
+                if(
+                    os.path.exists(image_path) and
+                    os.path.exists(label_path)
+                ):
                     images.append(torch.load(image_path).clone())
                     labels.append(torch.load(label_path).clone())
 
@@ -42,9 +40,6 @@ class DatasetAdversarial:
                     os.remove(label_path)
 
                     i += 1
-                except:
-                    print("Collison...")
-                    time.sleep(0.1)
             else:
                 count_no_data += 1
                 if(count_no_data > 1 and count_no_data % 20 == 0):
