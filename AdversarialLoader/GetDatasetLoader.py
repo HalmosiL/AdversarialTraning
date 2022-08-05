@@ -65,8 +65,7 @@ def getDatasetLoader(CONFIG_DATALOADER_PATH, type_="train", num_workers=0, pin_m
             CONFIG_DATALOADER["DATA_QUEUE_PATH_LOADER"],
             len_,
             int(concatenate_number),
-            plus_batch_num,
-            type_
+            plus_batch_num
         )
     else:
         len_ = CONFIG_EXECUTOR["DATA_SET_END_INDEX_VAL"] / CONFIG_DATALOADER["BATCH_SIZE"]
@@ -80,8 +79,7 @@ def getDatasetLoader(CONFIG_DATALOADER_PATH, type_="train", num_workers=0, pin_m
             CONFIG_DATALOADER["DATA_QUEUE_PATH_LOADER"][:-1] + "_val/",
             len_,
             int(concatenate_number),
-            plus_batch_num,
-            type_
+            plus_batch_num
         )
 
     return torch.utils.data.DataLoader(dataset, batch_size=1, num_workers=num_workers, pin_memory=pin_memory)
