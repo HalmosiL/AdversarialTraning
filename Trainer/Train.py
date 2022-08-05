@@ -102,6 +102,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
 
         val_status = 0
         
+        print("Val finished:" + str(val_status / val_loader_adversarial.__len__())[:5] + "%", end="\r")
         for data in val_loader_adversarial:
             with torch.no_grad():
                 image_val = data[0][0].to(DEVICE)
