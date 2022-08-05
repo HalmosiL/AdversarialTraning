@@ -47,7 +47,7 @@ class Executor:
         self.model_name = None
         self.batch_size = batch_size
         self.device = device
-        self.num_workers = 2
+        self.num_workers = 1
         self.number_of_steps = number_of_steps
         self.data_queue = data_queue
 
