@@ -24,22 +24,21 @@ class DatasetAdversarial:
         count_no_data = 0
         
         while(i < concatenate_number_actual):
-            if(len(data)):
-                count_no_data = 0
-                image_path = self.data_queue_path + "image_" + str(idx + 1) + ".pt"
-                label_path = self.data_queue_path + "label_" + str(idx + 1) + ".pt"
+            count_no_data = 0
+            image_path = self.data_queue_path + "image_" + str(idx + 1) + ".pt"
+            label_path = self.data_queue_path + "label_" + str(idx + 1) + ".pt"
 
-                if(
-                    os.path.exists(image_path) and
-                    os.path.exists(label_path)
-                ):
-                    images.append(torch.load(image_path).clone())
-                    labels.append(torch.load(label_path).clone())
+            if(
+                os.path.exists(image_path) and
+                os.path.exists(label_path)
+            ):
+                images.append(torch.load(image_path).clone())
+                labels.append(torch.load(label_path).clone())
 
-                    os.remove(image_path)
-                    os.remove(label_path)
+                os.remove(image_path)
+                os.remove(label_path)
 
-                    i += 1
+                i += 1
             else:
                 count_no_data += 1
                 if(count_no_data > 1 and count_no_data % 20 == 0):
