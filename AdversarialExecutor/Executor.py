@@ -45,9 +45,11 @@ class Executor:
             
         if(train_batch_size < batch_size):
             if(batch_size % train_batch_size != 0):
-                print("train_batch_size", train_batch_size)
                 print("batch_size", batch_size)
-                raise ValueError("The executor batch size should be divisible by the train batch size....")
+                raise ValueError(
+                    "The executor batch size should be divisible by the train batch size...." +
+                    "\ntrain_batch_size" + str(train_batch_size) +
+                    "\nbatch_size" + str(batch_size))
             else:
                 self.split = int(batch_size / train_batch_size)
             
