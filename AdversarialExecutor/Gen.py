@@ -19,10 +19,10 @@ def run(id_, batch, device, model, attack, number_of_steps, data_queue, split):
         torch.save(image.cpu().detach(), data_queue + 'image_' + str(id_) + '_0_.pt')
         torch.save(label.cpu().detach(), data_queue + 'label_' + str(id_) + '_0_.pt')
     else:
-        image = torch.split(image.cpu().detach(), split)
-        label = torch.split(label.cpu().detach(), split)
+        image = torch.split(image, split)
+        label = torch.split(label, split)
         
         for i in range(split):
-            torch.save(image[i], data_queue + 'image_' + str(id_) + '_' + str(i) + '_.pt')
-            torch.save(label[i], data_queue + 'label_' + str(id_) + '_' + str(i) + '_.pt')
+            torch.save(image[i].cpu().detach(), data_queue + 'image_' + str(id_) + '_' + str(i) + '_.pt')
+            torch.save(label[i].cpu().detach(), data_queue + 'label_' + str(id_) + '_' + str(i) + '_.pt')
 
