@@ -4,11 +4,12 @@ import time
 import json
 
 class DatasetAdversarial:    
-    def __init__(self, data_queue_path, len_dataset, concatenate_number, plus_batch_num):
+    def __init__(self, data_queue_path, len_dataset, concatenate_number, plus_batch_num, slice_):
         self.len_dataset = len_dataset
         self.concatenate_number = concatenate_number
         self.data_queue_path = data_queue_path
         self.plus_batch_num = plus_batch_num
+        self.slice_ = slice_ 
 
     def __getitem__(self, idx):
         if(idx + 1 == self.len_dataset and self.plus_batch_num != None):
