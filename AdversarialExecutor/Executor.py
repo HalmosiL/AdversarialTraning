@@ -29,7 +29,9 @@ class Executor:
         data_set_end_index_train,
         data_set_start_index_val,
         data_set_end_index_val,
-        device
+        device,
+        num_workers,
+        train_batch_size
     ):
         try: 
             print("Create data cache...")
@@ -39,6 +41,14 @@ class Executor:
         except OSError as error: 
             print("Data cache alredy exist...")  
 
+        self.split = -1
+            
+        if(train_batch_size < batch_size):
+            if(batch_size % train_batch_size != 0):
+                raise ValueError("The executor batch size should be divisible by the train batch size....")
+            else:
+                self.split = int(batch_size / train_batch_size)
+            
         self.config_name = config_name
         self.model_cache = model_cache
         self.queue_size_train = queue_size_train
@@ -47,7 +57,8 @@ class Executor:
         self.model_name = None
         self.batch_size = batch_size
         self.device = device
-        self.num_workers = 1
+        self.num_workers = num_workers
+        self.train_batch_size = train_batch_size
         self.number_of_steps = number_of_steps
         self.data_queue = data_queue
 
@@ -160,7 +171,8 @@ class Executor:
                                     model=model,
                                     attack=self.attack,
                                     number_of_steps=self.number_of_steps,
-                                    data_queue=self.data_queue
+                                    data_queue=self.data_queue,
+                                    split=self.split
                                 )                               
                             except StopIteration:
                                 train_iter = iter(self.train_data_set_loader)
@@ -195,7 +207,8 @@ class Executor:
                                     model=model,
                                     attack=self.attack,
                                     number_of_steps=self.number_of_steps,
-                                    data_queue=self.data_queue[:-1] + "_val/"
+                                    data_queue=self.data_queue[:-1] + "_val/",
+                                    split=self.split
                                 )          
                             except StopIteration:
                                 val_iter = iter(self.val_data_set_loader)
