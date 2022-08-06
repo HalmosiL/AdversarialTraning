@@ -57,6 +57,8 @@ def start(CONFIG, CONFIG_NAME):
         data_queue=CONFIG['DATA_QUEUE'],
         data_path=CONFIG['DATA_PATH'],
         batch_size=CONFIG['BATCH_SIZE'],
+        train_batch_size=['TRAIN_BATCH_SIZE'],
+        number_of_workers=['NUMBER_OF_WORKERS'],
         device=DEVICE,
         number_of_steps=CONFIG['NUMBER_OF_STEPS'],
         data_set_start_index_train=CONFIG['DATA_SET_START_INDEX_TRAIN'],
