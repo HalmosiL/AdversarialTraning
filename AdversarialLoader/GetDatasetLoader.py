@@ -37,7 +37,7 @@ def getNormalDatasetLoader(CONFIG_DATALOADER_PATH, type_="val", num_workers=0, p
 
     return torch.utils.data.DataLoader(
         dataset,
-        batch_size=CONFIG_DATALOADER["BATCH_SIZE_LOADER"],
+        batch_size=CONFIG_DATALOADER["TRAIN_BATCH_SIZE"],
         num_workers=num_workers,
         pin_memory=pin_memory
     )
@@ -45,7 +45,7 @@ def getNormalDatasetLoader(CONFIG_DATALOADER_PATH, type_="val", num_workers=0, p
 
 def getDatasetLoader(CONFIG_DATALOADER_PATH, type_="train", num_workers=0, pin_memory=False):
     CONFIG_DATALOADER, CONFIG_EXECUTOR = load_config(CONFIG_DATALOADER_PATH)
-    concatenate_number = CONFIG_DATALOADER["BATCH_SIZE_LOADER"] / CONFIG_EXECUTOR["BATCH_SIZE"]
+    concatenate_number = CONFIG_DATALOADER["TRAIN_BATCH_SIZE"] / CONFIG_EXECUTOR["BATCH_SIZE"]
 
     if(concatenate_number != int(concatenate_number)):
         raise ValueError('The loader BATCH_SIZE should be divisible by EXECUTOR_BATCH_SIZE...')
@@ -59,7 +59,7 @@ def getDatasetLoader(CONFIG_DATALOADER_PATH, type_="train", num_workers=0, pin_m
         if(len_ != int(len_)):
             len_down = int(len_)
             len_ = math.ceil(len_)
-            plus_batch_num = math.ceil((CONFIG_EXECUTOR["DATA_SET_END_INDEX_TRAIN"] - len_down * CONFIG_DATALOADER["BATCH_SIZE"]) / CONFIG_EXECUTOR["BATCH_SIZE"])
+            plus_batch_num = math.ceil((CONFIG_EXECUTOR["DATA_SET_END_INDEX_TRAIN"] - len_down * CONFIG_DATALOADER["TRAIN_BATCH_SIZE"]) / CONFIG_EXECUTOR["BATCH_SIZE"])
 
         dataset = DatasetAdversarial(
             CONFIG_DATALOADER["DATA_QUEUE_PATH_LOADER"],
@@ -73,7 +73,7 @@ def getDatasetLoader(CONFIG_DATALOADER_PATH, type_="train", num_workers=0, pin_m
         if(len_ != int(len_)):
             len_down = int(len_) 
             len_ = math.ceil(len_)
-            plus_batch_num = math.ceil((CONFIG_EXECUTOR["DATA_SET_END_INDEX_VAL"] - len_down * CONFIG_DATALOADER["BATCH_SIZE"]) / CONFIG_EXECUTOR["BATCH_SIZE"])
+            plus_batch_num = math.ceil((CONFIG_EXECUTOR["DATA_SET_END_INDEX_VAL"] - len_down * CONFIG_DATALOADER["TRAIN_BATCH_SIZE"]) / CONFIG_EXECUTOR["BATCH_SIZE"])
         
         dataset = DatasetAdversarial(
             CONFIG_DATALOADER["DATA_QUEUE_PATH_LOADER"][:-1] + "_val/",
