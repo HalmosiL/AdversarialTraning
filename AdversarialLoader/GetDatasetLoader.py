@@ -45,10 +45,14 @@ def getNormalDatasetLoader(CONFIG_DATALOADER_PATH, type_="val", num_workers=0, p
 
 def getDatasetLoader(CONFIG_DATALOADER_PATH, type_="train", num_workers=0, pin_memory=False):
     CONFIG_DATALOADER, CONFIG_EXECUTOR = load_config(CONFIG_DATALOADER_PATH)
-    concatenate_number = CONFIG_DATALOADER["TRAIN_BATCH_SIZE"] / CONFIG_EXECUTOR["BATCH_SIZE"]
+    
+    if(CONFIG_DATALOADER["TRAIN_BATCH_SIZE"] > CONFIG_EXECUTOR["BATCH_SIZE"]):
+        concatenate_number = CONFIG_DATALOADER["TRAIN_BATCH_SIZE"] / CONFIG_EXECUTOR["BATCH_SIZE"]
 
-    if(concatenate_number != int(concatenate_number)):
-        raise ValueError('The loader BATCH_SIZE should be divisible by EXECUTOR_BATCH_SIZE...')
+        if(concatenate_number != int(concatenate_number)):
+            raise ValueError('The loader BATCH_SIZE should be divisible by EXECUTOR_BATCH_SIZE...')
+    else:
+        concatenate_number = 0
 
     dataset = None    
     plus_batch_num = None
