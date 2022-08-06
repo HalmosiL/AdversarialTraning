@@ -48,12 +48,17 @@ def getDatasetLoader(CONFIG_DATALOADER_PATH, type_="train", num_workers=0, pin_m
     
     if(CONFIG_DATALOADER["TRAIN_BATCH_SIZE"] > CONFIG_EXECUTOR["BATCH_SIZE"]):
         concatenate_number = CONFIG_DATALOADER["TRAIN_BATCH_SIZE"] / CONFIG_EXECUTOR["BATCH_SIZE"]
+        slice_ = -1
 
         if(concatenate_number != int(concatenate_number)):
             raise ValueError('The loader BATCH_SIZE should be divisible by EXECUTOR_BATCH_SIZE...')
     else:
         concatenate_number = 0
-
+        slice_ = int(CONFIG_EXECUTOR["BATCH_SIZE"] / CONFIG_DATALOADER["TRAIN_BATCH_SIZE"])
+        
+        if(CONFIG_EXECUTOR["BATCH_SIZE"] % CONFIG_DATALOADER["TRAIN_BATCH_SIZE"] != 0):
+            raise ValueError('The executor batch size should be divisible by the train batch size....')
+        
     dataset = None    
     plus_batch_num = None
 
@@ -69,7 +74,8 @@ def getDatasetLoader(CONFIG_DATALOADER_PATH, type_="train", num_workers=0, pin_m
             CONFIG_DATALOADER["DATA_QUEUE_PATH_LOADER"],
             len_,
             int(concatenate_number),
-            plus_batch_num
+            plus_batch_num,
+            slice_
         )
     else:
         len_ = CONFIG_EXECUTOR["DATA_SET_END_INDEX_VAL"] / CONFIG_DATALOADER["BATCH_SIZE"]
@@ -83,7 +89,8 @@ def getDatasetLoader(CONFIG_DATALOADER_PATH, type_="train", num_workers=0, pin_m
             CONFIG_DATALOADER["DATA_QUEUE_PATH_LOADER"][:-1] + "_val/",
             len_,
             int(concatenate_number),
-            plus_batch_num
+            plus_batch_num,
+            slice_ 
         )
 
     return torch.utils.data.DataLoader(dataset, batch_size=1, num_workers=num_workers, pin_memory=pin_memory)
