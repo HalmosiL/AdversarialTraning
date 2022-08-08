@@ -17,7 +17,7 @@ class DatasetAdversarial:
         else:
             concatenate_number_actual = self.concatenate_number
 
-        if(self.slice_ > 1):
+        if(self.slice_ => 1):
             concatenate_number_actual = 1
             
         i = 0
