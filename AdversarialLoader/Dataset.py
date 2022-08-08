@@ -27,8 +27,8 @@ class DatasetAdversarial:
 
         count_no_data = 0
         
-        path_a = int(idx / self.slice)
-        path_b = idx + self.slice
+        path_a = int(idx / self.slice_)
+        path_b = idx + self.slice_
         
         while(i < concatenate_number_actual):
             count_no_data = 0
