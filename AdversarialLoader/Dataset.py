@@ -17,6 +17,9 @@ class DatasetAdversarial:
         else:
             concatenate_number_actual = self.concatenate_number
 
+        if(slice_ > 1):
+            concatenate_number_actual = 1
+            
         i = 0
         
         images = []
@@ -24,10 +27,13 @@ class DatasetAdversarial:
 
         count_no_data = 0
         
+        path_a = int(idx / self.slice)
+        path_b = idx + self.slice
+        
         while(i < concatenate_number_actual):
             count_no_data = 0
-            image_path = self.data_queue_path + "image_" + str(idx + 1) + ".pt"
-            label_path = self.data_queue_path + "label_" + str(idx + 1) + ".pt"
+            image_path = self.data_queue_path + "image_" + str(path_a) + "_" + str(path_b) + "_.pt"
+            label_path = self.data_queue_path + "label_" + str(path_a) + "_" + str(path_b) + "_.pt"
 
             if(
                 os.path.exists(image_path) and
