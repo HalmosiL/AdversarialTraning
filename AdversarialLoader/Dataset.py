@@ -9,7 +9,8 @@ class DatasetAdversarial:
         self.concatenate_number = concatenate_number
         self.data_queue_path = data_queue_path
         self.plus_batch_num = plus_batch_num
-        self.slice_ = slice_ 
+        self.slice_ = slice_
+        self.remove_queue = []
 
     def __getitem__(self, idx):
         if(idx + 1 == self.len_dataset and self.plus_batch_num != None):
@@ -43,8 +44,13 @@ class DatasetAdversarial:
                     images.append(torch.load(image_path).clone())
                     labels.append(torch.load(label_path).clone())
 
-                    os.remove(image_path)
-                    os.remove(label_path)
+                    self.remove_queue.append([image_path, label_path])
+                    
+                    if(len(self.remove_queue) > 5):
+                        os.remove(self.remove_queue[0][0])
+                        os.remove(self.remove_queue[0][1])
+                        
+                        self.remove_queue.pop(0)
 
                     i += 1
                 except Exception as e:
