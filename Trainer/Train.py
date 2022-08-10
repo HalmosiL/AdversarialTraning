@@ -53,39 +53,45 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
             for filename in glob.glob(CONFIG['DATA_QUEUE'] + "*.pt"):
                 os.unlink(filename)
         
+        cut_ = 0
+        
         for data in train_loader_adversarial:
-            image = data[0][0].to(DEVICE)
-            label = data[1][0].to(DEVICE)
-            remove_files = np.array(data[2]).flatten()
+            if(data is not None):
+                image = data[0][0].to(DEVICE)
+                label = data[1][0].to(DEVICE)
+                remove_files = np.array(data[2]).flatten()
 
-            optimizer.zero_grad()
-            prediction = model(image)
+                optimizer.zero_grad()
+                prediction = model(image)
 
-            loss = lossFun(prediction, label)
-            iou = iou_score_m(prediction, label)
-            acc = acuracy(prediction, label) / CONFIG["BATCH_SIZE"]
+                loss = lossFun(prediction, label)
+                iou = iou_score_m(prediction, label)
+                acc = acuracy(prediction, label) / CONFIG["BATCH_SIZE"]
 
-            logger.log_loss_batch_train_adversarial(train_loader_adversarial.__len__(), e, batch_id, loss.item())
-            logger.log_iou_batch_train_adversarial(train_loader_adversarial.__len__(), e, batch_id, iou)
-            logger.log_acc_batch_train_adversarial(train_loader_adversarial.__len__(), e, batch_id, acc)
+                logger.log_loss_batch_train_adversarial(train_loader_adversarial.__len__(), e, batch_id, loss.item())
+                logger.log_iou_batch_train_adversarial(train_loader_adversarial.__len__(), e, batch_id, iou)
+                logger.log_acc_batch_train_adversarial(train_loader_adversarial.__len__(), e, batch_id, acc)
 
-            iou_train_epoch += iou
-            loss_train_epoch += loss.item()
-            acc_train_epoch += acc
+                iou_train_epoch += iou
+                loss_train_epoch += loss.item()
+                acc_train_epoch += acc
 
-            loss.backward()
-            optimizer.step()
-            batch_id += 1
+                loss.backward()
+                optimizer.step()
+                batch_id += 1
 
-            if(e % CONFIG["MODEL_CACHE_PERIOD"] == 0):
-                cache_id = cacheModel(cache_id, model, CONFIG)
-                
-            for m in remove_files:
-                os.remove(m)
+                if(e % CONFIG["MODEL_CACHE_PERIOD"] == 0):
+                    cache_id = cacheModel(cache_id, model, CONFIG)
 
-        loss_train_epoch = loss_train_epoch / train_loader_adversarial.__len__()
-        iou_train_epoch = iou_train_epoch / train_loader_adversarial.__len__()
-        acc_train_epoch = acc_train_epoch / train_loader_adversarial.__len__()
+                for m in remove_files:
+                    os.remove(m)
+            else:
+                print("Jump..")
+                cut_ += 1
+
+        loss_train_epoch = loss_train_epoch / (train_loader_adversarial.__len__() - cut_)
+        iou_train_epoch = iou_train_epoch / (train_loader_adversarial.__len__() - cut_)
+        acc_train_epoch = acc_train_epoch / (train_loader_adversarial.__len__() - cut_)
 
         logger.log_loss_epoch_train_adversarial(e, loss_train_epoch)
         logger.log_iou_epoch_train_adversarial(e, iou_train_epoch)
