@@ -120,6 +120,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
             with torch.no_grad():
                 image_val = data[0][0].to(DEVICE)
                 label_val = data[1][0].to(DEVICE)
+                remove_files = np.array(data[2]).flatten()
 
                 prediction = model(image_val)
                 loss = lossFun(prediction, label_val)
@@ -131,6 +132,9 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 acc_val_epoch += acc
                 
             print("Val finished:" + str(val_status / val_loader_adversarial.__len__())[:5] + "%", end="\r")
+            
+            for m in remove_files:
+                os.remove(m)
 
         loss_val_epoch = loss_val_epoch / val_loader_adversarial.__len__()
         iou_val_epoch = iou_val_epoch / val_loader_adversarial.__len__()
