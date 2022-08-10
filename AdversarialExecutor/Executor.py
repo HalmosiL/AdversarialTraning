@@ -157,6 +157,7 @@ class Executor:
 
                 if(config_main["MODE"] == "train"):
                     if(self.mode != "train"):
+                        print(self.mode)
                         self.mode == "train"
                         self.train_element_id = 0
                         train_iter = iter(self.train_data_set_loader)
