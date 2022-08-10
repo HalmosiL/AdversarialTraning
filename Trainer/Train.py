@@ -80,6 +80,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 cache_id = cacheModel(cache_id, model, CONFIG)
                 
             for m in remove_files:
+                print(m)
                 os.remove(m[0])
                 os.remove(m[1])
 
