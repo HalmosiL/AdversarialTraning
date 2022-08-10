@@ -156,9 +156,8 @@ class Executor:
                     )
 
                 if(config_main["MODE"] == "train"):
-                    if(self.mode != "train" or self.mode is None):
-                        print(self.mode)
-                        self.mode == "train"
+                    if(self.mode != "train"):
+                        self.mode = "train"
                         self.train_element_id = 0
                         train_iter = iter(self.train_data_set_loader)
             
@@ -198,8 +197,8 @@ class Executor:
                         time.sleep(1)
 
                 if(config_main["MODE"] == "val"):
-                    if(self.mode != "val" or self.mode is None):
-                        self.mode == "val"
+                    if(self.mode != "val"):
+                        self.mode = "val"
                         self.train_element_id = 0
                         val_iter = iter(self.val_data_set_loader)
                     
