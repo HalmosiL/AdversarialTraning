@@ -4,7 +4,7 @@ import torch
 import torchvision.transforms as T
 import os
 import json
-import numpy
+import numpy as np
 
 sys.path.insert(0, "./")
 
