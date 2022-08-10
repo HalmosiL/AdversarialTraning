@@ -80,9 +80,8 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 cache_id = cacheModel(cache_id, model, CONFIG)
                 
             for m in remove_files:
-                print(m)
-                os.remove(m[0])
-                os.remove(m[1])
+                os.remove(m[0][0])
+                os.remove(m[0][1])
 
         loss_train_epoch = loss_train_epoch / train_loader_adversarial.__len__()
         iou_train_epoch = iou_train_epoch / train_loader_adversarial.__len__()
