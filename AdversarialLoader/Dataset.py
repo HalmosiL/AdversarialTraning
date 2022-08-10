@@ -58,6 +58,9 @@ class DatasetAdversarial:
 
         images = torch.cat(images, dim=0)
         labels = torch.cat(labels, dim=0)
+        
+        print(images.shape)
+        print(labels.shape)
 
         return images, labels
 
