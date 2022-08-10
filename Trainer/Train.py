@@ -4,6 +4,7 @@ import torch
 import torchvision.transforms as T
 import os
 import json
+import numpy
 
 sys.path.insert(0, "./")
 
@@ -55,9 +56,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
         for data in train_loader_adversarial:
             image = data[0][0].to(DEVICE)
             label = data[1][0].to(DEVICE)
-            remove_files = data[2][0]
-            
-            print(remove_files)
+            remove_files = np.array(data[2]).flatten()
 
             optimizer.zero_grad()
             prediction = model(image)
@@ -82,8 +81,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 cache_id = cacheModel(cache_id, model, CONFIG)
                 
             for m in remove_files:
-                os.remove(m[0][0])
-                os.remove(m[0][1])
+                os.remove(m)
 
         loss_train_epoch = loss_train_epoch / train_loader_adversarial.__len__()
         iou_train_epoch = iou_train_epoch / train_loader_adversarial.__len__()
