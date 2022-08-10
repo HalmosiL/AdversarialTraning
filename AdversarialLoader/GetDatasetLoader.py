@@ -46,6 +46,11 @@ def getNormalDatasetLoader(CONFIG_DATALOADER_PATH, type_="val", num_workers=0, p
 def getDatasetLoader(CONFIG_DATALOADER_PATH, type_="train", num_workers=0, pin_memory=False):
     CONFIG_DATALOADER, CONFIG_EXECUTOR = load_config(CONFIG_DATALOADER_PATH)
     
+    if(type_ == "train"):
+        DATA_SET_END = CONFIG_EXECUTOR["DATA_SET_END_INDEX_TRAIN"]
+    else:
+        DATA_SET_END = CONFIG_EXECUTOR["DATA_SET_END_INDEX_VAL"]
+    
     if(CONFIG_DATALOADER["TRAIN_BATCH_SIZE"] > CONFIG_EXECUTOR["BATCH_SIZE"]):
         concatenate_number = CONFIG_DATALOADER["TRAIN_BATCH_SIZE"] / CONFIG_EXECUTOR["BATCH_SIZE"]
         slice_ = -1
@@ -53,14 +58,14 @@ def getDatasetLoader(CONFIG_DATALOADER_PATH, type_="train", num_workers=0, pin_m
         if(concatenate_number != int(concatenate_number)):
             raise ValueError('The loader BATCH_SIZE should be divisible by EXECUTOR_BATCH_SIZE...')
             
-        len_ = CONFIG_EXECUTOR["DATA_SET_END_INDEX_TRAIN"] / CONFIG_DATALOADER["BATCH_SIZE"]
+        len_ = DATA_SET_END / CONFIG_DATALOADER["BATCH_SIZE"]
         plus_batch_num = None
         
         if(len_ != int(len_)):
             len_down = int(len_)
             len_ = math.ceil(len_)
             plus_batch_num = math.ceil(
-                (CONFIG_EXECUTOR["DATA_SET_END_INDEX_TRAIN"] - len_down * CONFIG_DATALOADER["TRAIN_BATCH_SIZE"]) / CONFIG_EXECUTOR["BATCH_SIZE"]
+                (DATA_SET_END - len_down * CONFIG_DATALOADER["TRAIN_BATCH_SIZE"]) / CONFIG_EXECUTOR["BATCH_SIZE"]
             )
     else:
         concatenate_number = 0
@@ -69,7 +74,7 @@ def getDatasetLoader(CONFIG_DATALOADER_PATH, type_="train", num_workers=0, pin_m
         if(CONFIG_EXECUTOR["BATCH_SIZE"] % CONFIG_DATALOADER["TRAIN_BATCH_SIZE"] != 0):
             raise ValueError('The executor batch size should be divisible by the train batch size....')
             
-        len_ = CONFIG_EXECUTOR["DATA_SET_END_INDEX_TRAIN"] / CONFIG_DATALOADER["TRAIN_BATCH_SIZE"]
+        len_ = DATA_SET_END / CONFIG_DATALOADER["TRAIN_BATCH_SIZE"]
         plus_batch_num = None
         
         if(len_ != int(len_)):
