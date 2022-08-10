@@ -47,7 +47,8 @@ class DatasetAdversarial:
                     os.remove(label_path)
 
                     i += 1
-                except:
+                except Exception as e:
+                    print(e)
                     print("Conflict...")
             else:
                 count_no_data += 1
