@@ -123,6 +123,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
             for filename in glob.glob(CONFIG['DATA_QUEUE'] + "_val/*.pt"):
                 os.unlink(filename)
         
+        print("Val Adversarial loader length:", len(val_loader_adversarial))
         print("Val finished:" + str(val_status / val_loader_adversarial.__len__())[:5] + "%", end="\r")
         cut_ = 0
         for data in val_loader_adversarial:
