@@ -56,6 +56,8 @@ class DatasetAdversarial:
 
                     i += 1
                 except Exception as e:
+                    images = []
+                    labels = []
                     print(e)
                     print("Conflict...")
             else:
