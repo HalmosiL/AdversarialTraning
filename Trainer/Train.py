@@ -124,29 +124,34 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 os.unlink(filename)
         
         print("Val finished:" + str(val_status / val_loader_adversarial.__len__())[:5] + "%", end="\r")
+        cut_ = 0
         for data in val_loader_adversarial:
             with torch.no_grad():
-                image_val = data[0][0].to(DEVICE)
-                label_val = data[1][0].to(DEVICE)
-                remove_files = np.array(data[2]).flatten()
+                if(len(data) == 3):
+                    image_val = data[0][0].to(DEVICE)
+                    label_val = data[1][0].to(DEVICE)
+                    remove_files = np.array(data[2]).flatten()
 
-                prediction = model(image_val)
-                loss = lossFun(prediction, label_val)
-                iou = iou_score_m(prediction, label_val)
-                acc = acuracy(prediction, label_val) / CONFIG["BATCH_SIZE"]
+                    prediction = model(image_val)
+                    loss = lossFun(prediction, label_val)
+                    iou = iou_score_m(prediction, label_val)
+                    acc = acuracy(prediction, label_val) / CONFIG["BATCH_SIZE"]
 
-                iou_val_epoch += iou
-                loss_val_epoch += loss
-                acc_val_epoch += acc
+                    iou_val_epoch += iou
+                    loss_val_epoch += loss
+                    acc_val_epoch += acc
+                else:
+                    print("jump...")
+                    cut_ = cut_ + 1
                 
-            print("Val finished:" + str(val_status / val_loader_adversarial.__len__())[:5] + "%", end="\r")
+            print("Val finished:" + str(val_status / (val_loader_adversarial.__len__() - cut_))[:5] + "%", end="\r")
             
             for m in remove_files:
                 os.remove(m)
 
-        loss_val_epoch = loss_val_epoch / val_loader_adversarial.__len__()
-        iou_val_epoch = iou_val_epoch / val_loader_adversarial.__len__()
-        acc_val_epoch = acc_val_epoch / val_loader_adversarial.__len__()
+        loss_val_epoch = loss_val_epoch / (val_loader_adversarial.__len__() - cut_)
+        iou_val_epoch = iou_val_epoch / (val_loader_adversarial.__len__() - cut_)
+        acc_val_epoch = acc_val_epoch / (val_loader_adversarial.__len__() - cut_)
 
         logger.log_loss_epoch_val(e, loss_val_epoch)
         logger.log_iou_epoch_val(e, iou_val_epoch)
