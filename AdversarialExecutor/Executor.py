@@ -129,9 +129,6 @@ class Executor:
         train_iter = iter(self.train_data_set_loader)
         val_iter = iter(self.val_data_set_loader)
 
-        train_id = 0
-        val_id = 0
-
         while(True):
             config = json.load(open(sys.argv[1]))
             config_main = json.load(open("../Configs/config_main.json"))
@@ -172,13 +169,12 @@ class Executor:
                                 print("Start generating traning data from:", self.data_set_start_index_train, " to:", self.data_set_end_index_train, "...")
 
                             try:
-                                train_id += 1
                                 self.train_element_id += 1
 
                                 batch = next(train_iter)
 
                                 run(
-                                    id_=(train_id - 1) * config_main["NUMBER_OF_EXECUTORS"] + config["ID"],
+                                    id_=(self.train_element_id - 1) * config_main["NUMBER_OF_EXECUTORS"] + config["ID"],
                                     batch=batch,
                                     device=self.device,
                                     model=model,
@@ -214,13 +210,12 @@ class Executor:
 
                         if(number_elments_of_data_queue < self.queue_size_val * 2):
                             try:
-                                val_id += 1
                                 self.val_element_id += 1
 
                                 batch = next(val_iter)
 
                                 run(
-                                    id_=(val_id - 1) * config_main["NUMBER_OF_EXECUTORS"] + config["ID"],
+                                    id_=(self.val_element_id - 1) * config_main["NUMBER_OF_EXECUTORS"] + config["ID"],
                                     batch=batch,
                                     device=self.device,
                                     model=model,
