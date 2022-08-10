@@ -56,6 +56,8 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
             image = data[0][0].to(DEVICE)
             label = data[1][0].to(DEVICE)
             remove_files = data[2]
+            
+            print(remove_files)
 
             optimizer.zero_grad()
             prediction = model(image)
