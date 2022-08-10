@@ -47,7 +47,7 @@ class DatasetAdversarial:
 
                     i += 1
                 except Exception as e:
-                    return None
+                    return []
             else:
                 count_no_data += 1
                 if(count_no_data > 1 and count_no_data % 200 == 0):
