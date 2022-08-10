@@ -73,6 +73,8 @@ class Executor:
         self.data_set_start_index_val = data_set_start_index_val
         self.data_set_end_index_val = data_set_end_index_val
         
+        self.mode = None
+        
         input_transform = T.Compose([
             T.ToTensor(),
         ])
@@ -157,6 +159,11 @@ class Executor:
                     )
 
                 if(config_main["MODE"] == "train"):
+                    if(self.mode != "train"):
+                        self.mode == "train"
+                        self.train_element_id = 0
+                        train_iter = iter(self.train_data_set_loader)
+            
                     if(self.train_element_id < self.train_data_set_len):
                         number_elments_of_data_queue = len(glob.glob(self.data_queue + "/*"))
 
@@ -194,6 +201,11 @@ class Executor:
                         time.sleep(1)
 
                 if(config_main["MODE"] == "val"):
+                    if(self.mode != "val"):
+                        self.mode == "val"
+                        self.train_element_id = 0
+                        val_iter = iter(self.val_data_set_loader)
+                    
                     if(self.val_element_id < self.val_data_set_len):
                         if(self.val_element_id == 0):
                             print("Start generating val data from:", self.data_set_start_index_val, " to:", self.data_set_end_index_val, "...")
