@@ -34,6 +34,9 @@ class DatasetAdversarial:
             count_no_data = 0
             image_path = self.data_queue_path + "image_" + str(path_a) + "_" + str(path_b) + "_.pt"
             label_path = self.data_queue_path + "label_" + str(path_a) + "_" + str(path_b) + "_.pt"
+            
+            print(image_path)
+            print(label_path)
 
             if(
                 os.path.exists(image_path) and
