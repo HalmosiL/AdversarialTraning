@@ -72,4 +72,7 @@ class DatasetAdversarial:
         return images, labels
 
     def __len__(self):
+        if(self.slice_ != 1 and self.slice_ != -1)
+            return self.len_dataset * self.slice_
+        
         return self.len_dataset
