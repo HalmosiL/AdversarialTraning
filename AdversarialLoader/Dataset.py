@@ -47,10 +47,11 @@ class DatasetAdversarial:
                     self.remove_queue.append([image_path, label_path])
                     
                     if(len(self.remove_queue) > 5):
+                        print("Remove...")
+                        
                         os.remove(self.remove_queue[0][0])
                         os.remove(self.remove_queue[0][1])
                         
-                        print("Remove...")
                         self.remove_queue.pop(0)
 
                     i += 1
