@@ -48,6 +48,10 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
 
         batch_id = 1
 
+        if(os.path.exists(CONFIG['DATA_QUEUE'])):
+            for filename in glob.glob(CONFIG['DATA_QUEUE'] + "*.pt"):
+                os.unlink(filename)
+        
         for data in train_loader_adversarial:
             image = data[0][0].to(DEVICE)
             label = data[1][0].to(DEVICE)
@@ -101,6 +105,10 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
         acc_val_epoch = 0
 
         val_status = 0
+        
+        if(os.path.exists(CONFIG['DATA_QUEUE'] + "_val/")):
+            for filename in glob.glob(CONFIG['DATA_QUEUE'] + "_val/*.pt"):
+                os.unlink(filename)
         
         print("Val finished:" + str(val_status / val_loader_adversarial.__len__())[:5] + "%", end="\r")
         for data in val_loader_adversarial:
