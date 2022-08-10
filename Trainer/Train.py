@@ -56,7 +56,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
         cut_ = 0
         
         for data in train_loader_adversarial:
-            if(len(data) != 3):
+            if(len(data) == 3):
                 image = data[0][0].to(DEVICE)
                 label = data[1][0].to(DEVICE)
                 remove_files = np.array(data[2]).flatten()
