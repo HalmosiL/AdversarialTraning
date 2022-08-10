@@ -55,6 +55,8 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
         
         cut_ = 0
         
+        print("Train Adversarial loader length:", len(train_loader_adversarial))
+        
         for data in train_loader_adversarial:
             if(len(data) == 3):
                 image = data[0][0].to(DEVICE)
