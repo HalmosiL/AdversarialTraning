@@ -56,6 +56,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
         cut_ = 0
         
         print("Train Adversarial loader length:", len(train_loader_adversarial))
+        print("Val Adversarial loader length:", len(val_loader_adversarial))
         
         for data in train_loader_adversarial:
             if(len(data) == 3):
@@ -123,7 +124,6 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
             for filename in glob.glob(CONFIG['DATA_QUEUE'] + "_val/*.pt"):
                 os.unlink(filename)
         
-        print("Val Adversarial loader length:", len(val_loader_adversarial))
         print("Val finished:" + str(val_status / val_loader_adversarial.__len__())[:5] + "%", end="\r")
         cut_ = 0
         for data in val_loader_adversarial:
@@ -141,15 +141,15 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                     iou_val_epoch += iou
                     loss_val_epoch += loss
                     acc_val_epoch += acc
+                    
+                    print("Val finished:" + str(val_status / (val_loader_adversarial.__len__() - cut_))[:5] + "%", end="\r")
+            
+                    for m in remove_files:
+                        os.remove(m)
                 else:
                     print("jump...")
                     cut_ = cut_ + 1
                 
-            print("Val finished:" + str(val_status / (val_loader_adversarial.__len__() - cut_))[:5] + "%", end="\r")
-            
-            for m in remove_files:
-                os.remove(m)
-
         loss_val_epoch = loss_val_epoch / (val_loader_adversarial.__len__() - cut_)
         iou_val_epoch = iou_val_epoch / (val_loader_adversarial.__len__() - cut_)
         acc_val_epoch = acc_val_epoch / (val_loader_adversarial.__len__() - cut_)
