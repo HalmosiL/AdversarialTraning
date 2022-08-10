@@ -50,6 +50,7 @@ class DatasetAdversarial:
                         os.remove(self.remove_queue[0][0])
                         os.remove(self.remove_queue[0][1])
                         
+                        print("Remove...")
                         self.remove_queue.pop(0)
 
                     i += 1
