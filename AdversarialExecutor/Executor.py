@@ -53,7 +53,7 @@ class Executor:
                     "\nbatch_size" + str(batch_size))
             else:
                 self.split = int(batch_size / train_batch_size)
-                self.split_size = (batch_size / self.split)
+                self.split_size = int(batch_size / self.split)
             
         self.config_name = config_name
         self.model_cache = model_cache
