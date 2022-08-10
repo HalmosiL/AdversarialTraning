@@ -42,6 +42,7 @@ class Executor:
             print("Data cache alredy exist...")  
 
         self.split = -1
+        self.split_size = 0
             
         if(train_batch_size < batch_size):
             if(batch_size % train_batch_size != 0):
@@ -52,6 +53,7 @@ class Executor:
                     "\nbatch_size" + str(batch_size))
             else:
                 self.split = int(batch_size / train_batch_size)
+                self.split_size = (batch_size / self.split)
             
         self.config_name = config_name
         self.model_cache = model_cache
@@ -176,7 +178,8 @@ class Executor:
                                     attack=self.attack,
                                     number_of_steps=self.number_of_steps,
                                     data_queue=self.data_queue,
-                                    split=self.split
+                                    split=self.split,
+                                    split_size=self.split_size
                                 )                               
                             except StopIteration:
                                 train_iter = iter(self.train_data_set_loader)
@@ -212,7 +215,8 @@ class Executor:
                                     attack=self.attack,
                                     number_of_steps=self.number_of_steps,
                                     data_queue=self.data_queue[:-1] + "_val/",
-                                    split=self.split
+                                    split=self.split,
+                                    split_size=self.split_size
                                 )          
                             except StopIteration:
                                 val_iter = iter(self.val_data_set_loader)
