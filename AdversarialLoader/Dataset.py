@@ -10,7 +10,6 @@ class DatasetAdversarial:
         self.data_queue_path = data_queue_path
         self.plus_batch_num = plus_batch_num
         self.slice_ = slice_
-        self.remove_queue = []
 
     def __getitem__(self, idx):
         if(1 <= self.slice_):
@@ -25,6 +24,7 @@ class DatasetAdversarial:
         
         images = []
         labels = []
+        remove_queue = []
 
         count_no_data = 0
         
@@ -43,19 +43,11 @@ class DatasetAdversarial:
                 try:
                     images.append(torch.load(image_path).clone())
                     labels.append(torch.load(label_path).clone())
-
-                    self.remove_queue.append([image_path, label_path])
-                    
-                    if(len(self.remove_queue) > 3):
-                        print("Remove...")
-                        
-                        os.remove(self.remove_queue[0][0])
-                        os.remove(self.remove_queue[0][1])
-                        
-                        self.remove_queue.pop(0)
+                    remove_queue.append([image_path, label_path])
 
                     i += 1
                 except Exception as e:
+                    remove_queue = []
                     images = []
                     labels = []
                     print(e)
@@ -70,7 +62,7 @@ class DatasetAdversarial:
         images = torch.cat(images, dim=0)
         labels = torch.cat(labels, dim=0)
 
-        return images, labels
+        return images, labels, remove_queue
 
     def __len__(self):
         if(self.slice_ != 1 and self.slice_ != -1):
