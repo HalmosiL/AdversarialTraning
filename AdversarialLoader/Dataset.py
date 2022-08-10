@@ -13,13 +13,13 @@ class DatasetAdversarial:
         self.remove_queue = []
 
     def __getitem__(self, idx):
-        if(idx + 1 == self.len_dataset and self.plus_batch_num != None):
-            concatenate_number_actual = self.plus_batch_num
-        else:
-            concatenate_number_actual = self.concatenate_number
-
         if(1 <= self.slice_):
             concatenate_number_actual = 1
+        else:
+            if(idx + 1 == self.len_dataset and self.plus_batch_num != None):
+                concatenate_number_actual = self.plus_batch_num
+            else:
+                concatenate_number_actual = self.concatenate_number
             
         i = 0
         
