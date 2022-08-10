@@ -141,6 +141,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                     iou_val_epoch += iou
                     loss_val_epoch += loss
                     acc_val_epoch += acc
+                    val_status += 1
                     
                     print("Val finished:" + str(val_status / (val_loader_adversarial.__len__() - cut_))[:5] + "%", end="\r")
             
