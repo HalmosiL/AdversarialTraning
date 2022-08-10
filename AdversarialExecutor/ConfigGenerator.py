@@ -29,7 +29,7 @@ def config_generator(CONFIG_PATH):
         os.mkdir(CONFIG['DATA_QUEUE'])
 
     if(os.path.exists(CONFIG['DATA_QUEUE'][:-1] + "_val/")):
-        for filename in glob.glob(CONFIG['DATA_QUEUE'] + "*.pt"):
+        for filename in glob.glob(CONFIG['DATA_QUEUE'][:-1] + "_val/*.pt"):
             os.unlink(filename)
     else:
         os.mkdir(CONFIG['DATA_QUEUE'][:-1] + "_val/")
