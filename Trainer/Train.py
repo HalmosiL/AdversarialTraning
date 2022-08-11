@@ -13,8 +13,8 @@ from Metrics import iou_score_m, acuracy
 from WBLogger import LogerWB
 
 def sort_(key):
-    key = key.slice("_")[-1]
-    key = key.slice(".")[0]
+    key = key.split("_")[-1]
+    key = key.split(".")[0]
     
     return int(key)
 
