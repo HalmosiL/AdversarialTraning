@@ -100,7 +100,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
         logger.log_iou_epoch_train_adversarial(e, iou_train_epoch)
         logger.log_acc_epoch_train_adversarial(e, acc_train_epoch)
 
-        torch.save(model.state_dict(), CONFIG["MODEL_SAVE"] + CONFIG["MODEL_NAME"] + str(e) + ".pt")
+        torch.save(model.state_dict(), CONFIG["MODEL_SAVE"] + CONFIG["MODEL_NAME"] + "_" + str(e) + ".pt")
         torch.save(optimizer.state_dict(), CONFIG["MODEL_SAVE"] + CONFIG["MODEL_NAME"] + "_optimizer" + str(e) + ".pt")
 
         cache_id = cacheModel(cache_id, model, CONFIG)
