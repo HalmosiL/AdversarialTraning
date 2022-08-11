@@ -69,7 +69,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
 
                 loss = lossFun(prediction, label)
                 iou = iou_score_m(prediction, label)
-                acc = acuracy(prediction, label) / CONFIG["BATCH_SIZE"]
+                acc = acuracy(prediction, label) / CONFIG["TRAIN_BATCH_SIZE"]
 
                 logger.log_loss_batch_train_adversarial(train_loader_adversarial.__len__(), e, batch_id, loss.item())
                 logger.log_iou_batch_train_adversarial(train_loader_adversarial.__len__(), e, batch_id, iou)
@@ -136,7 +136,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                     prediction = model(image_val)
                     loss = lossFun(prediction, label_val)
                     iou = iou_score_m(prediction, label_val)
-                    acc = acuracy(prediction, label_val) / CONFIG["BATCH_SIZE"]
+                    acc = acuracy(prediction, label_val) / CONFIG["TRAIN_BATCH_SIZE"]
 
                     iou_val_epoch += iou
                     loss_val_epoch += loss
