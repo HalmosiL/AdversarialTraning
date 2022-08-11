@@ -21,7 +21,6 @@ def sort_(key):
 def cacheModel(cache_id, model, CONFIG):
     models = glob.glob(CONFIG["MODEL_CACHE"] + "*.pt")
     models.sort(key=sort_)
-    print(models)
     torch.save(model.state_dict(), CONFIG["MODEL_CACHE"] + CONFIG["MODEL_NAME"] + "_" + str(cache_id) + ".pt")
 
     if len(models) > 5:
