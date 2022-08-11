@@ -12,9 +12,16 @@ from Model import get_DeepLabv3
 from Metrics import iou_score_m, acuracy
 from WBLogger import LogerWB
 
+def sort_(key):
+    key = key.slice("_")[-1]
+    key = key.slice(".")[0]
+    
+    return int(key)
+
 def cacheModel(cache_id, model, CONFIG):
     models = glob.glob(CONFIG["MODEL_CACHE"] + "*.pt")
-    models.sort()
+    models.sort(key=sort_)
+    print(models)
     torch.save(model.state_dict(), CONFIG["MODEL_CACHE"] + CONFIG["MODEL_NAME"] + str(cache_id) + ".pt")
 
     if len(models) > 5:
