@@ -15,6 +15,12 @@ from Adversarial import Cosine_PDG_Adam
 from ModelLodaer import resnet_slice_model, get_resnet18_hourglass, load_model
 
 class Executor:
+    def sort_(self, key):
+        key = key.split("_")[-1]
+        key = key.split(".")[0]
+
+        return int(key)
+    
     def __init__(
         self,
         config_name,
@@ -144,7 +150,7 @@ class Executor:
                     print("There is no model to use yet...")
                     time.sleep(2)
             else:
-                new_model_name.sort()
+                new_model_name.sort(key=self.sort_)
                 new_model_name = new_model_name[-1]              
 
                 if(self.model_name != new_model_name):
