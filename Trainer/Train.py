@@ -8,8 +8,9 @@ import numpy as np
 
 sys.path.insert(0, "./")
 
+from Optimizer import poly_learning_rate
 from Model import get_DeepLabv3
-from Metrics import iou_score_m, acuracy
+from Metrics import intersectionAndUnion
 from WBLogger import LogerWB
 
 def sort_(key):
@@ -35,10 +36,18 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
         DEVICE = "cuda:2"
     
     model = get_model(DEVICE)
+    optimizer = torch.optim.SGD(
+        [{'params': model.layer0.parameters()},
+         {'params': model.layer1.parameters()},
+         {'params': model.layer2.parameters()},
+         {'params': model.layer3.parameters()},
+         {'params': model.layer4.parameters()},
+         {'params': model.ppm.parameters(), 'lr': CONFIG['LEARNING_RATE'] * 10},
+         {'params': model.cls.parameters(), 'lr': CONFIG['LEARNING_RATE'] * 10},
+         {'params': model.aux.parameters(), 'lr': CONFIG['LEARNING_RATE'] * 10}],
+        lr=CONFIG['LEARNING_RATE'], momentum=CONFIG['MOMENTUM'], weight_decay=CONFIG['WEIGHT_DECAY'])
 
-    optimizer = torch.optim.Adam(model.parameters(), lr=CONFIG["LEARNING_RATE"])
-    lossFun = torch.nn.CrossEntropyLoss(ignore_index=-1)
-
+    lossFun = nn.CrossEntropyLoss(ignore_index=CONFIG["DATASET"]["ignore_label"])
     logger = LogerWB(CONFIG["WB_LOG"], print_messages=CONFIG["PRINT_LOG"])
 
     print("Traning started.....")
@@ -46,14 +55,14 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
     cache_id = 0
     cache_id = cacheModel(cache_id, model, CONFIG)
     
+    max_iter = CONFIG["EPOCHS"] * len(train_loader)
+
     for e in range(CONFIG["EPOCHS"]):
         model = model.train()
 
         loss_train_epoch = 0
         iou_train_epoch = 0
         acc_train_epoch = 0
-
-        batch_id = 1
 
         if(os.path.exists(CONFIG['DATA_QUEUE'])):
             for filename in glob.glob(CONFIG['DATA_QUEUE'] + "*.pt"):
@@ -64,30 +73,36 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
         print("Train Adversarial loader length:", len(train_loader_adversarial))
         print("Val Adversarial loader length:", len(val_loader_adversarial))
         
-        for data in train_loader_adversarial:
+        for batch_id, data in enumerate(train_loader_adversarial):
             if(len(data) == 3):
                 image = data[0][0].to(DEVICE)
-                label = data[1][0].to(DEVICE)
+                target = data[1][0].to(DEVICE)
+
+                current_iter = e * len(train_loader) + i + 1
+                poly_learning_rate(optimizer, CONFIG['LEARNING_RATE'], current_iter, max_iter, power=CONFIG['POWER'])
+
                 remove_files = np.array(data[2]).flatten()
 
+                output, main_loss, aux_loss, _ = model(image, target)
+                loss = main_loss + args.aux_weight * aux_loss
+
                 optimizer.zero_grad()
-                prediction = model(image)
+                loss.backward()
+                optimizer.step()
 
-                loss = lossFun(prediction, label)
-                iou = iou_score_m(prediction, label)
-                acc = acuracy(prediction, label) / CONFIG["TRAIN_BATCH_SIZE"]
+                intersection, union, target = intersectionAndUnion(output, target, args.classes, args.ignore_label)
+                intersection, union, target = intersection.cpu().numpy(), union.cpu().numpy(), target.cpu().numpy()
 
-                logger.log_loss_batch_train_adversarial(train_loader_adversarial.__len__(), e, batch_id, loss.item())
-                logger.log_iou_batch_train_adversarial(train_loader_adversarial.__len__(), e, batch_id, iou)
-                logger.log_acc_batch_train_adversarial(train_loader_adversarial.__len__(), e, batch_id, acc)
+                iou = intersection / (union + 1e-10)
+                acc = sum(intersection) / (sum(target) + 1e-10)
+
+                logger.log_loss_batch_train_adversarial(train_loader_adversarial.__len__(), e, batch_id + 1, loss.item())
+                logger.log_iou_batch_train_adversarial(train_loader_adversarial.__len__(), e, batch_id + 1, iou)
+                logger.log_acc_batch_train_adversarial(train_loader_adversarial.__len__(), e, batch_id + 1, acc)
 
                 iou_train_epoch += iou
                 loss_train_epoch += loss.item()
                 acc_train_epoch += acc
-
-                loss.backward()
-                optimizer.step()
-                batch_id += 1
 
                 if(e % CONFIG["MODEL_CACHE_PERIOD"] == 0):
                     cache_id = cacheModel(cache_id, model, CONFIG)
@@ -140,9 +155,12 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                     remove_files = np.array(data[2]).flatten()
 
                     prediction = model(image_val)
-                    loss = lossFun(prediction, label_val)
-                    iou = iou_score_m(prediction, label_val)
-                    acc = acuracy(prediction, label_val) / CONFIG["TRAIN_BATCH_SIZE"]
+
+                    intersection, union, target = intersectionAndUnion(output, target, args.classes, args.ignore_label)
+                    intersection, union, target = intersection.cpu().numpy(), union.cpu().numpy(), target.cpu().numpy()
+
+                    iou = intersection / (union + 1e-10)
+                    acc = sum(intersection) / (sum(target) + 1e-10)
 
                     iou_val_epoch += iou
                     loss_val_epoch += loss
