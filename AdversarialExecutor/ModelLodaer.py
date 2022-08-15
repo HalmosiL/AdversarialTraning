@@ -1,7 +1,6 @@
 from Network import PSPNet
 import torch
 import torch.nn as nn
-from torchsummary import summary
 
 def slice_model(model, level="Encoder"):
     if(level == "Encoder"):
