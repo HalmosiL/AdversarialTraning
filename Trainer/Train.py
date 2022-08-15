@@ -56,6 +56,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
     cache_id = cacheModel(cache_id, model, CONFIG)
     
     max_iter = CONFIG["EPOCHS"] * len(train_loader)
+    cut_all = 0
 
     for e in range(CONFIG["EPOCHS"]):
         model = model.train()
@@ -78,7 +79,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 image = data[0][0].to(DEVICE)
                 target = data[1][0].to(DEVICE)
 
-                current_iter = e * len(train_loader) + i + 1
+                current_iter = e * len(train_loader) + i + 1 - cut_all
                 poly_learning_rate(optimizer, CONFIG['LEARNING_RATE'], current_iter, max_iter, power=CONFIG['POWER'])
 
                 remove_files = np.array(data[2]).flatten()
@@ -112,6 +113,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
             else:
                 print("Jump..")
                 cut_ += 1
+                cut_all += 1
 
         loss_train_epoch = loss_train_epoch / (train_loader_adversarial.__len__() - cut_)
         iou_train_epoch = iou_train_epoch / (train_loader_adversarial.__len__() - cut_)
