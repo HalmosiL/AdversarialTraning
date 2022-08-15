@@ -1,4 +1,3 @@
-from Cityscapes import CitySegmentation
 import sys
 import json
 import os
@@ -45,8 +44,8 @@ def config_generator(CONFIG_PATH):
 
     print("Use config:" + str(sys.argv[1]) + "...")
 
-    train_data_set_len = CitySegmentation(root=CONFIG['DATA_PATH'], split="train").__len__()
-    val_data_set_len = CitySegmentation(root=CONFIG['DATA_PATH'], split="val").__len__()
+    train_data_set_len = len(open(CONFIG['DATASET']["train_list"], 'r').readlines())
+    val_data_set_len = len(open(CONFIG['DATASET']["val_list"], 'r').readlines())
 
     train_split_step = int(train_data_set_len / CONFIG['NUMBER_OF_EXECUTORS'])
     val_split_step = int(val_data_set_len / CONFIG['NUMBER_OF_EXECUTORS'])

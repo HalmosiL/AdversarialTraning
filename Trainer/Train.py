@@ -34,7 +34,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
     elif(DEVICE == "cuda:3"):
         DEVICE = "cuda:2"
     
-    model = get_DeepLabv3(DEVICE, encoder_weights=None)
+    model = get_model(DEVICE)
 
     optimizer = torch.optim.Adam(model.parameters(), lr=CONFIG["LEARNING_RATE"])
     lossFun = torch.nn.CrossEntropyLoss(ignore_index=-1)
@@ -161,9 +161,9 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
         iou_val_epoch = iou_val_epoch / (val_loader_adversarial.__len__() - cut_)
         acc_val_epoch = acc_val_epoch / (val_loader_adversarial.__len__() - cut_)
 
-        logger.log_loss_epoch_val(e, loss_val_epoch)
-        logger.log_iou_epoch_val(e, iou_val_epoch)
-        logger.log_acc_epoch_val(e, acc_val_epoch)
+        logger.log_loss_epoch_val_adversarial(e, loss_val_epoch)
+        logger.log_iou_epoch_val_adversarial(e, iou_val_epoch)
+        logger.log_acc_epoch_val_adversarial(e, acc_val_epoch)
 
         with open(CONFIG_PATH, 'r+') as f:
             data_json = json.load(f)

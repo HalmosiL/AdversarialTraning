@@ -46,4 +46,4 @@ if __name__ == '__main__':
     )
 
     train(CONFIG_PATH, CONFIG, CONFIG["DEVICE_TRAIN"], train_loader_adversarial, val_loader_adversarial, val_loader)
-    subprocess.Popen("./stop_all.sh", stdout=subprocess.PIPE)
+    subprocess.Popen("../AdversarialExecutor/stop_all.sh", stdout=subprocess.PIPE)

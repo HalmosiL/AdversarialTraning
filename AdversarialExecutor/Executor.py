@@ -1,18 +1,16 @@
-import torchvision.transforms as T
 import glob
 import time
 import torch
 import os
-import copy
 import math
 import json
 import sys
-import json
 
 from Gen import run
-from Cityscapes import CitySegmentation
 from Adversarial import Cosine_PDG_Adam
-from ModelLodaer import resnet_slice_model, get_resnet18_hourglass, load_model
+import Transforms as transform
+from Dataset import SemData
+from ModelLodaer import load_model, slice_model
 
 class Executor:
     def sort_(self, key):
@@ -80,43 +78,65 @@ class Executor:
         self.data_set_end_index_train = data_set_end_index_train
         self.data_set_start_index_val = data_set_start_index_val
         self.data_set_end_index_val = data_set_end_index_val
-        
-        input_transform = T.Compose([
-            T.ToTensor(),
-        ])
 
-        self.train_data_set = CitySegmentation(
-            root=self.data_path,
-            split="train",
-            transform=input_transform,
-            start_index=data_set_start_index_train,
-            end_index=data_set_end_index_train
+        config_main = json.load(open("../Configs/config_main.json"))
+        args = config_main['DATASET']
+
+        value_scale = 255
+        mean = [0.485, 0.456, 0.406]
+        mean = [item * value_scale for item in mean]
+        std = [0.229, 0.224, 0.225]
+        std = [item * value_scale for item in std]
+
+        train_transform = transform.Compose([
+            transform.RandScale([args["scale_min"], args["scale_max"]]),
+            transform.RandRotate([args["rotate_min"], args["rotate_max"]], padding=mean, ignore_label=args["ignore_label"]),
+            transform.RandomGaussianBlur(),
+            transform.RandomHorizontalFlip(),
+            transform.Crop([args["train_h"], args["train_w"]], crop_type='rand', padding=mean, ignore_label=args["ignore_label"]),
+            transform.ToTensor(),
+            transform.Normalize(mean=mean, std=std)])
+
+        train_data = SemData(
+            split='train',
+            data_root=data_path,
+            data_list=args["train_list"],
+            transform=train_transform
         )
 
-        self.val_data_set = CitySegmentation(
-            root=self.data_path,
-            split="val",
-            transform=input_transform,
-            start_index=data_set_start_index_val,
-            end_index=data_set_end_index_val
+        val_transform = transform.Compose([
+            transform.Crop([args["train_h"], args["train_w"]], crop_type='center', padding=mean, ignore_label=args["ignore_label"]),
+            transform.ToTensor(),
+            transform.Normalize(mean=mean, std=std)])
+
+        val_data = SemData(
+            split='val',
+            data_root=data_path,
+            data_list=args["val_list"],
+            transform=val_transform
         )
 
         self.train_data_set_loader = torch.utils.data.DataLoader(
-            self.train_data_set,
-            batch_size=self.batch_size,
-            num_workers=self.num_workers
+            train_data,
+            batch_size=self.train_batch_size,
+            shuffle=True,
+            num_workers=self.num_workers,
+            pin_memory=True,
+            drop_last=True
         )
 
         self.val_data_set_loader = torch.utils.data.DataLoader(
-            self.val_data_set,
-            batch_size=self.batch_size,
-            num_workers=self.num_workers
+            val_data,
+            batch_size=self.train_batch_size,
+            shuffle=False,
+            num_workers=self.num_workers,
+            pin_memory=True
         )
 
         if(data_set_end_index_train is None):
-            self.train_data_set_len = math.ceil((train_data_set.__len__() - data_set_start_index_train) / self.batch_size)
+            self.train_data_set_len = int((train_data_set.__len__() - data_set_start_index_train) / self.batch_size)
         else:
-            self.train_data_set_len = math.ceil((data_set_end_index_train - data_set_start_index_train) / self.batch_size)
+            self.train_data_set_len = int((data_set_end_index_train - data_set_start_index_train) / self.batch_size)
 
         if(data_set_end_index_val is None):
             self.val_data_set_len = math.ceil((val_data_set.__len__() - data_set_start_index_val) / self.batch_size)
@@ -128,7 +148,7 @@ class Executor:
 
         self.attack = Cosine_PDG_Adam(
             step_size=1,
-            clip_size=0.02
+            clip_size=0.03
         )
 
     def start(self):
@@ -157,7 +177,7 @@ class Executor:
                     print("Use model:", new_model_name)
                     self.model_name = new_model_name
   
-                    model = resnet_slice_model(
+                    model = slice_model(
                         load_model(new_model_name, self.device)
                     )
 

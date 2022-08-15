@@ -1,42 +1,41 @@
-import segmentation_models_pytorch as smp
+from Network import PSPNet
 import torch
+import torch.nn as nn
+from torchsummary import summary
 
-def resnet_slice_model(model, level="Encoder"):
+def slice_model(model, level="Encoder"):
     if(level == "Encoder"):
-        return torch.nn.Sequential(model.encoder)
+        return model.getSliceModel()
 
-def get_DeepLabv3(device, encoder_weights=None):
-    model = smp.DeepLabV3(
-        encoder_name='resnet34',
-        encoder_depth=5,
-        encoder_weights=encoder_weights,
-        decoder_channels=256,
-        in_channels=3,
-        classes=19,
-        activation=None,
-        upsampling=8,
-        aux_params=None
-    )
-
-    model = model.to(device)
-
-    return model
-
-def get_resnet18_hourglass(device, encoder_weights=None):
-    model = smp.Unet(
-        encoder_name="resnet18",
-        encoder_weights=encoder_weights,
-        in_channels=3,
-        classes=19,
+def get_model(device):
+    model = PSPNet(
+        layers=50,
+        bins=(1, 2, 3, 6),
+        dropout=0.1,
+        classes=2,
+        zoom_factor=8,
+        use_ppm=True,
+        criterion=nn.CrossEntropyLoss(ignore_index=255),
+        BatchNorm=nn.BatchNorm2d,
+        pretrained=True
     )
 
     model = model.to(device).eval()
-
     return model
 
 def load_model(path, device):
-    model = get_DeepLabv3(device, encoder_weights=None)
-    model.load_state_dict(torch.load(path))
-    model = model.to(device)
+    model = PSPNet(
+        layers=50,
+        bins=(1, 2, 3, 6),
+        dropout=0.1,
+        classes=2,
+        zoom_factor=8,
+        use_ppm=True,
+        criterion=nn.CrossEntropyLoss(ignore_index=255),
+        BatchNorm=nn.BatchNorm2d,
+        pretrained=True
+    )
 
+    model.load_state_dict(torch.load(path, map_location=device))
+    model = model.to(device)
     return model
