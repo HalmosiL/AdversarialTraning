@@ -8,7 +8,7 @@
     "MOMENTUM": 0.99,
     "WEIGHT_DECAY": 0.01,
     "POWER": 1,
-    "BATCH_SIZE_LOADER": 32,
+    "BATCH_SIZE": 32,
     "TRAIN_BATCH_SIZE": 16,
     "DATA_PATH":"../../../city-scapes-dataset/",
     "EPOCHS": 500,
