@@ -9,7 +9,7 @@ import numpy as np
 sys.path.insert(0, "./")
 
 from Optimizer import poly_learning_rate
-from Model import get_DeepLabv3
+from Model import get_model
 from Metrics import intersectionAndUnion
 from WBLogger import LogerWB
 
