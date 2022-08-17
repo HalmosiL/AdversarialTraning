@@ -29,7 +29,7 @@ def load_model(path, device):
         dropout=0.1,
         classes=2,
         zoom_factor=8,
-        use_ppm=False,
+        use_ppm=True,
         criterion=nn.CrossEntropyLoss(ignore_index=255),
         BatchNorm=nn.BatchNorm2d,
         pretrained=True
