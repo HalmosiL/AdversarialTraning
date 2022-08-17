@@ -49,7 +49,8 @@ class Executor:
 
         self.split = -1
         self.split_size = 0
-            
+        
+        print(batch_size)
         print(train_batch_size)
             
         if(train_batch_size < batch_size):
