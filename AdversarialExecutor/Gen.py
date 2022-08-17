@@ -6,8 +6,6 @@ def run(id_, batch, device, model, attack, number_of_steps, data_queue, split, s
 
     image = batch[0].to(device)
     label = batch[1].to(device)
-    
-    print(image.shape)
 
     image = model_immer_attack_auto_loss(
         image=image,
@@ -25,6 +23,5 @@ def run(id_, batch, device, model, attack, number_of_steps, data_queue, split, s
         label = torch.split(label, split_size)
         
         for i in range(len(image)):
-            print(image[i].cpu().detach().clone().shape)
             torch.save(image[i].cpu().detach().clone(), data_queue + 'image_' + str(id_) + '_' + str(i) + '_.pt')
             torch.save(label[i].cpu().detach().clone(), data_queue + 'label_' + str(id_) + '_' + str(i) + '_.pt')
