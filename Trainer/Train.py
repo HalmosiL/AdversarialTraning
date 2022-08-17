@@ -79,7 +79,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 image = data[0][0].to(DEVICE)
                 target = data[1][0].to(DEVICE)
 
-                current_iter = e * len(train_loader_adversarial) + i + 1 - cut_all
+                current_iter = e * len(train_loader_adversarial) + batch_id + 1 - cut_all
                 poly_learning_rate(optimizer, CONFIG['LEARNING_RATE'], current_iter, max_iter, power=CONFIG['POWER'])
 
                 remove_files = np.array(data[2]).flatten()
