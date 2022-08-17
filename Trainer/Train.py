@@ -88,7 +88,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 remove_files = np.array(data[2]).flatten()
 
                 output, main_loss, aux_loss, _ = model(image, target)
-                loss = main_loss + args.aux_weight * aux_loss
+                loss = main_loss + CONFIG['AUX_WEIGHT'] * aux_loss
 
                 optimizer.zero_grad()
                 loss.backward()
