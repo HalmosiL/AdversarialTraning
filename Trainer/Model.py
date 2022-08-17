@@ -14,7 +14,7 @@ def get_model(device):
         classes=19,
         zoom_factor=8,
         use_ppm=True,
-        criterion=nn.MSELoss(),
+        criterion=nn.CrossEntropyLoss(ignore_index=255),
         BatchNorm=nn.BatchNorm2d,
         pretrained=True
     )
