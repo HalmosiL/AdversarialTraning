@@ -10,8 +10,8 @@ class DatasetAdversarial:
         self.slice_ = slice_
 
     def __getitem__(self, idx):
-        images = []
-        labels = []
+        image_ = None
+        label_ = None
 
         count_no_data = 0
         
@@ -22,25 +22,25 @@ class DatasetAdversarial:
         image_path = self.data_queue_path + "image_" + str(path_a) + "_" + str(path_b) + "_.pt"
         label_path = self.data_queue_path + "label_" + str(path_a) + "_" + str(path_b) + "_.pt"
 
-        if(
-            os.path.exists(image_path) and
-            os.path.exists(label_path)
-        ):
-            try:
-                images.append(torch.load(image_path).clone())
-                labels.append(torch.load(label_path).clone())
-                remove_queue.append([image_path, label_path])
-            except Exception as e:
-                return []
-        else:
-            count_no_data += 1
-            if(count_no_data > 1 and count_no_data % 200 == 0):
-                print("waiting for data sice:" + str(0.01 * count_no_data)[:5] + "(s)...", end="\r")
+        remove_queue = []
+        
+        while(label is None):
+            if(
+                os.path.exists(image_path) and
+                os.path.exists(label_path)
+            ):
+                try:
+                    image_ = torch.load(image_path).clone()
+                    label_ = torch.load(label_path).clone()
+                    remove_queue.append([image_, label_])
+                except Exception as e:
+                    return []
+            else:
+                count_no_data += 1
+                if(count_no_data > 1 and count_no_data % 200 == 0):
+                    print("waiting for data sice:" + str(0.01 * count_no_data)[:5] + "(s)...", end="\r")
 
-            time.sleep(0.01)
-
-        images = torch.cat(images, dim=0)
-        labels = torch.cat(labels, dim=0)
+                time.sleep(0.01)
 
         return images, labels, remove_queue
 
