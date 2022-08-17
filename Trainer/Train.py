@@ -114,6 +114,10 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                     os.remove(m)
             else:
                 print("Jump..")
+                remove_files = np.array(data[0]).flatten()
+                for m in remove_files:
+                    os.remove(m)
+                
                 cut_ += 1
                 cut_all += 1
 
