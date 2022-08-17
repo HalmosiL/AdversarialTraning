@@ -76,8 +76,8 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
         
         for batch_id, data in enumerate(train_loader_adversarial):
             if(len(data) == 3):
-                image = data[0].to(DEVICE)
-                target = data[1].to(DEVICE)
+                image = data[0][0].to(DEVICE)
+                target = data[1][0].to(DEVICE)
 
                 print(image.shape)
                 print(target.shape)
@@ -161,8 +161,8 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
         for data in val_loader_adversarial:
             with torch.no_grad():
                 if(len(data) == 3):
-                    image_val = data[0].to(DEVICE)
-                    label_val = data[1].to(DEVICE)
+                    image_val = data[0][0].to(DEVICE)
+                    label_val = data[1][0].to(DEVICE)
                     remove_files = np.array(data[2]).flatten()
 
                     prediction = model(image_val)
