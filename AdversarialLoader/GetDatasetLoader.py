@@ -7,10 +7,6 @@ import math
 import torch
 import time
 
-sys.path.insert(0, "../AdversarialExecutor/")
-
-from Cityscapes import CitySegmentation
-
 def load_config(CONFIG_DATALOADER_PATH):
     CONFIG_DATALOADER = json.load(open(CONFIG_DATALOADER_PATH))
     configs = glob.glob(CONFIG_DATALOADER["EXECUTOR_CONFIGS_PATH"] + "*.json")
