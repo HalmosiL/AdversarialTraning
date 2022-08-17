@@ -46,8 +46,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
          {'params': model.cls.parameters(), 'lr': CONFIG['LEARNING_RATE'] * 10},
          {'params': model.aux.parameters(), 'lr': CONFIG['LEARNING_RATE'] * 10}],
         lr=CONFIG['LEARNING_RATE'], momentum=CONFIG['MOMENTUM'], weight_decay=CONFIG['WEIGHT_DECAY'])
-
-    lossFun = torch.nn.CrossEntropyLoss(ignore_index=CONFIG["DATASET"]["ignore_label"])
+    
     logger = LogerWB(CONFIG["WB_LOG"], print_messages=CONFIG["PRINT_LOG"])
 
     print("Traning started.....")
