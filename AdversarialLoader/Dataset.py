@@ -42,7 +42,7 @@ class DatasetAdversarial:
 
                 time.sleep(0.01)
 
-        return images, labels, remove_queue
+        return image_, label_, remove_queue
 
     def __len__(self):
         return self.len_dataset
