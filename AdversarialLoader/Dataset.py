@@ -30,9 +30,11 @@ class DatasetAdversarial:
                 os.path.exists(label_path)
             ):
                 try:
+                    print("Data")
                     image_ = torch.load(image_path).clone()
                     label_ = torch.load(label_path).clone()
                     remove_queue.append([image_path, label_path])
+                    print("Data___end")
                 except Exception as e:
                     return []
             else:
