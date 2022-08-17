@@ -34,16 +34,21 @@ class DatasetAdversarial:
                     image_ = torch.load(image_path).clone()
                     label_ = torch.load(label_path).clone()
                     remove_queue.append([image_path, label_path])
+                    print(image_path)
+                    print(label_path)
                     print("Data___end")
                 except Exception as e:
                     return [remove_queue]
             else:
                 count_no_data += 1
                 if(count_no_data > 1 and count_no_data % 200 == 0):
-                    print("waiting for data sice:" + str(0.01 * count_no_data)[:5] + "(s)...", end="\r")
+                    print("waiting for data sice:" + str(0.01 * count_no_data)[:5] + "(s)...")
 
                 time.sleep(0.01)
 
+        image_ = image_.reshape(1, *image_.shape)
+        label_ = label_.reshape(1, *label_.shape)
+                
         return [image_, label_, remove_queue]
 
     def __len__(self):
