@@ -43,6 +43,8 @@ class DatasetAdversarial:
                 count_no_data += 1
                 if(count_no_data > 1 and count_no_data % 200 == 0):
                     print("waiting for data sice:" + str(0.01 * count_no_data)[:5] + "(s)...")
+                    print("w:", image_path)
+                    print("w:", label_path)
 
                 time.sleep(0.01)
                 
