@@ -49,9 +49,6 @@ class Executor:
 
         self.split = -1
         self.split_size = 0
-        
-        print(batch_size)
-        print(train_batch_size)
             
         if(train_batch_size < batch_size):
             if(batch_size % train_batch_size != 0):
@@ -121,7 +118,7 @@ class Executor:
 
         self.train_data_set_loader = torch.utils.data.DataLoader(
             train_data,
-            batch_size=self.train_batch_size,
+            batch_size=self.batch_size,
             shuffle=True,
             num_workers=self.num_workers,
             pin_memory=True,
@@ -130,7 +127,7 @@ class Executor:
 
         self.val_data_set_loader = torch.utils.data.DataLoader(
             val_data,
-            batch_size=self.train_batch_size,
+            batch_size=self.batch_size,
             shuffle=False,
             num_workers=self.num_workers,
             pin_memory=True
