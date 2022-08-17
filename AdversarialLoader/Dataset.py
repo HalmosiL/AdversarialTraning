@@ -30,6 +30,7 @@ class DatasetAdversarial:
                 os.path.exists(label_path)
             ):
                 try:
+                    count_no_data = 0
                     image_ = torch.load(image_path).clone()
                     label_ = torch.load(label_path).clone()
                     remove_queue.append([image_path, label_path])
