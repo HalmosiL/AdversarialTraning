@@ -23,7 +23,7 @@ def run(id_, batch, device, model, attack, number_of_steps, data_queue, split, s
         image = torch.split(image, split_size)
         label = torch.split(label, split_size)
         
-        print(image.shape)
+        print(image)
         
         for i in range(len(image)):
             print(i)
