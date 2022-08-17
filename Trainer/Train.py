@@ -76,6 +76,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
         
         for batch_id, data in enumerate(train_loader_adversarial):
             if(len(data) == 3):
+                print("step")
                 image = data[0][0].to(DEVICE)
                 target = data[1][0].to(DEVICE)
 
