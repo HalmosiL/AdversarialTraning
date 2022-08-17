@@ -32,7 +32,7 @@ class DatasetAdversarial:
                 try:
                     image_ = torch.load(image_path).clone()
                     label_ = torch.load(label_path).clone()
-                    remove_queue.append([image_, label_])
+                    remove_queue.append([image_path, label_path])
                 except Exception as e:
                     return []
             else:
