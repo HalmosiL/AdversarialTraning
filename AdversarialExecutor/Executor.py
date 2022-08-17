@@ -50,6 +50,8 @@ class Executor:
         self.split = -1
         self.split_size = 0
             
+        print(train_batch_size)
+            
         if(train_batch_size < batch_size):
             if(batch_size % train_batch_size != 0):
                 print("batch_size", batch_size)
