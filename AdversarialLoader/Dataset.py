@@ -24,7 +24,7 @@ class DatasetAdversarial:
 
         remove_queue = []
         
-        while(label is None):
+        while(label_ is None):
             if(
                 os.path.exists(image_path) and
                 os.path.exists(label_path)
