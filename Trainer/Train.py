@@ -161,8 +161,8 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
         for data in val_loader_adversarial:
             with torch.no_grad():
                 if(len(data) == 3):
-                    image_val = data[0][0].to(DEVICE)
-                    label_val = data[1][0].to(DEVICE)
+                    image_val = data[0].to(DEVICE)
+                    label_val = data[1].to(DEVICE)
                     remove_files = np.array(data[2]).flatten()
 
                     prediction = model(image_val)
@@ -184,6 +184,9 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                         os.remove(m)
                 else:
                     print("jump...")
+                    remove_files = np.array(data[2]).flatten()
+                    for m in remove_files:
+                        os.remove(m)
                     cut_ = cut_ + 1
                 
         loss_val_epoch = loss_val_epoch / (val_loader_adversarial.__len__() - cut_)
