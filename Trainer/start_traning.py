@@ -38,12 +38,7 @@ if __name__ == '__main__':
         pin_memory=CONFIG["PIN_MEMORY_ALLOWED_DATALOADER"]
     )
 
-    val_loader = getNormalDatasetLoader(
-        CONFIG_PATH,
-        type_="val",
-        num_workers=CONFIG["NUMBER_OF_WORKERS_DATALOADER"],
-        pin_memory=CONFIG["PIN_MEMORY_ALLOWED_DATALOADER"]
-    )
+    val_loader = None
 
     train(CONFIG_PATH, CONFIG, CONFIG["DEVICE_TRAIN"], train_loader_adversarial, val_loader_adversarial, val_loader)
     subprocess.Popen("../AdversarialExecutor/stop_all.sh", stdout=subprocess.PIPE)
