@@ -6,7 +6,7 @@ import glob
 import os
 
 sys.path.insert(0, "../AdversarialLoader/")
-from GetDatasetLoader import getDatasetLoader, getNormalDatasetLoader
+from GetDatasetLoader import getDatasetLoader
 
 sys.path.insert(0, "../AdversarialExecutor/")
 from start_all import start_all
