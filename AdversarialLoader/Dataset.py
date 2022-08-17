@@ -36,7 +36,7 @@ class DatasetAdversarial:
                     remove_queue.append([image_path, label_path])
                     print("Data___end")
                 except Exception as e:
-                    return []
+                    return [remove_queue]
             else:
                 count_no_data += 1
                 if(count_no_data > 1 and count_no_data % 200 == 0):
