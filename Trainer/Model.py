@@ -13,7 +13,7 @@ def get_model(device):
         dropout=0.1,
         classes=2,
         zoom_factor=8,
-        use_ppm=True,
+        use_ppm=False,
         criterion=nn.CrossEntropyLoss(ignore_index=255),
         BatchNorm=nn.BatchNorm2d,
         pretrained=True
