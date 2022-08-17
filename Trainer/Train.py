@@ -76,7 +76,6 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
         
         for batch_id, data in enumerate(train_loader_adversarial):
             if(len(data) == 3):
-                print("step")
                 image = data[0][0].to(DEVICE)
                 target = data[1][0].to(DEVICE)
 
@@ -109,6 +108,8 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 if(e % CONFIG["MODEL_CACHE_PERIOD"] == 0):
                     cache_id = cacheModel(cache_id, model, CONFIG)
 
+                print(remove_files)
+                    
                 for m in remove_files:
                     os.remove(m)
             else:
