@@ -42,6 +42,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
          {'params': model.layer2.parameters()},
          {'params': model.layer3.parameters()},
          {'params': model.layer4.parameters()},
+         {'params': model.ppm.parameters(), 'lr': CONFIG['LEARNING_RATE'] * 10},
          {'params': model.cls.parameters(), 'lr': CONFIG['LEARNING_RATE'] * 10},
          {'params': model.aux.parameters(), 'lr': CONFIG['LEARNING_RATE'] * 10}],
         lr=CONFIG['LEARNING_RATE'], momentum=CONFIG['MOMENTUM'], weight_decay=CONFIG['WEIGHT_DECAY'])
