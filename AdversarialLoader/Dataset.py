@@ -45,9 +45,6 @@ class DatasetAdversarial:
                     print("waiting for data sice:" + str(0.01 * count_no_data)[:5] + "(s)...")
 
                 time.sleep(0.01)
-
-        image_ = image_.reshape(1, *image_.shape)
-        label_ = label_.reshape(1, *label_.shape)
                 
         return [image_, label_, remove_queue]
 
