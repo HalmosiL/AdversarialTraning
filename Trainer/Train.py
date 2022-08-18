@@ -58,7 +58,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
     cut_all = 0
 
     for e in range(CONFIG["EPOCHS"]):
-        model = model.train()
+        model = model.eval()
 
         loss_train_epoch = 0
         iou_train_epoch = 0
