@@ -47,14 +47,14 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
          {'params': model.aux.parameters(), 'lr': CONFIG['LEARNING_RATE'] * 10}],
         lr=CONFIG['LEARNING_RATE'], momentum=CONFIG['MOMENTUM'], weight_decay=CONFIG['WEIGHT_DECAY'])
     
+    loss_fun = torch.nn.CrossEntropyLoss(ignore_index=255)
+    
     logger = LogerWB(CONFIG["WB_LOG"], print_messages=CONFIG["PRINT_LOG"])
 
     print("Traning started.....")
 
     cache_id = 0
     cache_id = cacheModel(cache_id, model, CONFIG)
-    
-    model = torch.nn.DataParallel(model, device_ids=[int(DEVICE.split(":")[-1])])
     
     max_iter = CONFIG["EPOCHS"] * len(train_loader_adversarial)
     cut_all = 0
@@ -86,8 +86,8 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 remove_files = np.array(data[2]).flatten()
                 optimizer.zero_grad()
                 
-                output, main_loss, aux_loss, _ = model(image, target)
-                loss = main_loss + CONFIG['AUX_WEIGHT'] * aux_loss
+                output, main, aux, _ = model(image)
+                loss = loss_fun(main, target) + CONFIG['AUX_WEIGHT'] * loss(aux, target)
 
                 loss.backward()
                 optimizer.step()
