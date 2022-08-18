@@ -88,7 +88,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 remove_files = np.array(data[2]).flatten()
                 
                 x = model(image, target)
-                x = torch.nn.ReLU(x)
+                x = torch.nn.ReLU()(x)
                 loss = torch.nn.CrossEntropyLoss()(x, target)
 
                 optimizer.zero_grad()
