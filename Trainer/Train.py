@@ -89,7 +89,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 
                 output, main_loss, aux_loss, _ = model(image, target)
                 loss = main_loss + CONFIG['AUX_WEIGHT'] * aux_loss
-                print(loss)
+                loss = torch.nn.MSELoss()(output, torch.rand(output.shape))
                 
                 optimizer.zero_grad()
                 loss.backward()
