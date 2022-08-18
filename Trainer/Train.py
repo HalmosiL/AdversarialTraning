@@ -89,7 +89,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 loss = main_loss + CONFIG['AUX_WEIGHT'] * aux_loss
 
                 optimizer.zero_grad()
-                loss.backward()
+                loss.backward(allow_unreachable=True, accumulate_grad=True)
                 optimizer.step()
 
                 intersection, union, target = intersectionAndUnion(output, target, args.classes, args.ignore_label)
