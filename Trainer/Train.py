@@ -87,6 +87,9 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 optimizer.zero_grad()
                 
                 output, main, aux, _ = model(image)
+                print(output.shape)
+                print(main.shape)
+                print(aux.shape)
                 loss = loss_fun(main, target) + CONFIG['AUX_WEIGHT'] * loss_fun(aux, target)
 
                 loss.backward()
