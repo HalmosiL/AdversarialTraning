@@ -84,11 +84,11 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 poly_learning_rate(optimizer, CONFIG['LEARNING_RATE'], current_iter, max_iter, power=CONFIG['POWER'])
                 
                 remove_files = np.array(data[2]).flatten()
+                optimizer.zero_grad()
                 
                 output, main_loss, aux_loss, _ = model(image, target)
                 loss = main_loss + CONFIG['AUX_WEIGHT'] * aux_loss
 
-                optimizer.zero_grad()
                 loss.backward()
                 optimizer.step()
 
