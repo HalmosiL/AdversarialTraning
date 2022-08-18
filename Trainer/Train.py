@@ -35,7 +35,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
     elif(DEVICE == "cuda:3"):
         DEVICE = "cuda:2"
     
-    model = get_model(DEVICE).train()
+    model = torch.nn.DataParallel(get_model(DEVICE).train())
     optimizer = torch.optim.SGD(
         [{'params': model.layer0.parameters()},
          {'params': model.layer1.parameters()},
