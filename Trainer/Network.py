@@ -322,8 +322,12 @@ class PSPNet(nn.Module):
             x = F.interpolate(x, size=(h, w), mode='bilinear', align_corners=True)
 
         if self.training or indicate==1:
+            aux = self.aux(x_tmp)
+            if self.zoom_factor != 1:
+                aux = F.interpolate(aux, size=(h, w), mode='bilinear', align_corners=True)
             main_loss = self.criterion(x, y)
-            return x.max(1)[1], main_loss, main_loss, x
+            aux_loss = self.criterion(aux, y)
+            return x.max(1)[1], main_loss, aux_loss, x
         else:
             return x
     
