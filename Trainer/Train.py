@@ -80,18 +80,13 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 image = data[0][0].to(DEVICE)
                 target = data[1][0].to(DEVICE)
                 
-                print(target.shape)
-                
                 current_iter = e * len(train_loader_adversarial) + batch_id + 1 - cut_all
-                print("ok1")
                 poly_learning_rate(optimizer, CONFIG['LEARNING_RATE'], current_iter, max_iter, power=CONFIG['POWER'])
-                print("ok2")
                 
                 remove_files = np.array(data[2]).flatten()
                 
-                x = model(image, target)
-                x = torch.nn.ReLU()(x)
-                loss = torch.nn.CrossEntropyLoss()(x, target)
+                output, main_loss, aux_loss, _ = model(image, target)
+                loss = main_loss + CONFIG['AUX'] * aux_loss
 
                 optimizer.zero_grad()
                 loss.backward()
