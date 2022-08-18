@@ -325,7 +325,7 @@ class PSPNet(nn.Module):
             aux = self.aux(x_tmp)
             if self.zoom_factor != 1:
                 aux = F.interpolate(aux, size=(h, w), mode='bilinear', align_corners=True)
-            return x.max(1)[1], x, aux_loss, x
+            return x.max(1)[1], x, aux, x
         else:
             return x
     
