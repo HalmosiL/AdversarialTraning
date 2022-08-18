@@ -90,8 +90,12 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 print(output.shape)
                 print(main.shape)
                 print(aux.shape)
-                loss = loss_fun(main, target) + CONFIG['AUX_WEIGHT'] * loss_fun(aux, target)
-
+                loss_main = loss_fun(main, target)
+                loss_aux = loss_fun(aux, target)
+                loss_aux = CONFIG['AUX_WEIGHT'] * loss_aux 
+                
+                loss = loss_main + loss_aux
+                
                 loss.backward()
                 optimizer.step()
 
