@@ -78,6 +78,8 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 image = data[0][0].to(DEVICE)
                 target = data[1][0].to(DEVICE)
                 
+                print(target.shape)
+                
                 current_iter = e * len(train_loader_adversarial) + batch_id + 1 - cut_all
                 print("ok1")
                 poly_learning_rate(optimizer, CONFIG['LEARNING_RATE'], current_iter, max_iter, power=CONFIG['POWER'])
@@ -87,7 +89,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 
                 x = model(image, target)
                 print(x.shape)
-                loss = torch.nn.MSELoss()(x, torch.rand(x.shape).to(DEVICE))
+                loss = torch.nn.CrossEntropyLoss()(x, target)
 
                 optimizer.zero_grad()
                 loss.backward()
