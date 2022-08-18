@@ -35,7 +35,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
     elif(DEVICE == "cuda:3"):
         DEVICE = "cuda:2"
     
-    model = torch.nn.DataParallel(get_model(DEVICE).train())
+    model = get_model(DEVICE).train()
     optimizer = torch.optim.SGD(
         [{'params': model.layer0.parameters()},
          {'params': model.layer1.parameters()},
@@ -47,6 +47,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
          {'params': model.aux.parameters(), 'lr': CONFIG['LEARNING_RATE'] * 10}],
         lr=CONFIG['LEARNING_RATE'], momentum=CONFIG['MOMENTUM'], weight_decay=CONFIG['WEIGHT_DECAY'])
     
+    model = torch.nn.DataParallel(model)
     logger = LogerWB(CONFIG["WB_LOG"], print_messages=CONFIG["PRINT_LOG"])
 
     print("Traning started.....")
