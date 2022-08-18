@@ -54,7 +54,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
     cache_id = 0
     cache_id = cacheModel(cache_id, model, CONFIG)
     
-    model = torch.nn.DataParallel(model)
+    model = torch.nn.DataParallel(model, device_ids=[int(DEVICE.split(":")[-1])])
     
     max_iter = CONFIG["EPOCHS"] * len(train_loader_adversarial)
     cut_all = 0
