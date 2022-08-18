@@ -4,7 +4,7 @@ import torch.nn as nn
 
 def slice_model(model, level="Encoder"):
     if(level == "Encoder"):
-        return model.getSliceModel()
+        return model.getSliceModel().eval()
 
 def get_model(device):
     model = PSPNet(
@@ -19,7 +19,7 @@ def get_model(device):
         pretrained=True
     )
 
-    model = model.to(device).eval()
+    model = model.to(device)
     return model
 
 def load_model(path, device):
@@ -36,5 +36,5 @@ def load_model(path, device):
     )
 
     model.load_state_dict(torch.load(path, map_location=device))
-    model = model.to(device)
+    model = model.to(device).eval()
     return model
