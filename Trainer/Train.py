@@ -77,10 +77,6 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
             if(len(data) == 3):
                 image = data[0][0].to(DEVICE)
                 target = data[1][0].to(DEVICE)
-
-                print(image.shape)
-                print(target.shape)
-                print(torch.max(target))
                 
                 current_iter = e * len(train_loader_adversarial) + batch_id + 1 - cut_all
                 print("ok1")
@@ -89,12 +85,9 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 
                 remove_files = np.array(data[2]).flatten()
                 
-                output, main_loss, aux_loss, _ = model(image, target)
-                loss = main_loss + CONFIG['AUX_WEIGHT'] * aux_loss
-                print("loss:", loss)
-                print(output.get_device())
-                print(output.shape)
-                
+                x = model(image, target)
+                loss = torch.nn.MSELoss()(x, torch.rand(x.shape))
+
                 optimizer.zero_grad()
                 loss.backward()
                 optimizer.step()
