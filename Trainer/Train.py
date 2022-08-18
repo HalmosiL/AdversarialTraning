@@ -80,6 +80,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
 
                 print(image.shape)
                 print(target.shape)
+                print(torch.max(target))
                 
                 current_iter = e * len(train_loader_adversarial) + batch_id + 1 - cut_all
                 poly_learning_rate(optimizer, CONFIG['LEARNING_RATE'], current_iter, max_iter, power=CONFIG['POWER'])
