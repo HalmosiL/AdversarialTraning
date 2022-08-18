@@ -86,7 +86,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 remove_files = np.array(data[2]).flatten()
                 
                 x = model(image, target)
-                loss = torch.nn.MSELoss()(x, torch.rand(x.shape))
+                loss = torch.nn.MSELoss()(x, torch.rand(x.shape).to(DEVICE))
 
                 optimizer.zero_grad()
                 loss.backward()
