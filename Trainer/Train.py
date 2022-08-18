@@ -47,13 +47,14 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
          {'params': model.aux.parameters(), 'lr': CONFIG['LEARNING_RATE'] * 10}],
         lr=CONFIG['LEARNING_RATE'], momentum=CONFIG['MOMENTUM'], weight_decay=CONFIG['WEIGHT_DECAY'])
     
-    model = torch.nn.DataParallel(model)
     logger = LogerWB(CONFIG["WB_LOG"], print_messages=CONFIG["PRINT_LOG"])
 
     print("Traning started.....")
 
     cache_id = 0
     cache_id = cacheModel(cache_id, model, CONFIG)
+    
+    model = torch.nn.DataParallel(model)
     
     max_iter = CONFIG["EPOCHS"] * len(train_loader_adversarial)
     cut_all = 0
