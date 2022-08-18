@@ -35,7 +35,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
     elif(DEVICE == "cuda:3"):
         DEVICE = "cuda:2"
     
-    model = get_model(DEVICE).train()
+    model = get_model(DEVICE)
     optimizer = torch.optim.SGD(
         [{'params': model.layer0.parameters()},
          {'params': model.layer1.parameters()},
@@ -60,7 +60,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
     cut_all = 0
 
     for e in range(CONFIG["EPOCHS"]):
-        model = model.eval()
+        model = model.train()
 
         loss_train_epoch = 0
         iou_train_epoch = 0
