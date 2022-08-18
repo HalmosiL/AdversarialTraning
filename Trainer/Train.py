@@ -89,6 +89,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 
                 x = model(image, target)
                 print(x.shape)
+                print(x)
                 loss = torch.nn.CrossEntropyLoss()(x, target)
 
                 optimizer.zero_grad()
