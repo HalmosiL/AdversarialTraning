@@ -28,6 +28,7 @@ def getDatasetLoader(CONFIG_DATALOADER_PATH, type_="train", num_workers=0, pin_m
     
     slice_ = int(CONFIG_EXECUTOR["BATCH_SIZE"] / CONFIG_DATALOADER["TRAIN_BATCH_SIZE"])
     len_ = DATA_SET_END / CONFIG_DATALOADER["TRAIN_BATCH_SIZE"]
+    len_ = len_ - int(CONFIG_EXECUTOR["BATCH_SIZE"] / CONFIG_DATALOADER["TRAIN_BATCH_SIZE"])
         
     dataset = None    
 
@@ -40,7 +41,7 @@ def getDatasetLoader(CONFIG_DATALOADER_PATH, type_="train", num_workers=0, pin_m
             slice_
         )
     else:
-        if(len_ != int(len_)): len_ = int(len_) + 1
+        len_ = int(len_) - 1
 
         dataset = DatasetAdversarial(
             CONFIG_DATALOADER["DATA_QUEUE_PATH_LOADER"][:-1] + "_val/",
