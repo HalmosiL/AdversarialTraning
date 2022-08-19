@@ -66,6 +66,7 @@ class Cosine_PDG_Adam:
         
 
 def model_immer_attack_auto_loss(image, model, attack, number_of_steps, device):
+    model.zero_grad()
     image_adv = image.clone().detach().to(device)
     image_adv.requires_grad = True
     target = model(image)[-1]
