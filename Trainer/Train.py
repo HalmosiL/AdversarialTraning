@@ -89,7 +89,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 loss.backward()
                 optimizer.step()
 
-                intersection, union, target = intersectionAndUnion(output, target, args.classes, args.ignore_label)
+                intersection, union, target = intersectionAndUnion(output, target, CONFIG['CALSSES'], args.ignore_label)
                 intersection, union, target = intersection.cpu().numpy(), union.cpu().numpy(), target.cpu().numpy()
 
                 iou = intersection / (union + 1e-10)
@@ -160,7 +160,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
 
                     prediction = model(image_val)
 
-                    intersection, union, target = intersectionAndUnion(output, target, args.classes, args.ignore_label)
+                    intersection, union, target = intersectionAndUnion(output, target, CONFIG['CALSSES'], args.ignore_label)
                     intersection, union, target = intersection.cpu().numpy(), union.cpu().numpy(), target.cpu().numpy()
 
                     iou = intersection / (union + 1e-10)
