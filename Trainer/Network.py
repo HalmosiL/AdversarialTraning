@@ -327,7 +327,7 @@ class PSPNet(nn.Module):
                 aux = F.interpolate(aux, size=(h, w), mode='bilinear', align_corners=True)
             main_loss = self.criterion(x, y)
             aux_loss = self.criterion(aux, y)
-            return x.max(1)[1], main_loss, aux_loss, 
+            return x.max(1)[1], main_loss, aux_loss, x
         else:
             return x
     
