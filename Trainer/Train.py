@@ -47,10 +47,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
          {'params': model.aux.parameters(), 'lr': CONFIG['LEARNING_RATE'] * 10}],
         lr=CONFIG['LEARNING_RATE'], momentum=CONFIG['MOMENTUM'], weight_decay=CONFIG['WEIGHT_DECAY'])
     
-    loss_fun = torch.nn.CrossEntropyLoss(ignore_index=255)
-    
     logger = LogerWB(CONFIG["WB_LOG"], print_messages=CONFIG["PRINT_LOG"])
-
     print("Traning started.....")
 
     cache_id = 0
@@ -86,15 +83,8 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 remove_files = np.array(data[2]).flatten()
                 optimizer.zero_grad()
                 
-                output, main, aux, _ = model(image)
-                print(output.shape)
-                print(main.shape)
-                print(aux.shape)
-                loss_main = loss_fun(main, target)
-                loss_aux = loss_fun(aux, target)
-                loss_aux = CONFIG['AUX_WEIGHT'] * loss_aux 
-                
-                loss = loss_main + loss_aux
+                output, main_loss, aux_loss, _ = model(image)
+                loss = loss_main + CONFIG['AUX_WEIGHT'] * loss_aux
                 
                 loss.backward()
                 optimizer.step()
@@ -115,8 +105,6 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
 
                 if(e % CONFIG["MODEL_CACHE_PERIOD"] == 0):
                     cache_id = cacheModel(cache_id, model, CONFIG)
-
-                print(remove_files)
                     
                 for m in remove_files:
                     os.remove(m)
