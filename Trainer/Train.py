@@ -155,10 +155,10 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
             with torch.no_grad():
                 if(len(data) == 3):
                     image_val = data[0][0].to(DEVICE)
-                    label_val = data[1][0].to(DEVICE)
+                    target = data[1][0].to(DEVICE)
                     remove_files = np.array(data[2]).flatten()
 
-                    prediction = model(image_val)
+                    output, _ = model(image_val)
 
                     intersection, union, target = intersectionAndUnion(output, target, CONFIG['CALSSES'], CONFIG['IGNOR_LABEL'])
                     intersection, union, target = intersection.cpu().numpy(), union.cpu().numpy(), target.cpu().numpy()
