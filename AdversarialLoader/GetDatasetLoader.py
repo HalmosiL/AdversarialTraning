@@ -27,7 +27,8 @@ def getDatasetLoader(CONFIG_DATALOADER_PATH, type_="train", num_workers=0, pin_m
         DATA_SET_END = CONFIG_EXECUTOR["DATA_SET_END_INDEX_VAL"]
     
     slice_ = int(CONFIG_EXECUTOR["BATCH_SIZE"] / CONFIG_DATALOADER["TRAIN_BATCH_SIZE"])
-        
+    len_ = DATA_SET_END / CONFIG_DATALOADER["TRAIN_BATCH_SIZE"]
+    
     dataset = None    
 
     if(type_ == "train"):
