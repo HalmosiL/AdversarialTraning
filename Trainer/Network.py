@@ -304,7 +304,7 @@ class PSPNet(nn.Module):
                 nn.Conv2d(256, classes, kernel_size=1)
             )
 
-    def forward(self, x, indicate=0):
+    def forward(self, x, y=None, indicate=0):
         x_size = x.size()
         assert (x_size[2]-1) % 8 == 0 and (x_size[3]-1) % 8 == 0
         h = int((x_size[2] - 1) / 8 * self.zoom_factor + 1)
