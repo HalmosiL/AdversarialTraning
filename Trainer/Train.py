@@ -92,7 +92,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                 intersection, union, target = intersectionAndUnion(output, target, CONFIG['CALSSES'], CONFIG['IGNOR_LABEL'])
                 intersection, union, target = intersection.cpu().numpy(), union.cpu().numpy(), target.cpu().numpy()
 
-                iou = intersection / (union + 1e-10)
+                iou = np.mean(intersection / (union + 1e-10))
                 acc = sum(intersection) / (sum(target) + 1e-10)
 
                 logger.log_loss_batch_train_adversarial(train_loader_adversarial.__len__(), e, batch_id + 1, loss.item())
@@ -163,7 +163,7 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
                     intersection, union, target = intersectionAndUnion(output, target, CONFIG['CALSSES'], CONFIG['IGNOR_LABEL'])
                     intersection, union, target = intersection.cpu().numpy(), union.cpu().numpy(), target.cpu().numpy()
 
-                    iou = intersection / (union + 1e-10)
+                    iou = np.mean(intersection / (union + 1e-10))
                     acc = sum(intersection) / (sum(target) + 1e-10)
 
                     iou_val_epoch += iou
