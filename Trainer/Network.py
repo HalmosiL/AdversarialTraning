@@ -329,7 +329,7 @@ class PSPNet(nn.Module):
             aux_loss = self.criterion(aux, y)
             return x.max(1)[1], main_loss, aux_loss, x
         else:
-            return x
+            return x.max(1)[1], x
     
     def getSliceModel(self):
         class SliceModule(nn.Module):
