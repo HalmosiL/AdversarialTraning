@@ -130,7 +130,7 @@ class Executor:
             batch_size=self.batch_size,
             shuffle=False,
             num_workers=self.num_workers,
-            pin_memory==False
+            pin_memory=False
         )
 
         if(data_set_end_index_train is None):
