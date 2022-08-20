@@ -5,7 +5,6 @@ def run(id_, batch, device, model, attack, number_of_steps, data_queue, split, s
     print("Gen_", id_, " started..")
 
     image = batch[0].to(device)
-    label = batch[1].to(device)
 
     if(gen):
         image = model_immer_attack_auto_loss(
