@@ -52,8 +52,8 @@ class Cosine_PDG_Adam:
         target = target.reshape(prediction.shape[0], -1)
 
         loss = (1 - self.loss_function(prediction, target + 0.0001)).sum()
-        grad = torch.autograd.grad(loss, image, retain_graph=False, create_graph=False)[0]
-
+        grad = torch.autograd.grad(loss, image, retain_graph=False, create_graph=False, allow_unused=True)[0]
+        
         image = self.optimizer.step(-1 * grad, image)
             
         image = torch.max(torch.min(image, image_o + self.clip_size), image_o - self.clip_size)
