@@ -75,7 +75,6 @@ def model_immer_attack_auto_loss(image, model, attack, number_of_steps, device):
         prediction = model(image_adv)
         image_adv = attack.step(image, image_adv, prediction, target)
         model.zero_grad()
-        torch.cuda.empty_cache()
     
     attack.reset()
 
