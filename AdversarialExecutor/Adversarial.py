@@ -69,8 +69,8 @@ def model_immer_attack_auto_loss(image, model, attack, number_of_steps, device):
     model.zero_grad()
     image_adv = image.clone().detach().to(device)
     image_adv.requires_grad = True
-    target = model(image)
-    prediction = target.clone()
+    prediction = model(image)
+    target = prediction.clone().detach()
 
     for i in range(number_of_steps):
         image_adv = attack.step(image, image_adv, prediction, target)
