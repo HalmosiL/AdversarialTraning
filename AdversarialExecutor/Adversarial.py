@@ -52,7 +52,7 @@ class Cosine_PDG_Adam:
         target = target.reshape(prediction.shape[0], -1)
 
         loss = (1 - self.loss_function(prediction, target + 0.0001)).sum()
-        grad = torch.autograd.grad(loss, image, retain_graph=False, create_graph=False, allow_unused=True)[0]
+        grad = torch.autograd.grad(loss, image, retain_graph=False, create_graph=False)[0]
         
         image = self.optimizer.step(-1 * grad, image)
             
@@ -70,13 +70,11 @@ def model_immer_attack_auto_loss(image, model, attack, number_of_steps, device):
     image_adv = image.clone().detach().to(device)
     image_adv.requires_grad = True
     prediction = model(image)
-    target = prediction.clone().detach()
+    target = model(image)
 
     for i in range(number_of_steps):
+        prediction = model(image_adv)
         image_adv = attack.step(image, image_adv, prediction, target)
-        
-        if(i + 1 != number_of_steps):
-            prediction = model(image_adv)
         model.zero_grad()
     
     attack.reset()
