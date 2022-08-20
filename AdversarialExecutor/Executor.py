@@ -198,10 +198,6 @@ class Executor:
                                 self.train_element_id += 1
 
                                 batch = next(train_iter)
-                                gen = True
-                                
-                                if(self.train_element_id % 2 == 0):
-                                    gen = False
                                     
                                 run(
                                     id_=(self.train_element_id - 1) * config_main["NUMBER_OF_EXECUTORS"] + config["ID"],
@@ -212,8 +208,7 @@ class Executor:
                                     number_of_steps=self.number_of_steps,
                                     data_queue=self.data_queue,
                                     split=self.split,
-                                    split_size=self.split_size,
-                                    gen=gen
+                                    split_size=self.split_size
                                 )                               
                             except StopIteration:
                                 train_iter = iter(self.train_data_set_loader)
