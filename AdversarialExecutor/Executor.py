@@ -121,7 +121,7 @@ class Executor:
             batch_size=self.batch_size,
             shuffle=True,
             num_workers=self.num_workers,
-            pin_memory=True,
+            pin_memory=False,
             drop_last=False
         )
 
