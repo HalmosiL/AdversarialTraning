@@ -10,7 +10,7 @@ from Gen import run
 from Adversarial import Cosine_PDG_Adam
 import Transforms as transform
 from Dataset import SemData
-from ModelLodaer import load_model, slice_model
+from ModelLodaer import slice_model, load_model_slice
 
 class Executor:
     def sort_(self, key):
@@ -177,9 +177,7 @@ class Executor:
                     print("Use model:", new_model_name)
                     self.model_name = new_model_name
   
-                    model = slice_model(
-                        load_model(new_model_name, self.device)
-                    )
+                    model = load_model_slice(new_model_name, self.device)
 
                 if(config_main["MODE"] == "train"):
                     if(self.mode != "train"):
