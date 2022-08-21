@@ -33,6 +33,10 @@
     "MODE": "train",
     "LOG_PATH": "../AdversarialExecutor/Logs/",
 
+    "MODE_LOADE": false,
+    "MODEL_CONTINUM_PATH": "",
+    "OPTIMIZER_CONTINUM_PATH": "",
+
     "DATASET": {
         "scale_min":0.25, 
         "scale_max":1.0,

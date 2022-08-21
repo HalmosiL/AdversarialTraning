@@ -35,20 +35,44 @@ def train(CONFIG_PATH, CONFIG, DEVICE, train_loader_adversarial, val_loader_adve
     elif(DEVICE == "cuda:3"):
         DEVICE = "cuda:2"
     
-    model = get_model(DEVICE)
-    optimizer = torch.optim.SGD(
-        [{'params': model.layer0.parameters()},
-         {'params': model.layer1.parameters()},
-         {'params': model.layer2.parameters()},
-         {'params': model.layer3.parameters()},
-         {'params': model.layer4.parameters()},
-         {'params': model.ppm.parameters(), 'lr': CONFIG['LEARNING_RATE'] * 10},
-         {'params': model.cls.parameters(), 'lr': CONFIG['LEARNING_RATE'] * 10},
-         {'params': model.aux.parameters(), 'lr': CONFIG['LEARNING_RATE'] * 10}],
-        lr=CONFIG['LEARNING_RATE'], momentum=CONFIG['MOMENTUM'], weight_decay=CONFIG['WEIGHT_DECAY'])
-    
     logger = LogerWB(CONFIG["WB_LOG"], print_messages=CONFIG["PRINT_LOG"])
-    print("Traning started.....")
+
+    if(CONFIG["MODE_LOADE"]):
+        model = get_model(DEVICE)
+        optimizer = torch.optim.SGD(
+            [{'params': model.layer0.parameters()},
+            {'params': model.layer1.parameters()},
+            {'params': model.layer2.parameters()},
+            {'params': model.layer3.parameters()},
+            {'params': model.layer4.parameters()},
+            {'params': model.ppm.parameters(), 'lr': CONFIG['LEARNING_RATE'] * 10},
+            {'params': model.cls.parameters(), 'lr': CONFIG['LEARNING_RATE'] * 10},
+            {'params': model.aux.parameters(), 'lr': CONFIG['LEARNING_RATE'] * 10}],
+            lr=CONFIG['LEARNING_RATE'], momentum=CONFIG['MOMENTUM'], weight_decay=CONFIG['WEIGHT_DECAY'])
+            print("Traning started.....")
+    else:
+        print("Continum Traning.....")
+        model = get_model(DEVICE)
+
+        print("Load Model.....")
+        model.load_state_dict(torch.load(CONFIG["MODEL_CONTINUM_PATH"]))
+
+        optimizer = torch.optim.SGD(
+            [{'params': model.layer0.parameters()},
+            {'params': model.layer1.parameters()},
+            {'params': model.layer2.parameters()},
+            {'params': model.layer3.parameters()},
+            {'params': model.layer4.parameters()},
+            {'params': model.ppm.parameters(), 'lr': CONFIG['LEARNING_RATE'] * 10},
+            {'params': model.cls.parameters(), 'lr': CONFIG['LEARNING_RATE'] * 10},
+            {'params': model.aux.parameters(), 'lr': CONFIG['LEARNING_RATE'] * 10}],
+            lr=CONFIG['LEARNING_RATE'], momentum=CONFIG['MOMENTUM'], weight_decay=CONFIG['WEIGHT_DECAY'])
+
+        print("Load optimizer.....")
+        optimizer.load_state_dict(torch.load(CONFIG["OPTIMIZER_CONTINUM_PATH"]))
+
+        print("Traning started.....")
+    
 
     cache_id = 0
     cache_id = cacheModel(cache_id, model, CONFIG)
