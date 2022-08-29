@@ -1,0 +1,108 @@
+
+Traning started.....
+Train Adversarial loader length: 2975
+Val Adversarial loader length: 500
+Epoch[0] Finished[1.084%]Batch[1]loss_adversarial:3.0307424068450928
+Epoch[0] Finished[1.084%]Batch[1]iou_adversarial:0.0
+Epoch[0] Finished[1.084%]Batch[1]acc_adversarial:0.0
+Epoch[0] Finished[2.168%]Batch[2]loss_adversarial:3.0625195503234863
+Epoch[0] Finished[2.168%]Batch[2]iou_adversarial:0.0
+Epoch[0] Finished[2.168%]Batch[2]acc_adversarial:0.0
+Epoch[0] Finished[3.252%]Batch[3]loss_adversarial:3.0268642902374268
+Epoch[0] Finished[3.252%]Batch[3]iou_adversarial:0.0
+Epoch[0] Finished[3.252%]Batch[3]acc_adversarial:0.0
+Epoch[0] Finished[4.336%]Batch[4]loss_adversarial:3.0627968311309814
+Epoch[0] Finished[4.336%]Batch[4]iou_adversarial:0.0
+Epoch[0] Finished[4.336%]Batch[4]acc_adversarial:0.0
+Epoch[0] Finished[5.421%]Batch[5]loss_adversarial:2.9990155696868896
+Epoch[0] Finished[5.421%]Batch[5]iou_adversarial:0.0
+Epoch[0] Finished[5.421%]Batch[5]acc_adversarial:0.0
+Epoch[0] Finished[6.505%]Batch[6]loss_adversarial:2.97282075881958
+Epoch[0] Finished[6.505%]Batch[6]iou_adversarial:0.0
+Epoch[0] Finished[6.505%]Batch[6]acc_adversarial:0.0
+Epoch[0] Finished[7.589%]Batch[7]loss_adversarial:3.0154671669006348
+Epoch[0] Finished[7.589%]Batch[7]iou_adversarial:0.007492547
+Epoch[0] Finished[7.589%]Batch[7]acc_adversarial:0.14176149928378157
+Epoch[0] Finished[8.673%]Batch[8]loss_adversarial:2.977576494216919
+Epoch[0] Finished[8.673%]Batch[8]iou_adversarial:0.0
+Epoch[0] Finished[8.673%]Batch[8]acc_adversarial:0.0
+Epoch[0] Finished[9.757%]Batch[9]loss_adversarial:2.9866104125976562
+Epoch[0] Finished[9.757%]Batch[9]iou_adversarial:0.0
+Epoch[0] Finished[9.757%]Batch[9]acc_adversarial:0.0
+Epoch[0] Finished[1.084%]Batch[10]loss_adversarial:2.8139162063598633
+Epoch[0] Finished[1.084%]Batch[10]iou_adversarial:0.0011207319
+Epoch[0] Finished[1.084%]Batch[10]acc_adversarial:0.008463930348258701
+Epoch[0] Finished[1.192%]Batch[11]loss_adversarial:2.948533773422241
+Epoch[0] Finished[1.192%]Batch[11]iou_adversarial:0.0043296027
+Epoch[0] Finished[1.192%]Batch[11]acc_adversarial:0.06261512029264414
+Epoch[0] Finished[1.301%]Batch[12]loss_adversarial:2.9161760807037354
+Epoch[0] Finished[1.301%]Batch[12]iou_adversarial:0.016683113
+Epoch[0] Finished[1.301%]Batch[12]acc_adversarial:0.316182639317991
+Epoch[0] Finished[1.409%]Batch[13]loss_adversarial:2.8625054359436035
+Epoch[0] Finished[1.409%]Batch[13]iou_adversarial:0.021651104
+Epoch[0] Finished[1.409%]Batch[13]acc_adversarial:0.41137096539902945
+Epoch[0] Finished[1.517%]Batch[14]loss_adversarial:2.8678812980651855
+Epoch[0] Finished[1.517%]Batch[14]iou_adversarial:0.024482554
+Epoch[0] Finished[1.517%]Batch[14]acc_adversarial:0.4651685199848517
+Epoch[0] Finished[1.626%]Batch[15]loss_adversarial:2.974987506866455
+Epoch[0] Finished[1.626%]Batch[15]iou_adversarial:0.010087163
+Epoch[0] Finished[1.626%]Batch[15]acc_adversarial:0.19165609826341337
+Epoch[0] Finished[1.734%]Batch[16]loss_adversarial:2.7433905601501465
+Epoch[0] Finished[1.734%]Batch[16]iou_adversarial:0.029558655
+Epoch[0] Finished[1.734%]Batch[16]acc_adversarial:0.5616144678051004
+Epoch[0] Finished[1.843%]Batch[17]loss_adversarial:2.7203612327575684
+Epoch[0] Finished[1.843%]Batch[17]iou_adversarial:0.027359422
+Epoch[0] Finished[1.843%]Batch[17]acc_adversarial:0.5198290155440413
+Epoch[0] Finished[1.951%]Batch[18]loss_adversarial:2.4761948585510254
+Epoch[0] Finished[1.951%]Batch[18]iou_adversarial:0.050240014
+Epoch[0] Finished[1.951%]Batch[18]acc_adversarial:0.95456026424591
+Epoch[0] Finished[2.059%]Batch[19]loss_adversarial:2.679539918899536
+Epoch[0] Finished[2.059%]Batch[19]iou_adversarial:0.01874076
+Epoch[0] Finished[2.059%]Batch[19]acc_adversarial:0.3560744548152607
+Epoch[0] Finished[2.168%]Batch[20]loss_adversarial:2.5639286041259766
+Epoch[0] Finished[2.168%]Batch[20]iou_adversarial:0.028955001
+Epoch[0] Finished[2.168%]Batch[20]acc_adversarial:0.5501450519987848
+Epoch[0] Finished[2.276%]Batch[21]loss_adversarial:2.5572147369384766
+Epoch[0] Finished[2.276%]Batch[21]iou_adversarial:0.026703285
+Epoch[0] Finished[2.276%]Batch[21]acc_adversarial:0.5073624545622571
+Epoch[0] Finished[2.385%]Batch[22]loss_adversarial:2.5308094024658203
+Epoch[0] Finished[2.385%]Batch[22]iou_adversarial:0.021207636
+Epoch[0] Finished[2.385%]Batch[22]acc_adversarial:0.40294506435866545
+Epoch[0] Finished[2.493%]Batch[23]loss_adversarial:2.5465354919433594
+Epoch[0] Finished[2.493%]Batch[23]iou_adversarial:0.016612833
+Epoch[0] Finished[2.493%]Batch[23]acc_adversarial:0.3156438032574147
+Epoch[0] Finished[2.602%]Batch[24]loss_adversarial:2.926457166671753
+Epoch[0] Finished[2.602%]Batch[24]iou_adversarial:0.0004754539
+Epoch[0] Finished[2.602%]Batch[24]acc_adversarial:0.009033624296265684
+Epoch[0] Finished[2.710%]Batch[25]loss_adversarial:2.335211992263794
+Epoch[0] Finished[2.710%]Batch[25]iou_adversarial:0.02041889
+Epoch[0] Finished[2.710%]Batch[25]acc_adversarial:0.38795890829471946
+
+
+
+
+
+
+
+
+
+Epoch[0] loss_adversarial:2.8239223098754884
+Epoch[0] iou_adversarial:0.013044750653207302
+Epoch[0] acc_adversarial:0.24649543528273563
+Val finished:0.0%
+Traceback (most recent call last):
+  File "start_traning.py", line 91, in <module>
+    train(CONFIG_PATH, CONFIG, train_loader_adversarial, val_loader_adversarial, val_loader)
+  File "../train_tools/Train.py", line 209, in train
+    output, _ = model(image_val)
+  File "/home/developer/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "../models/Network.py", line 35, in forward
+    main_loss = self.criterion(x, y)
+  File "/home/developer/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/developer/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/nn/modules/loss.py", line 1152, in forward
+    label_smoothing=self.label_smoothing)
+  File "/home/developer/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/nn/functional.py", line 2846, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+TypeError: cross_entropy_loss(): argument 'target' (position 2) must be Tensor, not NoneType

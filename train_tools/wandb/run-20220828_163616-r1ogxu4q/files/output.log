@@ -1,0 +1,138 @@
+Traning started.....
+Train Adversarial loader length: 2975
+Val Adversarial loader length: 500
+Epoch[0] Finished[1.084%]Batch[1]loss_adversarial:3.015381336212158
+Epoch[0] Finished[1.084%]Batch[1]iou_adversarial:0.0009642523
+Epoch[0] Finished[1.084%]Batch[1]acc_adversarial:0.013115387186133032
+Epoch[0] Finished[2.168%]Batch[2]loss_adversarial:2.978940010070801
+Epoch[0] Finished[2.168%]Batch[2]iou_adversarial:0.00028086265
+Epoch[0] Finished[2.168%]Batch[2]acc_adversarial:0.0053228401097687875
+Epoch[0] Finished[3.252%]Batch[3]loss_adversarial:2.837710380554199
+Epoch[0] Finished[3.252%]Batch[3]iou_adversarial:0.00015235339
+Epoch[0] Finished[3.252%]Batch[3]acc_adversarial:0.0006869943995021777
+Epoch[0] Finished[4.336%]Batch[4]loss_adversarial:2.9312846660614014
+Epoch[0] Finished[4.336%]Batch[4]iou_adversarial:0.0019203499
+Epoch[0] Finished[4.336%]Batch[4]acc_adversarial:0.020096275178763365
+Epoch[0] Finished[5.421%]Batch[5]loss_adversarial:2.9570443630218506
+Epoch[0] Finished[5.421%]Batch[5]iou_adversarial:9.456365e-06
+Epoch[0] Finished[5.421%]Batch[5]acc_adversarial:0.00017496988499094858
+Epoch[0] Finished[6.505%]Batch[6]loss_adversarial:2.88118314743042
+Epoch[0] Finished[6.505%]Batch[6]iou_adversarial:0.0052472847
+Epoch[0] Finished[6.505%]Batch[6]acc_adversarial:0.08319074309169093
+Epoch[0] Finished[7.589%]Batch[7]loss_adversarial:2.8761403560638428
+Epoch[0] Finished[7.589%]Batch[7]iou_adversarial:0.009811287
+Epoch[0] Finished[7.589%]Batch[7]acc_adversarial:0.18608828374391553
+Epoch[0] Finished[8.673%]Batch[8]loss_adversarial:2.859588384628296
+Epoch[0] Finished[8.673%]Batch[8]iou_adversarial:0.008950054
+Epoch[0] Finished[8.673%]Batch[8]acc_adversarial:0.1700265866140788
+Epoch[0] Finished[9.757%]Batch[9]loss_adversarial:3.1005828380584717
+Epoch[0] Finished[9.757%]Batch[9]iou_adversarial:0.0015242556
+Epoch[0] Finished[9.757%]Batch[9]acc_adversarial:0.01692016306315286
+Epoch[0] Finished[1.084%]Batch[10]loss_adversarial:2.9062840938568115
+Epoch[0] Finished[1.084%]Batch[10]iou_adversarial:0.019279107
+Epoch[0] Finished[1.084%]Batch[10]acc_adversarial:0.3658854701556912
+Epoch[0] Finished[1.192%]Batch[11]loss_adversarial:3.0237619876861572
+Epoch[0] Finished[1.192%]Batch[11]iou_adversarial:0.0071153655
+Epoch[0] Finished[1.192%]Batch[11]acc_adversarial:0.13519193980359642
+Epoch[0] Finished[1.301%]Batch[12]loss_adversarial:2.6077399253845215
+Epoch[0] Finished[1.301%]Batch[12]iou_adversarial:0.04018639
+Epoch[0] Finished[1.301%]Batch[12]acc_adversarial:0.7635414253180147
+Epoch[0] Finished[1.409%]Batch[13]loss_adversarial:2.7549335956573486
+Epoch[0] Finished[1.409%]Batch[13]iou_adversarial:0.020367472
+Epoch[0] Finished[1.409%]Batch[13]acc_adversarial:0.3869819724514318
+Epoch[0] Finished[1.517%]Batch[14]loss_adversarial:2.6425817012786865
+Epoch[0] Finished[1.517%]Batch[14]iou_adversarial:0.03256324
+Epoch[0] Finished[1.517%]Batch[14]acc_adversarial:0.6187016026861039
+Epoch[0] Finished[1.626%]Batch[15]loss_adversarial:2.5425047874450684
+Epoch[0] Finished[1.626%]Batch[15]iou_adversarial:0.035999637
+Epoch[0] Finished[1.626%]Batch[15]acc_adversarial:0.6839931275309283
+Epoch[0] Finished[1.734%]Batch[16]loss_adversarial:2.7785215377807617
+Epoch[0] Finished[1.734%]Batch[16]iou_adversarial:0.0147309415
+Epoch[0] Finished[1.734%]Batch[16]acc_adversarial:0.2798878736652899
+Epoch[0] Finished[1.843%]Batch[17]loss_adversarial:2.3775620460510254
+Epoch[0] Finished[1.843%]Batch[17]iou_adversarial:0.039502375
+Epoch[0] Finished[1.843%]Batch[17]acc_adversarial:0.7505451610182761
+Epoch[0] Finished[1.951%]Batch[18]loss_adversarial:2.244734048843384
+Epoch[0] Finished[1.951%]Batch[18]iou_adversarial:0.04196643
+Epoch[0] Finished[1.951%]Batch[18]acc_adversarial:0.7973622300641406
+Epoch[0] Finished[2.059%]Batch[19]loss_adversarial:2.595057249069214
+Epoch[0] Finished[2.059%]Batch[19]iou_adversarial:0.017631937
+Epoch[0] Finished[2.059%]Batch[19]acc_adversarial:0.33500681681207234
+Epoch[0] Finished[2.168%]Batch[20]loss_adversarial:2.541161298751831
+Epoch[0] Finished[2.168%]Batch[20]iou_adversarial:0.022932557
+Epoch[0] Finished[2.168%]Batch[20]acc_adversarial:0.4357185864007917
+Epoch[0] Finished[2.276%]Batch[21]loss_adversarial:2.4243903160095215
+Epoch[0] Finished[2.276%]Batch[21]iou_adversarial:0.023526128
+Epoch[0] Finished[2.276%]Batch[21]acc_adversarial:0.44699645436099905
+Epoch[0] Finished[2.385%]Batch[22]loss_adversarial:2.951327323913574
+Epoch[0] Finished[2.385%]Batch[22]iou_adversarial:0.0
+Epoch[0] Finished[2.385%]Batch[22]acc_adversarial:0.0
+Epoch[0] Finished[2.493%]Batch[23]loss_adversarial:2.435230016708374
+Epoch[0] Finished[2.493%]Batch[23]iou_adversarial:0.020614235
+Epoch[0] Finished[2.493%]Batch[23]acc_adversarial:0.3916704682276746
+Epoch[0] Finished[2.602%]Batch[24]loss_adversarial:1.9374576807022095
+Epoch[0] Finished[2.602%]Batch[24]iou_adversarial:0.03458814
+Epoch[0] Finished[2.602%]Batch[24]acc_adversarial:0.6571746330493867
+Epoch[0] Finished[2.710%]Batch[25]loss_adversarial:2.285682201385498
+Epoch[0] Finished[2.710%]Batch[25]iou_adversarial:0.020436974
+Epoch[0] Finished[2.710%]Batch[25]acc_adversarial:0.3883025022605694
+
+
+
+
+
+
+Epoch[0] loss_adversarial:2.699471411705017
+Epoch[0] iou_adversarial:0.016812043389909378
+Epoch[0] acc_adversarial:0.3173033002830785
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+Traning started.....
+Train Adversarial loader length: 2975
+Val Adversarial loader length: 500
+Epoch[0] Finished[1.084%]Batch[1]loss_adversarial:2.9561100006103516
+Epoch[0] Finished[1.084%]Batch[1]iou_adversarial:0.0
+Epoch[0] Finished[1.084%]Batch[1]acc_adversarial:0.0
+
+
+
+
+Epoch[0] loss_adversarial:2.9561100006103516
+Epoch[0] iou_adversarial:0.0
+Epoch[0] acc_adversarial:0.0
+jump...ished:0.0%
+Traceback (most recent call last):
+  File "start_traning.py", line 91, in <module>
+    train(CONFIG_PATH, CONFIG, train_loader_adversarial, val_loader_adversarial, val_loader)
+  File "../train_tools/Train.py", line 215, in train
+    remove_files = np.array(data[0]).flatten()
+IndexError: list index out of range

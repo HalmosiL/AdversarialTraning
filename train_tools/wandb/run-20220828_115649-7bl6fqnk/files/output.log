@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "start_traning.py", line 88, in <module>
+    train(CONFIG_PATH, CONFIG, train_loader_adversarial, val_loader_adversarial, val_loader)
+  File "../train_tools/Train.py", line 132, in train
+    loss = main_loss + CONFIG['AUX_WEIGHT'] * aux_loss
+KeyError: 'AUX_WEIGHT'
+Traning started.....
+Train Adversarial loader length: 2975
+Val Adversarial loader length: 500

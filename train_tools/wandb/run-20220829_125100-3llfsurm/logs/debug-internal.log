@@ -1,0 +1,53 @@
+2022-08-29 12:51:01,407 INFO    MainThread:3187 [internal.py:wandb_internal():93] W&B internal server running at pid: 3187, started at: 2022-08-29 12:51:01.407197
+2022-08-29 12:51:01,409 INFO    WriterThread:3187 [datastore.py:open_for_write():75] open: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220829_125100-3llfsurm/run-3llfsurm.wandb
+2022-08-29 12:51:01,411 DEBUG   SenderThread:3187 [sender.py:send():236] send: header
+2022-08-29 12:51:01,412 DEBUG   SenderThread:3187 [sender.py:send():236] send: run
+2022-08-29 12:51:01,772 DEBUG   HandlerThread:3187 [handler.py:handle_request():140] handle_request: check_version
+2022-08-29 12:51:01,780 INFO    SenderThread:3187 [dir_watcher.py:__init__():216] watching files in: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220829_125100-3llfsurm/files
+2022-08-29 12:51:01,781 INFO    SenderThread:3187 [sender.py:_start_run_threads():818] run started: 3llfsurm with start time 1661770260
+2022-08-29 12:51:01,781 DEBUG   SenderThread:3187 [sender.py:send():236] send: summary
+2022-08-29 12:51:01,782 INFO    SenderThread:3187 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-08-29 12:51:01,782 DEBUG   SenderThread:3187 [sender.py:send_request():250] send_request: check_version
+2022-08-29 12:51:02,045 DEBUG   HandlerThread:3187 [handler.py:handle_request():140] handle_request: run_start
+2022-08-29 12:51:02,056 DEBUG   HandlerThread:3187 [meta.py:__init__():35] meta init
+2022-08-29 12:51:02,056 DEBUG   HandlerThread:3187 [meta.py:__init__():49] meta init done
+2022-08-29 12:51:02,056 DEBUG   HandlerThread:3187 [meta.py:probe():209] probe
+2022-08-29 12:51:02,064 DEBUG   HandlerThread:3187 [meta.py:_setup_git():199] setup git
+2022-08-29 12:51:02,080 DEBUG   HandlerThread:3187 [meta.py:_setup_git():206] setup git done
+2022-08-29 12:51:02,080 DEBUG   HandlerThread:3187 [meta.py:_save_pip():53] save pip
+2022-08-29 12:51:02,081 DEBUG   HandlerThread:3187 [meta.py:_save_pip():67] save pip done
+2022-08-29 12:51:02,081 DEBUG   HandlerThread:3187 [meta.py:_save_conda():74] save conda
+2022-08-29 12:51:02,712 DEBUG   HandlerThread:3187 [meta.py:_save_conda():84] save conda done
+2022-08-29 12:51:02,713 DEBUG   HandlerThread:3187 [meta.py:probe():247] probe done
+2022-08-29 12:51:02,720 DEBUG   SenderThread:3187 [sender.py:send():236] send: files
+2022-08-29 12:51:02,720 INFO    SenderThread:3187 [sender.py:_save_file():952] saving file wandb-metadata.json with policy now
+2022-08-29 12:51:02,731 DEBUG   HandlerThread:3187 [handler.py:handle_request():140] handle_request: stop_status
+2022-08-29 12:51:02,732 DEBUG   SenderThread:3187 [sender.py:send_request():250] send_request: stop_status
+2022-08-29 12:51:02,785 INFO    Thread-7  :3187 [dir_watcher.py:_on_file_created():269] file/dir created: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220829_125100-3llfsurm/files/wandb-metadata.json
+2022-08-29 12:51:02,785 INFO    Thread-7  :3187 [dir_watcher.py:_on_file_created():269] file/dir created: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220829_125100-3llfsurm/files/conda-environment.yaml
+2022-08-29 12:51:02,785 INFO    Thread-7  :3187 [dir_watcher.py:_on_file_created():269] file/dir created: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220829_125100-3llfsurm/files/requirements.txt
+2022-08-29 12:51:02,786 INFO    Thread-7  :3187 [dir_watcher.py:_on_file_created():269] file/dir created: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220829_125100-3llfsurm/files/output.log
+2022-08-29 12:51:02,786 INFO    Thread-7  :3187 [dir_watcher.py:_on_file_created():269] file/dir created: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220829_125100-3llfsurm/files/wandb-summary.json
+2022-08-29 12:51:02,788 WARNING MainThread:3187 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2022-08-29 12:51:03,094 DEBUG   SenderThread:3187 [sender.py:send():236] send: telemetry
+2022-08-29 12:51:03,094 DEBUG   SenderThread:3187 [sender.py:send():236] send: telemetry
+2022-08-29 12:51:03,707 INFO    Thread-11 :3187 [upload_job.py:push():138] Uploaded file /tmp/tmpa4u0qbiawandb/12mp09gi-wandb-metadata.json
+2022-08-29 12:51:03,763 WARNING MainThread:3187 [internal.py:wandb_internal():153] Internal process interrupt: 2
+2022-08-29 12:51:03,763 ERROR   MainThread:3187 [internal.py:wandb_internal():156] Internal process interrupted.
+2022-08-29 12:51:03,840 INFO    WriterThread:3187 [datastore.py:close():279] close: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220829_125100-3llfsurm/run-3llfsurm.wandb
+2022-08-29 12:51:03,841 INFO    HandlerThread:3187 [handler.py:finish():806] shutting down handler
+2022-08-29 12:51:04,095 INFO    SenderThread:3187 [sender.py:finish():1114] shutting down sender
+2022-08-29 12:51:04,096 INFO    SenderThread:3187 [dir_watcher.py:finish():353] shutting down directory watcher
+2022-08-29 12:51:04,787 INFO    SenderThread:3187 [dir_watcher.py:finish():383] scan: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220829_125100-3llfsurm/files
+2022-08-29 12:51:04,787 INFO    SenderThread:3187 [dir_watcher.py:finish():397] scan save: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220829_125100-3llfsurm/files/config.yaml config.yaml
+2022-08-29 12:51:04,788 INFO    SenderThread:3187 [dir_watcher.py:finish():397] scan save: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220829_125100-3llfsurm/files/conda-environment.yaml conda-environment.yaml
+2022-08-29 12:51:04,788 INFO    SenderThread:3187 [dir_watcher.py:finish():397] scan save: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220829_125100-3llfsurm/files/output.log output.log
+2022-08-29 12:51:04,793 INFO    SenderThread:3187 [dir_watcher.py:finish():397] scan save: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220829_125100-3llfsurm/files/requirements.txt requirements.txt
+2022-08-29 12:51:04,793 INFO    SenderThread:3187 [dir_watcher.py:finish():397] scan save: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220829_125100-3llfsurm/files/wandb-metadata.json wandb-metadata.json
+2022-08-29 12:51:04,793 INFO    SenderThread:3187 [dir_watcher.py:finish():397] scan save: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220829_125100-3llfsurm/files/wandb-summary.json wandb-summary.json
+2022-08-29 12:51:04,793 INFO    SenderThread:3187 [file_pusher.py:finish():171] shutting down file pusher
+2022-08-29 12:51:04,794 INFO    SenderThread:3187 [file_pusher.py:join():176] waiting for file pusher
+2022-08-29 12:51:05,654 INFO    Thread-14 :3187 [upload_job.py:push():138] Uploaded file /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220829_125100-3llfsurm/files/wandb-summary.json
+2022-08-29 12:51:05,657 INFO    Thread-12 :3187 [upload_job.py:push():138] Uploaded file /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220829_125100-3llfsurm/files/config.yaml
+2022-08-29 12:51:05,658 INFO    Thread-13 :3187 [upload_job.py:push():138] Uploaded file /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220829_125100-3llfsurm/files/requirements.txt
+2022-08-29 12:51:06,573 INFO    Dummy-15  :3187 [internal.py:handle_exit():80] Internal process exited

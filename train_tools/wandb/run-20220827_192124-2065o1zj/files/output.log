@@ -1,0 +1,21 @@
+Traning started.....
+Train Adversarial loader length: 2975
+Val Adversarial loader length: 500
+Traceback (most recent call last):
+  File "start_traning.py", line 88, in <module>
+    train(CONFIG_PATH, CONFIG, train_loader_adversarial, val_loader_adversarial, val_loader)
+  File "../train_tools/Train.py", line 116, in train
+    data = next(train_loader_adversarial_iter)
+  File "/home/developer/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "/home/developer/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 560, in _next_data
+    index = self._next_index()  # may raise StopIteration
+  File "/home/developer/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 512, in _next_index
+    return next(self._sampler_iter)  # may raise StopIteration
+  File "/home/developer/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/sampler.py", line 229, in __iter__
+    for idx in self.sampler:
+  File "/home/developer/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/sampler.py", line 66, in __iter__
+    return iter(range(len(self.data_source)))
+  File "../dataset/DatasetAdversarial.py", line 14, in __len__
+    return sys.maxint
+AttributeError: module 'sys' has no attribute 'maxint'

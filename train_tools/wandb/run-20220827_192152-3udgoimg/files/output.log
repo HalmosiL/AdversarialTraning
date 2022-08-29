@@ -1,0 +1,19 @@
+Traning started.....
+Train Adversarial loader length: 2975
+Val Adversarial loader length: 500
+Traceback (most recent call last):
+  File "start_traning.py", line 88, in <module>
+    train(CONFIG_PATH, CONFIG, train_loader_adversarial, val_loader_adversarial, val_loader)
+  File "../train_tools/Train.py", line 116, in train
+    data = next(train_loader_adversarial_iter)
+  File "/home/developer/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "/home/developer/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 561, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/developer/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/developer/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "../dataset/DatasetAdversarial.py", line 30, in __getitem__
+    con_conf = json(open(self.con_conf_path))
+TypeError: 'module' object is not callable

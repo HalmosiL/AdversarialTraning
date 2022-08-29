@@ -1,0 +1,154 @@
+2022-08-28 14:59:51,973 INFO    MainThread:29074 [internal.py:wandb_internal():93] W&B internal server running at pid: 29074, started at: 2022-08-28 14:59:51.972850
+2022-08-28 14:59:51,977 INFO    WriterThread:29074 [datastore.py:open_for_write():75] open: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220828_145951-1xg2vkmi/run-1xg2vkmi.wandb
+2022-08-28 14:59:51,980 DEBUG   SenderThread:29074 [sender.py:send():236] send: header
+2022-08-28 14:59:51,980 DEBUG   SenderThread:29074 [sender.py:send():236] send: run
+2022-08-28 14:59:52,331 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: check_version
+2022-08-28 14:59:52,333 INFO    SenderThread:29074 [dir_watcher.py:__init__():216] watching files in: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220828_145951-1xg2vkmi/files
+2022-08-28 14:59:52,334 INFO    SenderThread:29074 [sender.py:_start_run_threads():818] run started: 1xg2vkmi with start time 1661691591
+2022-08-28 14:59:52,334 DEBUG   SenderThread:29074 [sender.py:send():236] send: summary
+2022-08-28 14:59:52,334 INFO    SenderThread:29074 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-08-28 14:59:52,334 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: check_version
+2022-08-28 14:59:52,596 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: run_start
+2022-08-28 14:59:52,633 DEBUG   HandlerThread:29074 [meta.py:__init__():35] meta init
+2022-08-28 14:59:52,634 DEBUG   HandlerThread:29074 [meta.py:__init__():49] meta init done
+2022-08-28 14:59:52,634 DEBUG   HandlerThread:29074 [meta.py:probe():209] probe
+2022-08-28 14:59:52,642 DEBUG   HandlerThread:29074 [meta.py:_setup_git():199] setup git
+2022-08-28 14:59:52,664 DEBUG   HandlerThread:29074 [meta.py:_setup_git():206] setup git done
+2022-08-28 14:59:52,664 DEBUG   HandlerThread:29074 [meta.py:_save_pip():53] save pip
+2022-08-28 14:59:52,665 DEBUG   HandlerThread:29074 [meta.py:_save_pip():67] save pip done
+2022-08-28 14:59:52,665 DEBUG   HandlerThread:29074 [meta.py:_save_conda():74] save conda
+2022-08-28 14:59:53,335 INFO    Thread-7  :29074 [dir_watcher.py:_on_file_created():269] file/dir created: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220828_145951-1xg2vkmi/files/wandb-summary.json
+2022-08-28 14:59:53,335 INFO    Thread-7  :29074 [dir_watcher.py:_on_file_created():269] file/dir created: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220828_145951-1xg2vkmi/files/requirements.txt
+2022-08-28 14:59:53,335 INFO    Thread-7  :29074 [dir_watcher.py:_on_file_created():269] file/dir created: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220828_145951-1xg2vkmi/files/conda-environment.yaml
+2022-08-28 14:59:53,490 DEBUG   HandlerThread:29074 [meta.py:_save_conda():84] save conda done
+2022-08-28 14:59:53,490 DEBUG   HandlerThread:29074 [meta.py:probe():247] probe done
+2022-08-28 14:59:53,522 DEBUG   SenderThread:29074 [sender.py:send():236] send: files
+2022-08-28 14:59:53,522 INFO    SenderThread:29074 [sender.py:_save_file():952] saving file wandb-metadata.json with policy now
+2022-08-28 14:59:53,533 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: stop_status
+2022-08-28 14:59:53,534 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: stop_status
+2022-08-28 14:59:53,857 DEBUG   SenderThread:29074 [sender.py:send():236] send: telemetry
+2022-08-28 14:59:54,334 INFO    Thread-7  :29074 [dir_watcher.py:_on_file_created():269] file/dir created: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220828_145951-1xg2vkmi/files/wandb-metadata.json
+2022-08-28 14:59:54,336 INFO    Thread-7  :29074 [dir_watcher.py:_on_file_created():269] file/dir created: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220828_145951-1xg2vkmi/files/output.log
+2022-08-28 14:59:54,351 INFO    Thread-11 :29074 [upload_job.py:push():138] Uploaded file /tmp/tmpqjr2i_bbwandb/3223wajw-wandb-metadata.json
+2022-08-28 14:59:57,352 DEBUG   SenderThread:29074 [sender.py:send():236] send: telemetry
+2022-08-28 14:59:59,337 INFO    Thread-7  :29074 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220828_145951-1xg2vkmi/files/output.log
+2022-08-28 15:00:00,071 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-28 15:00:00,071 DEBUG   SenderThread:29074 [sender.py:send():236] send: exit
+2022-08-28 15:00:00,072 INFO    SenderThread:29074 [sender.py:send_exit():372] handling exit code: 1
+2022-08-28 15:00:00,073 INFO    SenderThread:29074 [sender.py:send_exit():374] handling runtime: 7
+2022-08-28 15:00:00,073 INFO    SenderThread:29074 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-08-28 15:00:00,074 INFO    SenderThread:29074 [sender.py:send_exit():380] send defer
+2022-08-28 15:00:00,074 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: poll_exit
+2022-08-28 15:00:00,075 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: defer
+2022-08-28 15:00:00,075 INFO    HandlerThread:29074 [handler.py:handle_request_defer():163] handle defer: 0
+2022-08-28 15:00:00,075 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: defer
+2022-08-28 15:00:00,076 INFO    SenderThread:29074 [sender.py:send_request_defer():389] handle sender defer: 0
+2022-08-28 15:00:00,076 INFO    SenderThread:29074 [sender.py:transition_state():393] send defer: 1
+2022-08-28 15:00:00,076 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: defer
+2022-08-28 15:00:00,076 INFO    HandlerThread:29074 [handler.py:handle_request_defer():163] handle defer: 1
+2022-08-28 15:00:00,131 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: defer
+2022-08-28 15:00:00,132 INFO    SenderThread:29074 [sender.py:send_request_defer():389] handle sender defer: 1
+2022-08-28 15:00:00,132 INFO    SenderThread:29074 [sender.py:transition_state():393] send defer: 2
+2022-08-28 15:00:00,132 DEBUG   SenderThread:29074 [sender.py:send():236] send: stats
+2022-08-28 15:00:00,132 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: defer
+2022-08-28 15:00:00,133 INFO    HandlerThread:29074 [handler.py:handle_request_defer():163] handle defer: 2
+2022-08-28 15:00:00,133 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: defer
+2022-08-28 15:00:00,133 INFO    SenderThread:29074 [sender.py:send_request_defer():389] handle sender defer: 2
+2022-08-28 15:00:00,133 INFO    SenderThread:29074 [sender.py:transition_state():393] send defer: 3
+2022-08-28 15:00:00,133 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: defer
+2022-08-28 15:00:00,133 INFO    HandlerThread:29074 [handler.py:handle_request_defer():163] handle defer: 3
+2022-08-28 15:00:00,133 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: defer
+2022-08-28 15:00:00,133 INFO    SenderThread:29074 [sender.py:send_request_defer():389] handle sender defer: 3
+2022-08-28 15:00:00,133 INFO    SenderThread:29074 [sender.py:transition_state():393] send defer: 4
+2022-08-28 15:00:00,134 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: defer
+2022-08-28 15:00:00,134 INFO    HandlerThread:29074 [handler.py:handle_request_defer():163] handle defer: 4
+2022-08-28 15:00:00,134 DEBUG   SenderThread:29074 [sender.py:send():236] send: summary
+2022-08-28 15:00:00,134 INFO    SenderThread:29074 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-08-28 15:00:00,135 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: defer
+2022-08-28 15:00:00,135 INFO    SenderThread:29074 [sender.py:send_request_defer():389] handle sender defer: 4
+2022-08-28 15:00:00,135 INFO    SenderThread:29074 [sender.py:transition_state():393] send defer: 5
+2022-08-28 15:00:00,136 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: defer
+2022-08-28 15:00:00,136 INFO    HandlerThread:29074 [handler.py:handle_request_defer():163] handle defer: 5
+2022-08-28 15:00:00,137 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: defer
+2022-08-28 15:00:00,137 INFO    SenderThread:29074 [sender.py:send_request_defer():389] handle sender defer: 5
+2022-08-28 15:00:00,194 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-28 15:00:00,337 INFO    Thread-7  :29074 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220828_145951-1xg2vkmi/files/output.log
+2022-08-28 15:00:00,337 INFO    Thread-7  :29074 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220828_145951-1xg2vkmi/files/wandb-summary.json
+2022-08-28 15:00:00,513 INFO    SenderThread:29074 [sender.py:transition_state():393] send defer: 6
+2022-08-28 15:00:00,514 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: poll_exit
+2022-08-28 15:00:00,514 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: defer
+2022-08-28 15:00:00,515 INFO    HandlerThread:29074 [handler.py:handle_request_defer():163] handle defer: 6
+2022-08-28 15:00:00,515 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: defer
+2022-08-28 15:00:00,515 INFO    SenderThread:29074 [sender.py:send_request_defer():389] handle sender defer: 6
+2022-08-28 15:00:00,515 INFO    SenderThread:29074 [dir_watcher.py:finish():353] shutting down directory watcher
+2022-08-28 15:00:00,616 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-28 15:00:01,338 INFO    Thread-7  :29074 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220828_145951-1xg2vkmi/files/config.yaml
+2022-08-28 15:00:01,338 INFO    SenderThread:29074 [dir_watcher.py:finish():383] scan: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220828_145951-1xg2vkmi/files
+2022-08-28 15:00:01,339 INFO    SenderThread:29074 [dir_watcher.py:finish():397] scan save: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220828_145951-1xg2vkmi/files/config.yaml config.yaml
+2022-08-28 15:00:01,339 INFO    SenderThread:29074 [dir_watcher.py:finish():397] scan save: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220828_145951-1xg2vkmi/files/conda-environment.yaml conda-environment.yaml
+2022-08-28 15:00:01,342 INFO    SenderThread:29074 [dir_watcher.py:finish():397] scan save: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220828_145951-1xg2vkmi/files/output.log output.log
+2022-08-28 15:00:01,342 INFO    SenderThread:29074 [dir_watcher.py:finish():397] scan save: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220828_145951-1xg2vkmi/files/requirements.txt requirements.txt
+2022-08-28 15:00:01,343 INFO    SenderThread:29074 [dir_watcher.py:finish():397] scan save: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220828_145951-1xg2vkmi/files/wandb-metadata.json wandb-metadata.json
+2022-08-28 15:00:01,343 INFO    SenderThread:29074 [dir_watcher.py:finish():397] scan save: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220828_145951-1xg2vkmi/files/wandb-summary.json wandb-summary.json
+2022-08-28 15:00:01,343 INFO    SenderThread:29074 [sender.py:transition_state():393] send defer: 7
+2022-08-28 15:00:01,344 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: poll_exit
+2022-08-28 15:00:01,350 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: defer
+2022-08-28 15:00:01,352 INFO    HandlerThread:29074 [handler.py:handle_request_defer():163] handle defer: 7
+2022-08-28 15:00:01,361 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: defer
+2022-08-28 15:00:01,361 INFO    SenderThread:29074 [sender.py:send_request_defer():389] handle sender defer: 7
+2022-08-28 15:00:01,361 INFO    SenderThread:29074 [file_pusher.py:finish():171] shutting down file pusher
+2022-08-28 15:00:01,445 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-28 15:00:01,445 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: poll_exit
+2022-08-28 15:00:01,547 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-28 15:00:01,547 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: poll_exit
+2022-08-28 15:00:01,649 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-28 15:00:01,650 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: poll_exit
+2022-08-28 15:00:01,752 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-28 15:00:01,752 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: poll_exit
+2022-08-28 15:00:01,854 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-28 15:00:01,855 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: poll_exit
+2022-08-28 15:00:01,957 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-28 15:00:01,958 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: poll_exit
+2022-08-28 15:00:02,060 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-28 15:00:02,061 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: poll_exit
+2022-08-28 15:00:02,141 INFO    Thread-15 :29074 [upload_job.py:push():138] Uploaded file /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220828_145951-1xg2vkmi/files/wandb-summary.json
+2022-08-28 15:00:02,162 INFO    Thread-12 :29074 [upload_job.py:push():138] Uploaded file /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220828_145951-1xg2vkmi/files/config.yaml
+2022-08-28 15:00:02,162 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-28 15:00:02,163 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: poll_exit
+2022-08-28 15:00:02,178 INFO    Thread-13 :29074 [upload_job.py:push():138] Uploaded file /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220828_145951-1xg2vkmi/files/output.log
+2022-08-28 15:00:02,188 INFO    Thread-14 :29074 [upload_job.py:push():138] Uploaded file /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220828_145951-1xg2vkmi/files/requirements.txt
+2022-08-28 15:00:02,265 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-28 15:00:02,266 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: poll_exit
+2022-08-28 15:00:02,368 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-28 15:00:02,368 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: poll_exit
+2022-08-28 15:00:02,388 INFO    Thread-6  :29074 [sender.py:transition_state():393] send defer: 8
+2022-08-28 15:00:02,389 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: defer
+2022-08-28 15:00:02,389 INFO    HandlerThread:29074 [handler.py:handle_request_defer():163] handle defer: 8
+2022-08-28 15:00:02,390 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: defer
+2022-08-28 15:00:02,390 INFO    SenderThread:29074 [sender.py:send_request_defer():389] handle sender defer: 8
+2022-08-28 15:00:02,470 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-28 15:00:02,659 INFO    SenderThread:29074 [sender.py:transition_state():393] send defer: 9
+2022-08-28 15:00:02,660 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: poll_exit
+2022-08-28 15:00:02,660 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: defer
+2022-08-28 15:00:02,660 INFO    HandlerThread:29074 [handler.py:handle_request_defer():163] handle defer: 9
+2022-08-28 15:00:02,661 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: defer
+2022-08-28 15:00:02,661 INFO    SenderThread:29074 [sender.py:send_request_defer():389] handle sender defer: 9
+2022-08-28 15:00:02,661 INFO    SenderThread:29074 [sender.py:transition_state():393] send defer: 10
+2022-08-28 15:00:02,662 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: defer
+2022-08-28 15:00:02,662 DEBUG   SenderThread:29074 [sender.py:send():236] send: final
+2022-08-28 15:00:02,662 INFO    HandlerThread:29074 [handler.py:handle_request_defer():163] handle defer: 10
+2022-08-28 15:00:02,662 DEBUG   SenderThread:29074 [sender.py:send():236] send: footer
+2022-08-28 15:00:02,662 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: defer
+2022-08-28 15:00:02,662 INFO    SenderThread:29074 [sender.py:send_request_defer():389] handle sender defer: 10
+2022-08-28 15:00:02,762 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-28 15:00:02,762 DEBUG   SenderThread:29074 [sender.py:send_request():250] send_request: poll_exit
+2022-08-28 15:00:02,763 INFO    SenderThread:29074 [file_pusher.py:join():176] waiting for file pusher
+2022-08-28 15:00:03,480 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: sampled_history
+2022-08-28 15:00:03,481 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: get_summary
+2022-08-28 15:00:03,482 DEBUG   HandlerThread:29074 [handler.py:handle_request():140] handle_request: shutdown
+2022-08-28 15:00:03,482 INFO    HandlerThread:29074 [handler.py:finish():806] shutting down handler
+2022-08-28 15:00:03,662 INFO    WriterThread:29074 [datastore.py:close():279] close: /home/developer/Desktop/continum/AdversarialTraning/train_tools/wandb/run-20220828_145951-1xg2vkmi/run-1xg2vkmi.wandb
+2022-08-28 15:00:04,379 INFO    SenderThread:29074 [sender.py:finish():1114] shutting down sender
+2022-08-28 15:00:04,379 INFO    SenderThread:29074 [file_pusher.py:finish():171] shutting down file pusher
+2022-08-28 15:00:04,379 INFO    SenderThread:29074 [file_pusher.py:join():176] waiting for file pusher
+2022-08-28 15:00:04,383 INFO    Dummy-16  :29074 [internal.py:handle_exit():80] Internal process exited

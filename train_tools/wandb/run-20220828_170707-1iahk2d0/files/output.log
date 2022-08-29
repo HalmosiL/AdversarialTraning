@@ -1,0 +1,95 @@
+Traning started.....
+Train Adversarial loader length: 2975
+Val Adversarial loader length: 500
+Epoch[0] Finished[1.084%]Batch[1]loss_adversarial:2.9279377460479736
+Epoch[0] Finished[1.084%]Batch[1]iou_adversarial:0.019308832
+Epoch[0] Finished[1.084%]Batch[1]acc_adversarial:0.3660948216368731
+Epoch[0] Finished[2.168%]Batch[2]loss_adversarial:2.9747207164764404
+Epoch[0] Finished[2.168%]Batch[2]iou_adversarial:0.012906456
+Epoch[0] Finished[2.168%]Batch[2]acc_adversarial:0.234183897521186
+Epoch[0] Finished[3.252%]Batch[3]loss_adversarial:3.025503158569336
+Epoch[0] Finished[3.252%]Batch[3]iou_adversarial:0.001777042
+Epoch[0] Finished[3.252%]Batch[3]acc_adversarial:0.03376329100598063
+Epoch[0] Finished[4.336%]Batch[4]loss_adversarial:3.016906976699829
+Epoch[0] Finished[4.336%]Batch[4]iou_adversarial:0.0072598467
+Epoch[0] Finished[4.336%]Batch[4]acc_adversarial:0.13793638868019029
+Epoch[0] Finished[5.421%]Batch[5]loss_adversarial:3.0110907554626465
+Epoch[0] Finished[5.421%]Batch[5]iou_adversarial:0.0025128592
+Epoch[0] Finished[5.421%]Batch[5]acc_adversarial:0.04774432329698908
+Epoch[0] Finished[6.505%]Batch[6]loss_adversarial:2.984964370727539
+Epoch[0] Finished[6.505%]Batch[6]iou_adversarial:0.005657078
+Epoch[0] Finished[6.505%]Batch[6]acc_adversarial:0.10748448467917317
+Epoch[0] Finished[7.589%]Batch[7]loss_adversarial:2.9545302391052246
+Epoch[0] Finished[7.589%]Batch[7]iou_adversarial:0.011304952
+Epoch[0] Finished[7.589%]Batch[7]acc_adversarial:0.21479408546445738
+Epoch[0] Finished[8.673%]Batch[8]loss_adversarial:2.9169652462005615
+Epoch[0] Finished[8.673%]Batch[8]iou_adversarial:0.0023885763
+Epoch[0] Finished[8.673%]Batch[8]acc_adversarial:0.04538294889766788
+Epoch[0] Finished[9.757%]Batch[9]loss_adversarial:2.928758144378662
+Epoch[0] Finished[9.757%]Batch[9]iou_adversarial:0.00786717
+Epoch[0] Finished[9.757%]Batch[9]acc_adversarial:0.14947621839539668
+Epoch[0] Finished[1.084%]Batch[10]loss_adversarial:2.801570177078247
+Epoch[0] Finished[1.084%]Batch[10]iou_adversarial:0.0
+Epoch[0] Finished[1.084%]Batch[10]acc_adversarial:0.0
+Epoch[0] Finished[1.192%]Batch[11]loss_adversarial:2.7707631587982178
+Epoch[0] Finished[1.192%]Batch[11]iou_adversarial:0.014287002
+Epoch[0] Finished[1.192%]Batch[11]acc_adversarial:0.27145305689203625
+Epoch[0] Finished[1.301%]Batch[12]loss_adversarial:2.6917290687561035
+Epoch[0] Finished[1.301%]Batch[12]iou_adversarial:0.0070416615
+Epoch[0] Finished[1.301%]Batch[12]acc_adversarial:0.133791558976598
+Epoch[0] Finished[1.409%]Batch[13]loss_adversarial:2.9497251510620117
+Epoch[0] Finished[1.409%]Batch[13]iou_adversarial:0.0040532365
+Epoch[0] Finished[1.409%]Batch[13]acc_adversarial:0.063924734892922
+Epoch[0] Finished[1.517%]Batch[14]loss_adversarial:2.634369373321533
+Epoch[0] Finished[1.517%]Batch[14]iou_adversarial:0.021537215
+Epoch[0] Finished[1.517%]Batch[14]acc_adversarial:0.40659188073226854
+Epoch[0] Finished[1.626%]Batch[15]loss_adversarial:2.6956467628479004
+Epoch[0] Finished[1.626%]Batch[15]iou_adversarial:0.015222642
+Epoch[0] Finished[1.626%]Batch[15]acc_adversarial:0.2891602720224601
+Epoch[0] Finished[1.734%]Batch[16]loss_adversarial:2.5461223125457764
+Epoch[0] Finished[1.734%]Batch[16]iou_adversarial:0.02958052
+Epoch[0] Finished[1.734%]Batch[16]acc_adversarial:0.562026819464264
+Epoch[0] Finished[1.843%]Batch[17]loss_adversarial:2.6184322834014893
+Epoch[0] Finished[1.843%]Batch[17]iou_adversarial:0.023683926
+Epoch[0] Finished[1.843%]Batch[17]acc_adversarial:0.4499945972554055
+Epoch[0] Finished[1.951%]Batch[18]loss_adversarial:2.527625322341919
+Epoch[0] Finished[1.951%]Batch[18]iou_adversarial:0.024639433
+Epoch[0] Finished[1.951%]Batch[18]acc_adversarial:0.4681492441725647
+Epoch[0] Finished[2.059%]Batch[19]loss_adversarial:2.4230551719665527
+Epoch[0] Finished[2.059%]Batch[19]iou_adversarial:0.0069367196
+Epoch[0] Finished[2.059%]Batch[19]acc_adversarial:0.13179767522751926
+Epoch[0] Finished[2.168%]Batch[20]loss_adversarial:2.104950189590454
+Epoch[0] Finished[2.168%]Batch[20]iou_adversarial:0.034734182
+Epoch[0] Finished[2.168%]Batch[20]acc_adversarial:0.6599494934004025
+Epoch[0] Finished[2.276%]Batch[21]loss_adversarial:2.29109525680542
+Epoch[0] Finished[2.276%]Batch[21]iou_adversarial:0.020700077
+Epoch[0] Finished[2.276%]Batch[21]acc_adversarial:0.3933014628002174
+Epoch[0] Finished[2.385%]Batch[22]loss_adversarial:2.8501665592193604
+Epoch[0] Finished[2.385%]Batch[22]iou_adversarial:0.0005049361
+Epoch[0] Finished[2.385%]Batch[22]acc_adversarial:0.009593785336517736
+Epoch[0] Finished[2.493%]Batch[23]loss_adversarial:2.568743944168091
+Epoch[0] Finished[2.493%]Batch[23]iou_adversarial:0.013983327
+Epoch[0] Finished[2.493%]Batch[23]acc_adversarial:0.2656832059364784
+Epoch[0] Finished[2.602%]Batch[24]loss_adversarial:2.4910435676574707
+Epoch[0] Finished[2.602%]Batch[24]iou_adversarial:0.005826104
+Epoch[0] Finished[2.602%]Batch[24]acc_adversarial:0.11069597441494487
+Epoch[0] Finished[2.710%]Batch[25]loss_adversarial:2.365190267562866
+Epoch[0] Finished[2.710%]Batch[25]iou_adversarial:0.011047877
+Epoch[0] Finished[2.710%]Batch[25]acc_adversarial:0.2099096730670978
+
+
+
+
+
+Epoch[0] loss_adversarial:2.722864236831665
+Epoch[0] iou_adversarial:0.01219046684447676
+Epoch[0] acc_adversarial:0.23051535576678442
+Val finished:0.004%
+Traceback (most recent call last):
+  File "start_traning.py", line 91, in <module>
+    train(CONFIG_PATH, CONFIG, train_loader_adversarial, val_loader_adversarial, val_loader)
+  File "../train_tools/Train.py", line 223, in train
+    removeFiles(remove_files)
+  File "../train_tools/Train.py", line 35, in removeFiles
+    os.remove(m)
+FileNotFoundError: [Errno 2] No such file or directory: '../data_queue_val/image_0_0_.pt'

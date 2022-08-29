@@ -1,0 +1,976 @@
+Traning started.....
+Train Adversarial loader length: 2975
+Val Adversarial loader length: 500
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[1.084%]Batch[1]loss_adversarial:3.05271577835083
+Epoch[0] Finished[1.084%]Batch[1]iou_adversarial:0.0
+Epoch[0] Finished[1.084%]Batch[1]acc_adversarial:0.0
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[2.168%]Batch[2]loss_adversarial:3.0521509647369385
+Epoch[0] Finished[2.168%]Batch[2]iou_adversarial:0.0012223206
+Epoch[0] Finished[2.168%]Batch[2]acc_adversarial:0.023224091150341505
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[3.252%]Batch[3]loss_adversarial:3.0222582817077637
+Epoch[0] Finished[3.252%]Batch[3]iou_adversarial:0.0
+Epoch[0] Finished[3.252%]Batch[3]acc_adversarial:0.0
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[4.336%]Batch[4]loss_adversarial:3.043257236480713
+Epoch[0] Finished[4.336%]Batch[4]iou_adversarial:0.00010244922
+Epoch[0] Finished[4.336%]Batch[4]acc_adversarial:0.0019465351674020236
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[5.421%]Batch[5]loss_adversarial:3.0243911743164062
+Epoch[0] Finished[5.421%]Batch[5]iou_adversarial:0.0
+Epoch[0] Finished[5.421%]Batch[5]acc_adversarial:0.0
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[6.505%]Batch[6]loss_adversarial:2.9959285259246826
+Epoch[0] Finished[6.505%]Batch[6]iou_adversarial:0.0
+Epoch[0] Finished[6.505%]Batch[6]acc_adversarial:0.0
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[7.589%]Batch[7]loss_adversarial:2.9714741706848145
+Epoch[0] Finished[7.589%]Batch[7]iou_adversarial:0.0
+Epoch[0] Finished[7.589%]Batch[7]acc_adversarial:0.0
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[8.673%]Batch[8]loss_adversarial:2.96614408493042
+Epoch[0] Finished[8.673%]Batch[8]iou_adversarial:0.0
+Epoch[0] Finished[8.673%]Batch[8]acc_adversarial:0.0
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[9.757%]Batch[9]loss_adversarial:2.9334168434143066
+Epoch[0] Finished[9.757%]Batch[9]iou_adversarial:0.0
+Epoch[0] Finished[9.757%]Batch[9]acc_adversarial:0.0
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[1.084%]Batch[10]loss_adversarial:2.9073894023895264
+Epoch[0] Finished[1.084%]Batch[10]iou_adversarial:0.00011727454
+Epoch[0] Finished[1.084%]Batch[10]acc_adversarial:9.466488630248915e-05
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[1.192%]Batch[11]loss_adversarial:2.846337080001831
+Epoch[0] Finished[1.192%]Batch[11]iou_adversarial:0.0
+Epoch[0] Finished[1.192%]Batch[11]acc_adversarial:0.0
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[1.301%]Batch[12]loss_adversarial:2.807697296142578
+Epoch[0] Finished[1.301%]Batch[12]iou_adversarial:0.036628317
+Epoch[0] Finished[1.301%]Batch[12]acc_adversarial:0.6959380775846409
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[1.409%]Batch[13]loss_adversarial:2.7840769290924072
+Epoch[0] Finished[1.409%]Batch[13]iou_adversarial:0.032183778
+Epoch[0] Finished[1.409%]Batch[13]acc_adversarial:0.6114917494744163
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[1.517%]Batch[14]loss_adversarial:2.7418768405914307
+Epoch[0] Finished[1.517%]Batch[14]iou_adversarial:0.03404025
+Epoch[0] Finished[1.517%]Batch[14]acc_adversarial:0.6467647705259066
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[1.626%]Batch[15]loss_adversarial:2.7379050254821777
+Epoch[0] Finished[1.626%]Batch[15]iou_adversarial:0.031622916
+Epoch[0] Finished[1.626%]Batch[15]acc_adversarial:0.6008353759191634
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[1.734%]Batch[16]loss_adversarial:2.6109867095947266
+Epoch[0] Finished[1.734%]Batch[16]iou_adversarial:0.036309317
+Epoch[0] Finished[1.734%]Batch[16]acc_adversarial:0.6898770245950807
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[1.843%]Batch[17]loss_adversarial:2.595364809036255
+Epoch[0] Finished[1.843%]Batch[17]iou_adversarial:0.032697212
+Epoch[0] Finished[1.843%]Batch[17]acc_adversarial:0.6212469724435234
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[1.951%]Batch[18]loss_adversarial:2.535332441329956
+Epoch[0] Finished[1.951%]Batch[18]iou_adversarial:0.03340291
+Epoch[0] Finished[1.951%]Batch[18]acc_adversarial:0.6346553077973902
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[2.059%]Batch[19]loss_adversarial:2.5523149967193604
+Epoch[0] Finished[2.059%]Batch[19]iou_adversarial:0.029631106
+Epoch[0] Finished[2.059%]Batch[19]acc_adversarial:0.5629910075565447
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[2.168%]Batch[20]loss_adversarial:2.4432172775268555
+Epoch[0] Finished[2.168%]Batch[20]iou_adversarial:0.032603916
+Epoch[0] Finished[2.168%]Batch[20]acc_adversarial:0.6194744296145047
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[2.276%]Batch[21]loss_adversarial:2.332123041152954
+Epoch[0] Finished[2.276%]Batch[21]iou_adversarial:0.0351804
+Epoch[0] Finished[2.276%]Batch[21]acc_adversarial:0.6684276329948039
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[2.385%]Batch[22]loss_adversarial:2.3117518424987793
+Epoch[0] Finished[2.385%]Batch[22]iou_adversarial:0.032932788
+Epoch[0] Finished[2.385%]Batch[22]acc_adversarial:0.6257229673614113
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[2.493%]Batch[23]loss_adversarial:2.161059617996216
+Epoch[0] Finished[2.493%]Batch[23]iou_adversarial:0.036644418
+Epoch[0] Finished[2.493%]Batch[23]acc_adversarial:0.6962439705573938
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[2.602%]Batch[24]loss_adversarial:2.1332900524139404
+Epoch[0] Finished[2.602%]Batch[24]iou_adversarial:0.035094403
+Epoch[0] Finished[2.602%]Batch[24]acc_adversarial:0.6667936253382778
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[2.710%]Batch[25]loss_adversarial:3.2163848876953125
+Epoch[0] Finished[2.710%]Batch[25]iou_adversarial:0.00024070473
+Epoch[0] Finished[2.710%]Batch[25]acc_adversarial:0.004573390012946362
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[2.818%]Batch[26]loss_adversarial:2.46620512008667
+Epoch[0] Finished[2.818%]Batch[26]iou_adversarial:0.017822778
+Epoch[0] Finished[2.818%]Batch[26]acc_adversarial:0.3386327666832272
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[2.927%]Batch[27]loss_adversarial:1.9214810132980347
+Epoch[0] Finished[2.927%]Batch[27]iou_adversarial:0.033074547
+Epoch[0] Finished[2.927%]Batch[27]acc_adversarial:0.6284164417318844
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[3.035%]Batch[28]loss_adversarial:1.8175817728042603
+Epoch[0] Finished[3.035%]Batch[28]iou_adversarial:0.033120167
+Epoch[0] Finished[3.035%]Batch[28]acc_adversarial:0.6292831927092458
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[3.144%]Batch[29]loss_adversarial:1.8491555452346802
+Epoch[0] Finished[3.144%]Batch[29]iou_adversarial:0.031003164
+Epoch[0] Finished[3.144%]Batch[29]acc_adversarial:0.5890601422720411
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[3.252%]Batch[30]loss_adversarial:1.924154281616211
+Epoch[0] Finished[3.252%]Batch[30]iou_adversarial:0.029424384
+Epoch[0] Finished[3.252%]Batch[30]acc_adversarial:0.5590632858870496
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[3.361%]Batch[31]loss_adversarial:2.109837532043457
+Epoch[0] Finished[3.361%]Batch[31]iou_adversarial:0.027036466
+Epoch[0] Finished[3.361%]Batch[31]acc_adversarial:0.5136928847645222
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[3.469%]Batch[32]loss_adversarial:2.611560583114624
+Epoch[0] Finished[3.469%]Batch[32]iou_adversarial:0.019300861
+Epoch[0] Finished[3.469%]Batch[32]acc_adversarial:0.36671634219037336
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[3.577%]Batch[33]loss_adversarial:1.9064326286315918
+Epoch[0] Finished[3.577%]Batch[33]iou_adversarial:0.031225456
+Epoch[0] Finished[3.577%]Batch[33]acc_adversarial:0.5932836749215066
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[3.686%]Batch[34]loss_adversarial:2.0924577713012695
+Epoch[0] Finished[3.686%]Batch[34]iou_adversarial:0.023739165
+Epoch[0] Finished[3.686%]Batch[34]acc_adversarial:0.45104414406277893
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[3.794%]Batch[35]loss_adversarial:1.8205394744873047
+Epoch[0] Finished[3.794%]Batch[35]iou_adversarial:0.028465588
+Epoch[0] Finished[3.794%]Batch[35]acc_adversarial:0.5408461542305211
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[3.903%]Batch[36]loss_adversarial:1.6276288032531738
+Epoch[0] Finished[3.903%]Batch[36]iou_adversarial:0.03325777
+Epoch[0] Finished[3.903%]Batch[36]acc_adversarial:0.6318976602644559
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[4.011%]Batch[37]loss_adversarial:1.7088220119476318
+Epoch[0] Finished[4.011%]Batch[37]iou_adversarial:0.032976512
+Epoch[0] Finished[4.011%]Batch[37]acc_adversarial:0.6265536926373335
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[4.119%]Batch[38]loss_adversarial:1.8796619176864624
+Epoch[0] Finished[4.119%]Batch[38]iou_adversarial:0.030922513
+Epoch[0] Finished[4.119%]Batch[38]acc_adversarial:0.5875277787620921
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[4.228%]Batch[39]loss_adversarial:1.7275093793869019
+Epoch[0] Finished[4.228%]Batch[39]iou_adversarial:0.03262184
+Epoch[0] Finished[4.228%]Batch[39]acc_adversarial:0.6198149066270036
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[4.336%]Batch[40]loss_adversarial:1.6534520387649536
+Epoch[0] Finished[4.336%]Batch[40]iou_adversarial:0.03365143
+Epoch[0] Finished[4.336%]Batch[40]acc_adversarial:0.6393771815467426
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[4.445%]Batch[41]loss_adversarial:1.7039679288864136
+Epoch[0] Finished[4.445%]Batch[41]iou_adversarial:0.032849815
+Epoch[0] Finished[4.445%]Batch[41]acc_adversarial:0.6241464529951855
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[4.553%]Batch[42]loss_adversarial:1.7307605743408203
+Epoch[0] Finished[4.553%]Batch[42]iou_adversarial:0.03246329
+Epoch[0] Finished[4.553%]Batch[42]acc_adversarial:0.6168024960193648
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[4.662%]Batch[43]loss_adversarial:1.9122143983840942
+Epoch[0] Finished[4.662%]Batch[43]iou_adversarial:0.031261086
+Epoch[0] Finished[4.662%]Batch[43]acc_adversarial:0.5939606579429493
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[4.770%]Batch[44]loss_adversarial:1.6620492935180664
+Epoch[0] Finished[4.770%]Batch[44]iou_adversarial:0.033113033
+Epoch[0] Finished[4.770%]Batch[44]acc_adversarial:0.6291476446094414
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[4.878%]Batch[45]loss_adversarial:1.5758768320083618
+Epoch[0] Finished[4.878%]Batch[45]iou_adversarial:0.035839703
+Epoch[0] Finished[4.878%]Batch[45]acc_adversarial:0.6809543393601516
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[4.987%]Batch[46]loss_adversarial:1.8380862474441528
+Epoch[0] Finished[4.987%]Batch[46]iou_adversarial:0.031049136
+Epoch[0] Finished[4.987%]Batch[46]acc_adversarial:0.5899336002838459
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[5.095%]Batch[47]loss_adversarial:1.40156090259552
+Epoch[0] Finished[5.095%]Batch[47]iou_adversarial:0.036622737
+Epoch[0] Finished[5.095%]Batch[47]acc_adversarial:0.6958320092667573
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[5.204%]Batch[48]loss_adversarial:1.493209719657898
+Epoch[0] Finished[5.204%]Batch[48]iou_adversarial:0.03402476
+Epoch[0] Finished[5.204%]Batch[48]acc_adversarial:0.6464704366529755
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[5.312%]Batch[49]loss_adversarial:1.6661969423294067
+Epoch[0] Finished[5.312%]Batch[49]iou_adversarial:0.03149831
+Epoch[0] Finished[5.312%]Batch[49]acc_adversarial:0.5984678950752343
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[5.421%]Batch[50]loss_adversarial:1.5217443704605103
+Epoch[0] Finished[5.421%]Batch[50]iou_adversarial:0.03307721
+Epoch[0] Finished[5.421%]Batch[50]acc_adversarial:0.6284669429289764
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[5.529%]Batch[51]loss_adversarial:1.3313847780227661
+Epoch[0] Finished[5.529%]Batch[51]iou_adversarial:0.035901826
+Epoch[0] Finished[5.529%]Batch[51]acc_adversarial:0.682134698898009
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[5.637%]Batch[52]loss_adversarial:1.9623806476593018
+Epoch[0] Finished[5.637%]Batch[52]iou_adversarial:0.031005746
+Epoch[0] Finished[5.637%]Batch[52]acc_adversarial:0.5891091810060464
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[5.746%]Batch[53]loss_adversarial:1.4445780515670776
+Epoch[0] Finished[5.746%]Batch[53]iou_adversarial:0.03467583
+Epoch[0] Finished[5.746%]Batch[53]acc_adversarial:0.658840773764239
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[5.854%]Batch[54]loss_adversarial:1.946398138999939
+Epoch[0] Finished[5.854%]Batch[54]iou_adversarial:0.030375035
+Epoch[0] Finished[5.854%]Batch[54]acc_adversarial:0.5771256395906618
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[5.963%]Batch[55]loss_adversarial:1.8757604360580444
+Epoch[0] Finished[5.963%]Batch[55]iou_adversarial:0.02679276
+Epoch[0] Finished[5.963%]Batch[55]acc_adversarial:0.5090624007421335
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[6.071%]Batch[56]loss_adversarial:1.3086068630218506
+Epoch[0] Finished[6.071%]Batch[56]iou_adversarial:0.033958897
+Epoch[0] Finished[6.071%]Batch[56]acc_adversarial:0.6452190173625421
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[6.179%]Batch[57]loss_adversarial:0.9528265595436096
+Epoch[0] Finished[6.179%]Batch[57]iou_adversarial:0.042699955
+Epoch[0] Finished[6.179%]Batch[57]acc_adversarial:0.8112991468118662
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[6.288%]Batch[58]loss_adversarial:2.5600006580352783
+Epoch[0] Finished[6.288%]Batch[58]iou_adversarial:0.020529365
+Epoch[0] Finished[6.288%]Batch[58]acc_adversarial:0.39005793995674326
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[6.396%]Batch[59]loss_adversarial:1.1994116306304932
+Epoch[0] Finished[6.396%]Batch[59]iou_adversarial:0.036736876
+Epoch[0] Finished[6.396%]Batch[59]acc_adversarial:0.698000694345171
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[6.505%]Batch[60]loss_adversarial:1.1548916101455688
+Epoch[0] Finished[6.505%]Batch[60]iou_adversarial:0.03980124
+Epoch[0] Finished[6.505%]Batch[60]acc_adversarial:0.7562235403069321
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[6.613%]Batch[61]loss_adversarial:1.384274959564209
+Epoch[0] Finished[6.613%]Batch[61]iou_adversarial:0.034718953
+Epoch[0] Finished[6.613%]Batch[61]acc_adversarial:0.6596600934897685
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[6.722%]Batch[62]loss_adversarial:2.672999620437622
+Epoch[0] Finished[6.722%]Batch[62]iou_adversarial:0.017521527
+Epoch[0] Finished[6.722%]Batch[62]acc_adversarial:0.33290901068583034
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[6.830%]Batch[63]loss_adversarial:1.3229292631149292
+Epoch[0] Finished[6.830%]Batch[63]iou_adversarial:0.03453067
+Epoch[0] Finished[6.830%]Batch[63]acc_adversarial:0.6560827463880952
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[6.938%]Batch[64]loss_adversarial:1.364532709121704
+Epoch[0] Finished[6.938%]Batch[64]iou_adversarial:0.034395985
+Epoch[0] Finished[6.938%]Batch[64]acc_adversarial:0.6535237454119982
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[7.047%]Batch[65]loss_adversarial:1.7650080919265747
+Epoch[0] Finished[7.047%]Batch[65]iou_adversarial:0.02313072
+Epoch[0] Finished[7.047%]Batch[65]acc_adversarial:0.4394836795846986
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[7.155%]Batch[66]loss_adversarial:2.4886975288391113
+Epoch[0] Finished[7.155%]Batch[66]iou_adversarial:0.014423934
+Epoch[0] Finished[7.155%]Batch[66]acc_adversarial:0.2740547458543419
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[7.264%]Batch[67]loss_adversarial:1.3413355350494385
+Epoch[0] Finished[7.264%]Batch[67]iou_adversarial:0.033941064
+Epoch[0] Finished[7.264%]Batch[67]acc_adversarial:0.6448802073840044
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[7.372%]Batch[68]loss_adversarial:1.4428658485412598
+Epoch[0] Finished[7.372%]Batch[68]iou_adversarial:0.030859085
+Epoch[0] Finished[7.372%]Batch[68]acc_adversarial:0.5863226221337993
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[7.480%]Batch[69]loss_adversarial:1.681051254272461
+Epoch[0] Finished[7.480%]Batch[69]iou_adversarial:0.030772334
+Epoch[0] Finished[7.480%]Batch[69]acc_adversarial:0.5846743528123381
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[7.589%]Batch[70]loss_adversarial:1.3270665407180786
+Epoch[0] Finished[7.589%]Batch[70]iou_adversarial:0.033190135
+Epoch[0] Finished[7.589%]Batch[70]acc_adversarial:0.6306125498007965
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[7.697%]Batch[71]loss_adversarial:1.5261821746826172
+Epoch[0] Finished[7.697%]Batch[71]iou_adversarial:0.030219646
+Epoch[0] Finished[7.697%]Batch[71]acc_adversarial:0.57417328076727
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[7.806%]Batch[72]loss_adversarial:1.5999295711517334
+Epoch[0] Finished[7.806%]Batch[72]iou_adversarial:0.02991954
+Epoch[0] Finished[7.806%]Batch[72]acc_adversarial:0.5684712345672867
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[7.914%]Batch[73]loss_adversarial:1.7738022804260254
+Epoch[0] Finished[7.914%]Batch[73]iou_adversarial:0.02762729
+Epoch[0] Finished[7.914%]Batch[73]acc_adversarial:0.5249184839510602
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[8.023%]Batch[74]loss_adversarial:1.4055348634719849
+Epoch[0] Finished[8.023%]Batch[74]iou_adversarial:0.033065967
+Epoch[0] Finished[8.023%]Batch[74]acc_adversarial:0.6282533733514123
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[8.131%]Batch[75]loss_adversarial:1.4133137464523315
+Epoch[0] Finished[8.131%]Batch[75]iou_adversarial:0.030815931
+Epoch[0] Finished[8.131%]Batch[75]acc_adversarial:0.5855026750778565
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[8.239%]Batch[76]loss_adversarial:2.800872325897217
+Epoch[0] Finished[8.239%]Batch[76]iou_adversarial:0.013026276
+Epoch[0] Finished[8.239%]Batch[76]acc_adversarial:0.24749923601915033
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[8.348%]Batch[77]loss_adversarial:1.465132713317871
+Epoch[0] Finished[8.348%]Batch[77]iou_adversarial:0.032844223
+Epoch[0] Finished[8.348%]Batch[77]acc_adversarial:0.6240402743589611
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[8.456%]Batch[78]loss_adversarial:1.6204097270965576
+Epoch[0] Finished[8.456%]Batch[78]iou_adversarial:0.032179862
+Epoch[0] Finished[8.456%]Batch[78]acc_adversarial:0.611417340736736
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+Epoch[0] Finished[8.565%]Batch[79]loss_adversarial:1.5270144939422607
+Epoch[0] Finished[8.565%]Batch[79]iou_adversarial:0.032531343
+Epoch[0] Finished[8.565%]Batch[79]acc_adversarial:0.6180955419496308
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': True}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': False, 'Executor_Finished_Val': False}
+{'MODE': 'train', 'Executor_Finished_Train': True, 'Executor_Finished_Val': False}
+heeeeeeeeeeeeeeee
+Traceback (most recent call last):
+  File "start_traning.py", line 91, in <module>
+    train(CONFIG_PATH, CONFIG, train_loader_adversarial, val_loader_adversarial, val_loader)
+  File "../train_tools/Train.py", line 233, in train
+    loss_val_epoch = loss_val_epoch / (batch_id - cut_)
+ZeroDivisionError: division by zero
+Epoch[0] loss_adversarial:2.051394747027868
+Epoch[0] iou_adversarial:0.026484660899503853
+Epoch[0] acc_adversarial:0.5031815511963936
+{'MODE': 'val', 'Executor_Finished_Train': True, 'Executor_Finished_Val': False}
+heeeeeeeeeeeeeeee
